@@ -1,0 +1,33 @@
+Test Epoch: 0
+FC(t2v):   Rank-1: 13.29% | Rank-5: 28.27% | Rank-10: 36.85%| Rank-20: 46.51%| mAP: 6.74%
+FC(v2t):   Rank-1: 13.89% | Rank-5: 28.95% | Rank-10: 37.58%| Rank-20: 48.38%| mAP: 6.76%
+Test Epoch: 10
+FC(t2v):   Rank-1: 62.91% | Rank-5: 78.03% | Rank-10: 83.03%| Rank-20: 88.07%| mAP: 48.31%
+FC(v2t):   Rank-1: 65.11% | Rank-5: 78.56% | Rank-10: 83.76%| Rank-20: 88.49%| mAP: 49.33%
+Test Epoch: 20
+FC(t2v):   Rank-1: 66.30% | Rank-5: 78.58% | Rank-10: 83.53%| Rank-20: 88.18%| mAP: 53.43%
+FC(v2t):   Rank-1: 68.94% | Rank-5: 80.72% | Rank-10: 85.11%| Rank-20: 89.19%| mAP: 54.99%
+Test Epoch: 30
+FC(t2v):   Rank-1: 69.24% | Rank-5: 78.97% | Rank-10: 83.33%| Rank-20: 88.05%| mAP: 57.80%
+FC(v2t):   Rank-1: 72.66% | Rank-5: 83.39% | Rank-10: 87.25%| Rank-20: 90.96%| mAP: 61.22%
+Test Epoch: 40
+FC(t2v):   Rank-1: 76.53% | Rank-5: 84.66% | Rank-10: 87.48%| Rank-20: 90.86%| mAP: 65.39%
+FC(v2t):   Rank-1: 78.33% | Rank-5: 86.66% | Rank-10: 89.49%| Rank-20: 92.41%| mAP: 67.52%
+Test Epoch: 50
+FC(t2v):   Rank-1: 78.95% | Rank-5: 86.30% | Rank-10: 89.16%| Rank-20: 92.04%| mAP: 67.66%
+FC(v2t):   Rank-1: 80.31% | Rank-5: 88.27% | Rank-10: 91.10%| Rank-20: 93.16%| mAP: 68.68%
+Test Epoch: 60
+FC(t2v):   Rank-1: 79.28% | Rank-5: 87.06% | Rank-10: 89.97%| Rank-20: 92.43%| mAP: 67.64%
+FC(v2t):   Rank-1: 81.06% | Rank-5: 89.10% | Rank-10: 91.61%| Rank-20: 94.16%| mAP: 69.17%
+Test Epoch: 70
+FC(t2v):   Rank-1: 79.34% | Rank-5: 87.09% | Rank-10: 90.38%| Rank-20: 93.04%| mAP: 67.65%
+FC(v2t):   Rank-1: 81.23% | Rank-5: 89.29% | Rank-10: 92.00%| Rank-20: 94.10%| mAP: 69.39%
+Test Epoch: 80
+FC(t2v):   Rank-1: 79.10% | Rank-5: 87.41% | Rank-10: 90.58%| Rank-20: 93.24%| mAP: 67.19%
+FC(v2t):   Rank-1: 81.06% | Rank-5: 89.35% | Rank-10: 91.98%| Rank-20: 94.19%| mAP: 68.75%
+Test Epoch: 90
+FC(t2v):   Rank-1: 79.62% | Rank-5: 87.70% | Rank-10: 90.64%| Rank-20: 93.19%| mAP: 67.69%
+FC(v2t):   Rank-1: 81.55% | Rank-5: 89.70% | Rank-10: 91.94%| Rank-20: 94.18%| mAP: 69.27%
+Test Epoch: 100
+FC(t2v):   Rank-1: 79.45% | Rank-5: 87.85% | Rank-10: 90.75%| Rank-20: 93.11%| mAP: 67.74%
+FC(v2t):   Rank-1: 81.57% | Rank-5: 89.53% | Rank-10: 91.88%| Rank-20: 94.31%| mAP: 69.18%

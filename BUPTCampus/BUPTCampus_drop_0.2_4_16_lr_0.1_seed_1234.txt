@@ -1,0 +1,220 @@
+Test Epoch: 0
+
+	RGB->RGB:  Rank1:19.53% Rank5:34.96% Rank10:42.58% Rank20:52.54% mAP:20.83%
+
+	RGB->IR :  Rank1:11.72% Rank5:21.29% Rank10:27.34% Rank20:36.52% mAP:12.28%
+
+	IR->RGB :  Rank1:6.13% Rank5:15.52% Rank10:24.90% Rank20:32.38% mAP:8.18%
+
+	IR->IR  :  Rank1:16.60% Rank5:32.65% Rank10:39.18% Rank20:48.51% mAP:18.16%
+
+	AllModal:  Rank1:18.03% Rank5:33.78% Rank10:40.84% Rank20:50.57% mAP:10.42%
+Test Epoch: 10
+
+	RGB->RGB:  Rank1:58.59% Rank5:74.61% Rank10:78.52% Rank20:83.59% mAP:52.08%
+
+	RGB->IR :  Rank1:32.23% Rank5:54.10% Rank10:61.91% Rank20:67.58% mAP:31.52%
+
+	IR->RGB :  Rank1:31.61% Rank5:47.89% Rank10:56.70% Rank20:65.71% mAP:30.56%
+
+	IR->IR  :  Rank1:49.25% Rank5:65.67% Rank10:69.96% Rank20:76.68% mAP:43.72%
+
+	AllModal:  Rank1:53.82% Rank5:70.04% Rank10:74.14% Rank20:80.06% mAP:24.25%
+Test Epoch: 20
+
+	RGB->RGB:  Rank1:66.80% Rank5:83.20% Rank10:86.91% Rank20:90.62% mAP:60.72%
+
+	RGB->IR :  Rank1:47.46% Rank5:68.55% Rank10:74.80% Rank20:80.86% mAP:44.35%
+
+	IR->RGB :  Rank1:43.68% Rank5:64.94% Rank10:71.07% Rank20:78.93% mAP:42.63%
+
+	IR->IR  :  Rank1:61.19% Rank5:77.43% Rank10:80.78% Rank20:85.07% mAP:55.85%
+
+	AllModal:  Rank1:63.93% Rank5:80.25% Rank10:83.78% Rank20:87.79% mAP:29.64%
+Test Epoch: 30
+
+	RGB->RGB:  Rank1:70.51% Rank5:86.33% Rank10:88.48% Rank20:91.21% mAP:64.97%
+
+	RGB->IR :  Rank1:51.76% Rank5:72.66% Rank10:78.12% Rank20:82.42% mAP:47.89%
+
+	IR->RGB :  Rank1:48.85% Rank5:68.20% Rank10:74.90% Rank20:81.99% mAP:48.04%
+
+	IR->IR  :  Rank1:68.10% Rank5:83.02% Rank10:87.50% Rank20:89.55% mAP:63.18%
+
+	AllModal:  Rank1:69.27% Rank5:84.64% Rank10:87.98% Rank20:90.36% mAP:32.82%
+Test Epoch: 40
+
+	RGB->RGB:  Rank1:79.10% Rank5:91.99% Rank10:93.75% Rank20:94.92% mAP:72.22%
+
+	RGB->IR :  Rank1:65.62% Rank5:80.86% Rank10:85.55% Rank20:89.45% mAP:59.42%
+
+	IR->RGB :  Rank1:63.03% Rank5:82.57% Rank10:86.21% Rank20:88.51% mAP:60.10%
+
+	IR->IR  :  Rank1:73.88% Rank5:86.75% Rank10:90.11% Rank20:92.16% mAP:69.06%
+
+	AllModal:  Rank1:76.24% Rank5:87.98% Rank10:91.32% Rank20:93.32% mAP:61.65%
+Test Epoch: 50
+
+	RGB->RGB:  Rank1:79.69% Rank5:91.60% Rank10:93.55% Rank20:94.92% mAP:73.88%
+
+	RGB->IR :  Rank1:65.62% Rank5:82.62% Rank10:86.72% Rank20:89.65% mAP:60.22%
+
+	IR->RGB :  Rank1:66.09% Rank5:83.33% Rank10:86.78% Rank20:90.23% mAP:62.96%
+
+	IR->IR  :  Rank1:74.44% Rank5:87.31% Rank10:90.11% Rank20:92.16% mAP:70.29%
+
+	AllModal:  Rank1:77.10% Rank5:88.36% Rank10:91.22% Rank20:92.94% mAP:63.82%
+Test Epoch: 60
+
+	RGB->RGB:  Rank1:80.66% Rank5:91.80% Rank10:93.95% Rank20:95.31% mAP:74.55%
+
+	RGB->IR :  Rank1:66.60% Rank5:83.20% Rank10:88.09% Rank20:90.04% mAP:60.64%
+
+	IR->RGB :  Rank1:66.67% Rank5:82.76% Rank10:86.21% Rank20:89.85% mAP:63.05%
+
+	IR->IR  :  Rank1:74.44% Rank5:87.31% Rank10:90.11% Rank20:91.79% mAP:70.55%
+
+	AllModal:  Rank1:77.39% Rank5:88.55% Rank10:91.32% Rank20:93.23% mAP:64.28%
+Test Epoch: 70
+
+	RGB->RGB:  Rank1:80.86% Rank5:91.41% Rank10:93.95% Rank20:95.12% mAP:74.59%
+
+	RGB->IR :  Rank1:68.36% Rank5:83.01% Rank10:87.11% Rank20:89.84% mAP:61.93%
+
+	IR->RGB :  Rank1:67.24% Rank5:83.72% Rank10:87.36% Rank20:91.00% mAP:64.02%
+
+	IR->IR  :  Rank1:76.49% Rank5:88.06% Rank10:90.49% Rank20:92.35% mAP:71.55%
+
+	AllModal:  Rank1:78.34% Rank5:88.74% Rank10:91.32% Rank20:93.51% mAP:64.73%
+Test Epoch: 80
+
+	RGB->RGB:  Rank1:81.45% Rank5:91.21% Rank10:93.55% Rank20:95.51% mAP:74.33%
+
+	RGB->IR :  Rank1:67.77% Rank5:82.81% Rank10:88.09% Rank20:90.23% mAP:61.59%
+
+	IR->RGB :  Rank1:66.09% Rank5:83.14% Rank10:87.36% Rank20:90.42% mAP:63.53%
+
+	IR->IR  :  Rank1:76.12% Rank5:87.50% Rank10:90.67% Rank20:92.35% mAP:71.38%
+
+	AllModal:  Rank1:78.53% Rank5:88.65% Rank10:91.41% Rank20:93.32% mAP:65.02%
+Test Epoch: 90
+
+	RGB->RGB:  Rank1:82.03% Rank5:91.80% Rank10:94.14% Rank20:94.92% mAP:74.94%
+
+	RGB->IR :  Rank1:67.58% Rank5:83.20% Rank10:87.89% Rank20:90.62% mAP:61.58%
+
+	IR->RGB :  Rank1:67.82% Rank5:83.14% Rank10:87.36% Rank20:90.23% mAP:64.18%
+
+	IR->IR  :  Rank1:75.93% Rank5:87.50% Rank10:90.86% Rank20:92.16% mAP:71.61%
+
+	AllModal:  Rank1:78.44% Rank5:89.03% Rank10:91.41% Rank20:93.42% mAP:65.27%
+Test Epoch: 100
+
+	RGB->RGB:  Rank1:82.23% Rank5:91.41% Rank10:93.75% Rank20:94.92% mAP:74.81%
+
+	RGB->IR :  Rank1:68.16% Rank5:82.42% Rank10:87.89% Rank20:90.62% mAP:61.62%
+
+	IR->RGB :  Rank1:68.39% Rank5:83.14% Rank10:87.55% Rank20:90.42% mAP:64.39%
+
+	IR->IR  :  Rank1:76.31% Rank5:88.43% Rank10:90.86% Rank20:92.35% mAP:71.54%
+
+	AllModal:  Rank1:78.72% Rank5:88.84% Rank10:91.03% Rank20:93.42% mAP:65.26%
+Test Epoch: 110
+
+	RGB->RGB:  Rank1:82.23% Rank5:91.60% Rank10:93.95% Rank20:95.12% mAP:75.25%
+
+	RGB->IR :  Rank1:69.14% Rank5:83.20% Rank10:88.67% Rank20:90.23% mAP:62.40%
+
+	IR->RGB :  Rank1:67.62% Rank5:83.14% Rank10:87.55% Rank20:90.80% mAP:64.24%
+
+	IR->IR  :  Rank1:75.19% Rank5:87.69% Rank10:91.04% Rank20:92.91% mAP:71.14%
+
+	AllModal:  Rank1:78.34% Rank5:88.93% Rank10:91.22% Rank20:93.42% mAP:65.46%
+Test Epoch: 120
+
+	RGB->RGB:  Rank1:82.03% Rank5:92.19% Rank10:93.95% Rank20:95.12% mAP:74.76%
+
+	RGB->IR :  Rank1:68.75% Rank5:82.42% Rank10:87.89% Rank20:90.23% mAP:62.08%
+
+	IR->RGB :  Rank1:67.82% Rank5:83.14% Rank10:86.78% Rank20:90.61% mAP:64.53%
+
+	IR->IR  :  Rank1:75.56% Rank5:87.69% Rank10:90.86% Rank20:92.35% mAP:71.37%
+
+	AllModal:  Rank1:78.53% Rank5:88.65% Rank10:91.51% Rank20:93.51% mAP:65.29%
+Test Epoch: 130
+
+	RGB->RGB:  Rank1:81.84% Rank5:91.99% Rank10:93.36% Rank20:94.92% mAP:74.54%
+
+	RGB->IR :  Rank1:68.16% Rank5:82.62% Rank10:87.30% Rank20:90.23% mAP:61.39%
+
+	IR->RGB :  Rank1:67.24% Rank5:83.72% Rank10:87.55% Rank20:90.42% mAP:64.09%
+
+	IR->IR  :  Rank1:76.31% Rank5:88.06% Rank10:90.86% Rank20:92.16% mAP:71.66%
+
+	AllModal:  Rank1:78.72% Rank5:88.55% Rank10:91.51% Rank20:93.23% mAP:65.01%
+Test Epoch: 140
+
+	RGB->RGB:  Rank1:82.42% Rank5:91.99% Rank10:94.34% Rank20:94.92% mAP:75.07%
+
+	RGB->IR :  Rank1:68.36% Rank5:82.23% Rank10:88.09% Rank20:90.82% mAP:61.81%
+
+	IR->RGB :  Rank1:68.20% Rank5:83.52% Rank10:87.74% Rank20:90.42% mAP:64.75%
+
+	IR->IR  :  Rank1:76.31% Rank5:87.31% Rank10:90.86% Rank20:92.35% mAP:71.71%
+
+	AllModal:  Rank1:78.72% Rank5:88.74% Rank10:91.41% Rank20:93.51% mAP:65.57%
+Test Epoch: 150
+
+	RGB->RGB:  Rank1:81.84% Rank5:91.99% Rank10:93.36% Rank20:94.92% mAP:74.85%
+
+	RGB->IR :  Rank1:67.58% Rank5:82.62% Rank10:87.50% Rank20:90.43% mAP:61.46%
+
+	IR->RGB :  Rank1:66.67% Rank5:82.95% Rank10:87.36% Rank20:90.42% mAP:64.09%
+
+	IR->IR  :  Rank1:75.93% Rank5:87.31% Rank10:90.67% Rank20:91.79% mAP:71.33%
+
+	AllModal:  Rank1:78.44% Rank5:88.93% Rank10:91.13% Rank20:93.23% mAP:65.20%
+Test Epoch: 160
+
+	RGB->RGB:  Rank1:82.23% Rank5:91.99% Rank10:93.95% Rank20:95.12% mAP:75.03%
+
+	RGB->IR :  Rank1:67.58% Rank5:83.79% Rank10:87.89% Rank20:90.23% mAP:61.97%
+
+	IR->RGB :  Rank1:66.48% Rank5:83.52% Rank10:88.31% Rank20:90.23% mAP:64.01%
+
+	IR->IR  :  Rank1:75.37% Rank5:86.75% Rank10:90.67% Rank20:92.35% mAP:71.46%
+
+	AllModal:  Rank1:78.44% Rank5:88.74% Rank10:91.60% Rank20:93.42% mAP:65.41%
+Test Epoch: 170
+
+	RGB->RGB:  Rank1:82.03% Rank5:91.60% Rank10:93.55% Rank20:95.12% mAP:74.84%
+
+	RGB->IR :  Rank1:68.75% Rank5:83.01% Rank10:87.89% Rank20:90.43% mAP:62.17%
+
+	IR->RGB :  Rank1:68.20% Rank5:83.14% Rank10:87.36% Rank20:90.61% mAP:64.51%
+
+	IR->IR  :  Rank1:75.93% Rank5:87.87% Rank10:91.04% Rank20:92.35% mAP:71.55%
+
+	AllModal:  Rank1:78.72% Rank5:88.93% Rank10:91.41% Rank20:93.51% mAP:65.47%
+Test Epoch: 180
+
+	RGB->RGB:  Rank1:81.45% Rank5:92.19% Rank10:93.75% Rank20:94.92% mAP:74.69%
+
+	RGB->IR :  Rank1:66.99% Rank5:83.40% Rank10:87.50% Rank20:90.43% mAP:61.66%
+
+	IR->RGB :  Rank1:67.62% Rank5:83.72% Rank10:87.36% Rank20:90.61% mAP:64.24%
+
+	IR->IR  :  Rank1:76.12% Rank5:87.87% Rank10:90.67% Rank20:92.35% mAP:71.72%
+
+	AllModal:  Rank1:78.34% Rank5:89.03% Rank10:91.51% Rank20:93.51% mAP:65.36%
+Test Epoch: 190
+
+	RGB->RGB:  Rank1:82.23% Rank5:92.19% Rank10:93.75% Rank20:95.31% mAP:75.09%
+
+	RGB->IR :  Rank1:68.55% Rank5:82.62% Rank10:88.28% Rank20:90.23% mAP:62.05%
+
+	IR->RGB :  Rank1:67.05% Rank5:82.76% Rank10:87.74% Rank20:90.61% mAP:64.15%
+
+	IR->IR  :  Rank1:75.75% Rank5:87.50% Rank10:90.86% Rank20:92.54% mAP:71.40%
+
+	AllModal:  Rank1:78.53% Rank5:88.74% Rank10:91.22% Rank20:93.51% mAP:65.35%
