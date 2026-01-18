@@ -1,2 +1,2 @@
-# STDC
-STDC fro IJCAI
+# DMTA
+DMTA fro IJCAI
