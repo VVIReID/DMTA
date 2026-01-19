@@ -1,0 +1,1012 @@
+==========
+Args:Namespace(dataset='BUPTCampus', lr=0.1, optim='sgd', arch='resnet50', resume='', test_only=False, model_path='save_model/', save_epoch=10, log_path='log/', vis_log_path='log/buptc_log/', num_workers=32, img_w=144, img_h=288, test_batch=64, method='agw', drop=0.2, margin=0.8, num_pos=4, seed=1234, gpu='0', cmt_depth=3, T=7, data_root='../datasets/BUPTCampus/DATA/', seq_lenth=10, fake=False, test_sampler='ConsistentModalitySampler', test_bs=64, test_frame_sample='uniform', distance='euclidean', max_rank=20, train_frame_sample='random', train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, random_flip=False, auxiliary_sampler='RandomCameraSampler', auxiliary_sampler_nc=2, auxiliary_sampler_nt=1, a=0.5, b=0.5, c=0.5, d=1, erasing_p=0.5)
+==========
+==> Loading data..
+===> MCPRL-ReID Dataset (query) <===
+Number of identities: 1076
+Number of samples   : 1076
+===> MCPRL-ReID Dataset (gallery) <===
+Number of identities: 1076
+Number of samples   : 4844
+===> MCPRL-ReID Dataset (train) <===
+Number of identities: 1074
+Number of samples   : 7148
+==> Building model..
+==> Start Training...
+==> Preparing Data Loader...
+Epoch: [0][0/192] Time: 5.528 (5.528) lr:0.01 Loss: 33.5983 iLoss: 6.9829 TLoss: 8.4905 iLossSTA: 6.9959 TLossSTA: 4.1460 iLossGcn: 6.9830 tri1Loss: 13.0945 id1Loss: 6.9691 idALoss: 13.9566 moeAuxL: 0.7294 Accu: 0.00
+Epoch: [0][100/192] Time: 0.374 (0.428) lr:0.01 Loss: 25.4540 iLoss: 7.0923 TLoss: 2.5811 iLossSTA: 7.1195 TLossSTA: 1.6899 iLossGcn: 6.9712 tri1Loss: 8.7445 id1Loss: 6.9798 idALoss: 13.9573 moeAuxL: 0.7315 Accu: 4.29
+训练耗时：78.57550311088562 s
+Test Epoch: 0
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:19.53%	Rank-5:34.96%	Rank-10:42.58%	Rank-20:52.54%	mAP: 20.83% .
+RGB->IR :   Rank-1:11.72%	Rank-5:21.29%	Rank-10:27.34%	Rank-20:36.52%	mAP: 12.28% .
+IR ->RGB:   Rank-1:6.13%	Rank-5:15.52%	Rank-10:24.90%	Rank-20:32.38%	mAP: 8.18% .
+IR ->IR :   Rank-1:16.60%	Rank-5:32.65%	Rank-10:39.18%	Rank-20:48.51%	mAP: 18.16% .
+AllModal:   Rank-1:18.03%	Rank-5:33.78%	Rank-10:40.84%	Rank-20:50.57%	mAP: 10.42% .
+测试耗时：45.67171120643616 s
+==> Preparing Data Loader...
+Epoch: [1][0/190] Time: 2.271 (2.271) lr:0.02 Loss: 18.1804 iLoss: 4.8843 TLoss: 1.0829 iLossSTA: 5.0247 TLossSTA: 0.9993 iLossGcn: 6.1892 tri1Loss: 11.0710 id1Loss: 6.9819 idALoss: 13.9385 moeAuxL: 0.7183 Accu: 15.62
+Epoch: [1][100/190] Time: 0.380 (0.399) lr:0.02 Loss: 21.6629 iLoss: 6.0916 TLoss: 1.3195 iLossSTA: 6.7837 TLossSTA: 1.1210 iLossGcn: 6.3470 tri1Loss: 9.6666 id1Loss: 6.9801 idALoss: 13.9588 moeAuxL: 0.7264 Accu: 12.45
+训练耗时：74.12144231796265 s
+==> Preparing Data Loader...
+Epoch: [2][0/191] Time: 2.260 (2.260) lr:0.030000000000000006 Loss: 17.9359 iLoss: 3.9802 TLoss: 1.1531 iLossSTA: 6.6474 TLossSTA: 0.9923 iLossGcn: 5.1629 tri1Loss: 11.4881 id1Loss: 6.9924 idALoss: 13.9660 moeAuxL: 0.7641 Accu: 23.44
+Epoch: [2][100/191] Time: 0.385 (0.404) lr:0.030000000000000006 Loss: 21.0011 iLoss: 5.2623 TLoss: 1.2250 iLossSTA: 7.8188 TLossSTA: 1.1518 iLossGcn: 5.5433 tri1Loss: 11.0201 id1Loss: 6.9796 idALoss: 13.9614 moeAuxL: 0.7404 Accu: 16.04
+训练耗时：75.61940288543701 s
+==> Preparing Data Loader...
+Epoch: [3][0/191] Time: 2.251 (2.251) lr:0.04 Loss: 17.4644 iLoss: 3.5731 TLoss: 0.9820 iLossSTA: 7.4417 TLossSTA: 0.9648 iLossGcn: 4.5027 tri1Loss: 12.0809 id1Loss: 6.9812 idALoss: 13.9682 moeAuxL: 0.7313 Accu: 28.12
+Epoch: [3][100/191] Time: 0.396 (0.410) lr:0.04 Loss: 17.3285 iLoss: 3.8323 TLoss: 1.1508 iLossSTA: 6.5330 TLossSTA: 1.0938 iLossGcn: 4.7186 tri1Loss: 11.7221 id1Loss: 6.9791 idALoss: 13.9608 moeAuxL: 0.7401 Accu: 26.05
+训练耗时：76.41217470169067 s
+==> Preparing Data Loader...
+Epoch: [4][0/191] Time: 2.271 (2.271) lr:0.05 Loss: 11.0001 iLoss: 2.4558 TLoss: 1.0587 iLossSTA: 2.9659 TLossSTA: 0.9354 iLossGcn: 3.5844 tri1Loss: 12.0504 id1Loss: 6.9724 idALoss: 13.9602 moeAuxL: 0.7521 Accu: 40.62
+Epoch: [4][100/191] Time: 0.393 (0.406) lr:0.05 Loss: 11.4561 iLoss: 2.1387 TLoss: 1.0007 iLossSTA: 3.8891 TLossSTA: 0.8851 iLossGcn: 3.5425 tri1Loss: 11.4039 id1Loss: 6.9795 idALoss: 13.9605 moeAuxL: 0.7424 Accu: 44.97
+训练耗时：76.4741415977478 s
+==> Preparing Data Loader...
+Epoch: [5][0/190] Time: 2.472 (2.472) lr:0.06000000000000001 Loss: 7.4731 iLoss: 1.1971 TLoss: 0.6803 iLossSTA: 2.4034 TLossSTA: 0.7042 iLossGcn: 2.4880 tri1Loss: 11.7003 id1Loss: 6.9782 idALoss: 13.9260 moeAuxL: 0.7500 Accu: 65.62
+Epoch: [5][100/190] Time: 0.381 (0.403) lr:0.06000000000000001 Loss: 7.7774 iLoss: 1.0434 TLoss: 0.9307 iLossSTA: 2.5332 TLossSTA: 0.7742 iLossGcn: 2.4960 tri1Loss: 11.4018 id1Loss: 6.9805 idALoss: 13.9640 moeAuxL: 0.7547 Accu: 58.77
+训练耗时：74.7079336643219 s
+==> Preparing Data Loader...
+Epoch: [6][0/190] Time: 2.294 (2.294) lr:0.07 Loss: 6.0622 iLoss: 0.7309 TLoss: 0.9619 iLossSTA: 1.7734 TLossSTA: 0.8017 iLossGcn: 1.7943 tri1Loss: 12.0847 id1Loss: 6.9791 idALoss: 13.9270 moeAuxL: 0.7507 Accu: 67.19
+Epoch: [6][100/190] Time: 0.386 (0.402) lr:0.07 Loss: 6.3102 iLoss: 0.6956 TLoss: 0.8597 iLossSTA: 2.0734 TLossSTA: 0.7057 iLossGcn: 1.9760 tri1Loss: 11.4851 id1Loss: 6.9802 idALoss: 13.9589 moeAuxL: 0.7491 Accu: 66.21
+训练耗时：74.67002081871033 s
+==> Preparing Data Loader...
+Epoch: [7][0/190] Time: 2.371 (2.371) lr:0.08 Loss: 7.6964 iLoss: 0.5050 TLoss: 1.0659 iLossSTA: 2.5120 TLossSTA: 0.9768 iLossGcn: 2.6367 tri1Loss: 12.1826 id1Loss: 6.9857 idALoss: 13.9672 moeAuxL: 0.7491 Accu: 60.94
+Epoch: [7][100/190] Time: 0.392 (0.406) lr:0.08 Loss: 5.6545 iLoss: 0.5000 TLoss: 0.7993 iLossSTA: 1.9397 TLossSTA: 0.6499 iLossGcn: 1.7655 tri1Loss: 11.4216 id1Loss: 6.9807 idALoss: 13.9654 moeAuxL: 0.7524 Accu: 70.68
+训练耗时：75.3701057434082 s
+==> Preparing Data Loader...
+Epoch: [8][0/190] Time: 2.339 (2.339) lr:0.09 Loss: 4.5408 iLoss: 0.4244 TLoss: 0.7084 iLossSTA: 1.2011 TLossSTA: 0.5001 iLossGcn: 1.7068 tri1Loss: 11.5211 id1Loss: 6.9715 idALoss: 13.9540 moeAuxL: 0.7534 Accu: 79.69
+Epoch: [8][100/190] Time: 0.396 (0.406) lr:0.09 Loss: 5.2205 iLoss: 0.4688 TLoss: 0.7749 iLossSTA: 1.7966 TLossSTA: 0.6314 iLossGcn: 1.5488 tri1Loss: 11.1847 id1Loss: 6.9798 idALoss: 13.9612 moeAuxL: 0.7499 Accu: 71.91
+训练耗时：75.99614191055298 s
+==> Preparing Data Loader...
+Epoch: [9][0/190] Time: 2.260 (2.260) lr:0.1 Loss: 4.4975 iLoss: 0.6362 TLoss: 0.6886 iLossSTA: 1.2650 TLossSTA: 0.5488 iLossGcn: 1.3589 tri1Loss: 11.7127 id1Loss: 6.9853 idALoss: 13.9815 moeAuxL: 0.7534 Accu: 71.88
+Epoch: [9][100/190] Time: 0.391 (0.405) lr:0.1 Loss: 4.5501 iLoss: 0.3801 TLoss: 0.7122 iLossSTA: 1.5967 TLossSTA: 0.5595 iLossGcn: 1.3017 tri1Loss: 11.0147 id1Loss: 6.9806 idALoss: 13.9623 moeAuxL: 0.7545 Accu: 75.36
+训练耗时：75.28544616699219 s
+==> Preparing Data Loader...
+Epoch: [10][0/191] Time: 2.123 (2.123) lr:0.1 Loss: 4.4464 iLoss: 0.2724 TLoss: 0.8371 iLossSTA: 1.5899 TLossSTA: 0.6248 iLossGcn: 1.1221 tri1Loss: 11.5782 id1Loss: 6.9873 idALoss: 13.9428 moeAuxL: 0.7463 Accu: 68.75
+Epoch: [10][100/191] Time: 0.389 (0.404) lr:0.1 Loss: 4.3381 iLoss: 0.4192 TLoss: 0.7130 iLossSTA: 1.4478 TLossSTA: 0.5341 iLossGcn: 1.2240 tri1Loss: 11.2687 id1Loss: 6.9790 idALoss: 13.9584 moeAuxL: 0.7550 Accu: 75.70
+训练耗时：76.07734441757202 s
+Test Epoch: 10
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:58.59%	Rank-5:74.61%	Rank-10:78.52%	Rank-20:83.59%	mAP: 52.08% .
+RGB->IR :   Rank-1:32.23%	Rank-5:54.10%	Rank-10:61.91%	Rank-20:67.58%	mAP: 31.52% .
+IR ->RGB:   Rank-1:31.61%	Rank-5:47.89%	Rank-10:56.70%	Rank-20:65.71%	mAP: 30.56% .
+IR ->IR :   Rank-1:49.25%	Rank-5:65.67%	Rank-10:69.96%	Rank-20:76.68%	mAP: 43.72% .
+AllModal:   Rank-1:53.82%	Rank-5:70.04%	Rank-10:74.14%	Rank-20:80.06%	mAP: 24.25% .
+测试耗时：46.99404287338257 s
+==> Preparing Data Loader...
+Epoch: [11][0/191] Time: 2.353 (2.353) lr:0.1 Loss: 3.0054 iLoss: 0.2472 TLoss: 0.5083 iLossSTA: 0.9814 TLossSTA: 0.2946 iLossGcn: 0.9740 tri1Loss: 11.6892 id1Loss: 6.9690 idALoss: 13.9530 moeAuxL: 0.7530 Accu: 81.25
+Epoch: [11][100/191] Time: 0.396 (0.405) lr:0.1 Loss: 3.8413 iLoss: 0.3698 TLoss: 0.7083 iLossSTA: 1.2273 TLossSTA: 0.5115 iLossGcn: 1.0244 tri1Loss: 11.3123 id1Loss: 6.9801 idALoss: 13.9609 moeAuxL: 0.7522 Accu: 76.58
+训练耗时：75.49070930480957 s
+==> Preparing Data Loader...
+Epoch: [12][0/191] Time: 2.379 (2.379) lr:0.1 Loss: 5.0294 iLoss: 1.1403 TLoss: 0.6034 iLossSTA: 1.6905 TLossSTA: 0.4917 iLossGcn: 1.1035 tri1Loss: 11.7440 id1Loss: 6.9883 idALoss: 13.9218 moeAuxL: 0.7425 Accu: 75.00
+Epoch: [12][100/191] Time: 0.386 (0.411) lr:0.1 Loss: 3.0753 iLoss: 0.2274 TLoss: 0.6311 iLossSTA: 0.9892 TLossSTA: 0.4155 iLossGcn: 0.8121 tri1Loss: 11.1548 id1Loss: 6.9786 idALoss: 13.9575 moeAuxL: 0.7412 Accu: 80.85
+训练耗时：76.71348094940186 s
+==> Preparing Data Loader...
+Epoch: [13][0/191] Time: 2.387 (2.387) lr:0.1 Loss: 3.6903 iLoss: 0.1979 TLoss: 0.7507 iLossSTA: 0.8347 TLossSTA: 0.6729 iLossGcn: 1.2341 tri1Loss: 11.3813 id1Loss: 6.9840 idALoss: 13.9596 moeAuxL: 0.7453 Accu: 73.44
+Epoch: [13][100/191] Time: 0.384 (0.408) lr:0.1 Loss: 3.1332 iLoss: 0.2226 TLoss: 0.6274 iLossSTA: 1.0273 TLossSTA: 0.4059 iLossGcn: 0.8500 tri1Loss: 11.1206 id1Loss: 6.9793 idALoss: 13.9585 moeAuxL: 0.7426 Accu: 81.61
+训练耗时：76.421226978302 s
+==> Preparing Data Loader...
+Epoch: [14][0/190] Time: 2.272 (2.272) lr:0.1 Loss: 2.2198 iLoss: 0.0866 TLoss: 0.5488 iLossSTA: 0.9450 TLossSTA: 0.1792 iLossGcn: 0.4603 tri1Loss: 11.2697 id1Loss: 6.9693 idALoss: 13.9560 moeAuxL: 0.7333 Accu: 87.50
+Epoch: [14][100/190] Time: 0.384 (0.409) lr:0.1 Loss: 2.5492 iLoss: 0.1626 TLoss: 0.5457 iLossSTA: 0.8408 TLossSTA: 0.3130 iLossGcn: 0.6872 tri1Loss: 10.8513 id1Loss: 6.9793 idALoss: 13.9588 moeAuxL: 0.7403 Accu: 84.64
+训练耗时：76.19962668418884 s
+==> Preparing Data Loader...
+Epoch: [15][0/192] Time: 2.137 (2.137) lr:0.1 Loss: 1.9919 iLoss: 0.0653 TLoss: 0.5334 iLossSTA: 0.5150 TLossSTA: 0.3030 iLossGcn: 0.5751 tri1Loss: 11.0272 id1Loss: 6.9765 idALoss: 13.9809 moeAuxL: 0.7382 Accu: 85.94
+Epoch: [15][100/192] Time: 0.393 (0.401) lr:0.1 Loss: 2.0470 iLoss: 0.1254 TLoss: 0.5175 iLossSTA: 0.5793 TLossSTA: 0.2732 iLossGcn: 0.5517 tri1Loss: 10.7015 id1Loss: 6.9803 idALoss: 13.9609 moeAuxL: 0.7407 Accu: 85.95
+训练耗时：76.16763806343079 s
+==> Preparing Data Loader...
+Epoch: [16][0/190] Time: 2.299 (2.299) lr:0.1 Loss: 2.2302 iLoss: 0.0724 TLoss: 0.4745 iLossSTA: 0.9277 TLossSTA: 0.2267 iLossGcn: 0.5289 tri1Loss: 10.7729 id1Loss: 6.9845 idALoss: 13.9970 moeAuxL: 0.7373 Accu: 92.19
+Epoch: [16][100/190] Time: 0.385 (0.408) lr:0.1 Loss: 1.9207 iLoss: 0.0747 TLoss: 0.5022 iLossSTA: 0.5766 TLossSTA: 0.2554 iLossGcn: 0.5118 tri1Loss: 10.4878 id1Loss: 6.9790 idALoss: 13.9625 moeAuxL: 0.7375 Accu: 87.05
+训练耗时：76.01364850997925 s
+==> Preparing Data Loader...
+Epoch: [17][0/191] Time: 2.376 (2.376) lr:0.1 Loss: 0.9121 iLoss: 0.0503 TLoss: 0.3381 iLossSTA: 0.1920 TLossSTA: 0.0412 iLossGcn: 0.2905 tri1Loss: 10.4533 id1Loss: 6.9897 idALoss: 13.9733 moeAuxL: 0.7398 Accu: 98.44
+Epoch: [17][100/191] Time: 0.390 (0.405) lr:0.1 Loss: 1.9294 iLoss: 0.0833 TLoss: 0.4909 iLossSTA: 0.5909 TLossSTA: 0.2458 iLossGcn: 0.5184 tri1Loss: 10.2428 id1Loss: 6.9801 idALoss: 13.9615 moeAuxL: 0.7418 Accu: 87.92
+训练耗时：76.3104784488678 s
+==> Preparing Data Loader...
+Epoch: [18][0/192] Time: 1.981 (1.981) lr:0.1 Loss: 1.4889 iLoss: 0.2120 TLoss: 0.2629 iLossSTA: 0.5562 TLossSTA: 0.0368 iLossGcn: 0.4211 tri1Loss: 10.2462 id1Loss: 6.9970 idALoss: 13.9974 moeAuxL: 0.7368 Accu: 89.06
+Epoch: [18][100/192] Time: 0.401 (0.407) lr:0.1 Loss: 1.7526 iLoss: 0.0964 TLoss: 0.4635 iLossSTA: 0.4958 TLossSTA: 0.2071 iLossGcn: 0.4899 tri1Loss: 10.1647 id1Loss: 6.9801 idALoss: 13.9595 moeAuxL: 0.7361 Accu: 88.23
+训练耗时：77.07967567443848 s
+==> Preparing Data Loader...
+Epoch: [19][0/191] Time: 2.093 (2.093) lr:0.1 Loss: 1.2912 iLoss: 0.0438 TLoss: 0.3143 iLossSTA: 0.3234 TLossSTA: 0.1760 iLossGcn: 0.4337 tri1Loss: 9.9186 id1Loss: 6.9615 idALoss: 13.9659 moeAuxL: 0.7365 Accu: 95.31
+Epoch: [19][100/191] Time: 0.395 (0.399) lr:0.1 Loss: 1.6924 iLoss: 0.1271 TLoss: 0.4174 iLossSTA: 0.4727 TLossSTA: 0.1764 iLossGcn: 0.4987 tri1Loss: 9.9353 id1Loss: 6.9785 idALoss: 13.9630 moeAuxL: 0.7385 Accu: 89.40
+训练耗时：75.51475238800049 s
+==> Preparing Data Loader...
+Epoch: [20][0/191] Time: 2.342 (2.342) lr:0.1 Loss: 1.1799 iLoss: 0.1749 TLoss: 0.2663 iLossSTA: 0.1468 TLossSTA: 0.0456 iLossGcn: 0.5462 tri1Loss: 9.9461 id1Loss: 6.9828 idALoss: 13.9327 moeAuxL: 0.7388 Accu: 96.88
+Epoch: [20][100/191] Time: 0.384 (0.404) lr:0.1 Loss: 1.4805 iLoss: 0.1064 TLoss: 0.3986 iLossSTA: 0.3975 TLossSTA: 0.1452 iLossGcn: 0.4328 tri1Loss: 9.6819 id1Loss: 6.9791 idALoss: 13.9615 moeAuxL: 0.7417 Accu: 90.18
+训练耗时：75.91749835014343 s
+Test Epoch: 20
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:66.80%	Rank-5:83.20%	Rank-10:86.91%	Rank-20:90.62%	mAP: 60.72% .
+RGB->IR :   Rank-1:47.46%	Rank-5:68.55%	Rank-10:74.80%	Rank-20:80.86%	mAP: 44.35% .
+IR ->RGB:   Rank-1:43.68%	Rank-5:64.94%	Rank-10:71.07%	Rank-20:78.93%	mAP: 42.63% .
+IR ->IR :   Rank-1:61.19%	Rank-5:77.43%	Rank-10:80.78%	Rank-20:85.07%	mAP: 55.85% .
+AllModal:   Rank-1:63.93%	Rank-5:80.25%	Rank-10:83.78%	Rank-20:87.79%	mAP: 29.64% .
+测试耗时：45.025688886642456 s
+==> Preparing Data Loader...
+Epoch: [21][0/191] Time: 2.391 (2.391) lr:0.1 Loss: 1.0996 iLoss: 0.0467 TLoss: 0.4301 iLossSTA: 0.1802 TLossSTA: 0.2156 iLossGcn: 0.2270 tri1Loss: 10.1117 id1Loss: 6.9673 idALoss: 13.9511 moeAuxL: 0.7376 Accu: 89.06
+Epoch: [21][100/191] Time: 0.379 (0.407) lr:0.1 Loss: 1.6078 iLoss: 0.1487 TLoss: 0.4067 iLossSTA: 0.4420 TLossSTA: 0.1426 iLossGcn: 0.4678 tri1Loss: 9.6919 id1Loss: 6.9788 idALoss: 13.9614 moeAuxL: 0.7416 Accu: 89.05
+训练耗时：75.25797963142395 s
+==> Preparing Data Loader...
+Epoch: [22][0/190] Time: 1.934 (1.934) lr:0.1 Loss: 1.5864 iLoss: 0.2644 TLoss: 0.3465 iLossSTA: 0.5366 TLossSTA: 0.0249 iLossGcn: 0.4140 tri1Loss: 9.7323 id1Loss: 6.9834 idALoss: 13.9621 moeAuxL: 0.7469 Accu: 85.94
+Epoch: [22][100/190] Time: 0.380 (0.397) lr:0.1 Loss: 1.6073 iLoss: 0.1780 TLoss: 0.3830 iLossSTA: 0.4332 TLossSTA: 0.1372 iLossGcn: 0.4759 tri1Loss: 9.5860 id1Loss: 6.9802 idALoss: 13.9596 moeAuxL: 0.7359 Accu: 89.85
+训练耗时：74.1785159111023 s
+==> Preparing Data Loader...
+Epoch: [23][0/192] Time: 2.099 (2.099) lr:0.1 Loss: 1.1347 iLoss: 0.0309 TLoss: 0.4346 iLossSTA: 0.2747 TLossSTA: 0.1253 iLossGcn: 0.2692 tri1Loss: 9.7344 id1Loss: 6.9796 idALoss: 13.9467 moeAuxL: 0.7394 Accu: 92.19
+Epoch: [23][100/192] Time: 0.383 (0.400) lr:0.1 Loss: 1.4819 iLoss: 0.1117 TLoss: 0.3826 iLossSTA: 0.4124 TLossSTA: 0.1416 iLossGcn: 0.4336 tri1Loss: 9.6007 id1Loss: 6.9793 idALoss: 13.9590 moeAuxL: 0.7397 Accu: 90.75
+训练耗时：75.41356110572815 s
+==> Preparing Data Loader...
+Epoch: [24][0/190] Time: 2.336 (2.336) lr:0.1 Loss: 1.0203 iLoss: 0.0441 TLoss: 0.3949 iLossSTA: 0.2974 TLossSTA: 0.0479 iLossGcn: 0.2360 tri1Loss: 9.4520 id1Loss: 6.9699 idALoss: 13.9434 moeAuxL: 0.7324 Accu: 89.06
+Epoch: [24][100/190] Time: 0.386 (0.405) lr:0.1 Loss: 1.5157 iLoss: 0.1098 TLoss: 0.3894 iLossSTA: 0.4825 TLossSTA: 0.1410 iLossGcn: 0.3929 tri1Loss: 9.2607 id1Loss: 6.9789 idALoss: 13.9606 moeAuxL: 0.7274 Accu: 89.76
+训练耗时：75.39914035797119 s
+==> Preparing Data Loader...
+Epoch: [25][0/191] Time: 2.270 (2.270) lr:0.1 Loss: 0.3209 iLoss: 0.0086 TLoss: 0.0929 iLossSTA: 0.1074 TLossSTA: 0.0000 iLossGcn: 0.1120 tri1Loss: 8.9136 id1Loss: 6.9723 idALoss: 13.9382 moeAuxL: 0.7204 Accu: 100.00
+Epoch: [25][100/191] Time: 0.382 (0.403) lr:0.1 Loss: 1.4595 iLoss: 0.0813 TLoss: 0.4000 iLossSTA: 0.4599 TLossSTA: 0.1194 iLossGcn: 0.3988 tri1Loss: 9.2575 id1Loss: 6.9796 idALoss: 13.9614 moeAuxL: 0.7234 Accu: 89.73
+训练耗时：75.37858295440674 s
+==> Preparing Data Loader...
+Epoch: [26][0/191] Time: 2.400 (2.400) lr:0.1 Loss: 1.1891 iLoss: 0.0286 TLoss: 0.2814 iLossSTA: 0.6285 TLossSTA: 0.0838 iLossGcn: 0.1669 tri1Loss: 9.0962 id1Loss: 6.9875 idALoss: 13.9719 moeAuxL: 0.7250 Accu: 96.88
+Epoch: [26][100/191] Time: 0.386 (0.410) lr:0.1 Loss: 1.5898 iLoss: 0.1202 TLoss: 0.3734 iLossSTA: 0.5098 TLossSTA: 0.1303 iLossGcn: 0.4561 tri1Loss: 9.0224 id1Loss: 6.9801 idALoss: 13.9613 moeAuxL: 0.7255 Accu: 90.87
+训练耗时：76.30207371711731 s
+==> Preparing Data Loader...
+Epoch: [27][0/191] Time: 1.981 (1.981) lr:0.1 Loss: 1.6372 iLoss: 0.1270 TLoss: 0.5805 iLossSTA: 0.2085 TLossSTA: 0.1284 iLossGcn: 0.5927 tri1Loss: 8.9232 id1Loss: 6.9823 idALoss: 13.9794 moeAuxL: 0.7275 Accu: 82.81
+Epoch: [27][100/191] Time: 0.386 (0.401) lr:0.1 Loss: 1.4201 iLoss: 0.1033 TLoss: 0.3453 iLossSTA: 0.4387 TLossSTA: 0.1117 iLossGcn: 0.4212 tri1Loss: 8.8602 id1Loss: 6.9794 idALoss: 13.9638 moeAuxL: 0.7231 Accu: 91.34
+训练耗时：75.30609178543091 s
+==> Preparing Data Loader...
+Epoch: [28][0/191] Time: 2.271 (2.271) lr:0.1 Loss: 0.7351 iLoss: 0.0446 TLoss: 0.3026 iLossSTA: 0.2545 TLossSTA: 0.0000 iLossGcn: 0.1333 tri1Loss: 8.8444 id1Loss: 6.9725 idALoss: 13.9298 moeAuxL: 0.7246 Accu: 93.75
+Epoch: [28][100/191] Time: 0.388 (0.401) lr:0.1 Loss: 1.1900 iLoss: 0.1296 TLoss: 0.3178 iLossSTA: 0.3265 TLossSTA: 0.0808 iLossGcn: 0.3353 tri1Loss: 8.7896 id1Loss: 6.9787 idALoss: 13.9594 moeAuxL: 0.7242 Accu: 92.34
+训练耗时：74.90593075752258 s
+==> Preparing Data Loader...
+Epoch: [29][0/191] Time: 1.885 (1.885) lr:0.1 Loss: 0.7747 iLoss: 0.0411 TLoss: 0.2059 iLossSTA: 0.2028 TLossSTA: 0.0505 iLossGcn: 0.2745 tri1Loss: 8.5839 id1Loss: 6.9669 idALoss: 14.0136 moeAuxL: 0.7246 Accu: 96.88
+Epoch: [29][100/191] Time: 0.393 (0.401) lr:0.1 Loss: 1.2086 iLoss: 0.1448 TLoss: 0.3369 iLossSTA: 0.3038 TLossSTA: 0.0713 iLossGcn: 0.3518 tri1Loss: 8.6852 id1Loss: 6.9794 idALoss: 13.9588 moeAuxL: 0.7257 Accu: 91.79
+训练耗时：74.93833518028259 s
+==> Preparing Data Loader...
+Epoch: [30][0/191] Time: 2.055 (2.055) lr:0.1 Loss: 0.9810 iLoss: 0.0750 TLoss: 0.2807 iLossSTA: 0.2280 TLossSTA: 0.0235 iLossGcn: 0.3739 tri1Loss: 8.6028 id1Loss: 6.9698 idALoss: 13.9707 moeAuxL: 0.7235 Accu: 93.75
+Epoch: [30][100/191] Time: 0.380 (0.402) lr:0.1 Loss: 1.0797 iLoss: 0.0595 TLoss: 0.3024 iLossSTA: 0.3207 TLossSTA: 0.0649 iLossGcn: 0.3322 tri1Loss: 8.5899 id1Loss: 6.9787 idALoss: 13.9646 moeAuxL: 0.7217 Accu: 92.90
+训练耗时：75.25588703155518 s
+Test Epoch: 30
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:70.51%	Rank-5:86.33%	Rank-10:88.48%	Rank-20:91.21%	mAP: 64.97% .
+RGB->IR :   Rank-1:51.76%	Rank-5:72.66%	Rank-10:78.12%	Rank-20:82.42%	mAP: 47.89% .
+IR ->RGB:   Rank-1:48.85%	Rank-5:68.20%	Rank-10:74.90%	Rank-20:81.99%	mAP: 48.04% .
+IR ->IR :   Rank-1:68.10%	Rank-5:83.02%	Rank-10:87.50%	Rank-20:89.55%	mAP: 63.18% .
+AllModal:   Rank-1:69.27%	Rank-5:84.64%	Rank-10:87.98%	Rank-20:90.36%	mAP: 32.82% .
+测试耗时：45.82469654083252 s
+==> Preparing Data Loader...
+Epoch: [31][0/191] Time: 2.380 (2.380) lr:0.1 Loss: 4.2780 iLoss: 0.0661 TLoss: 0.3539 iLossSTA: 2.9918 TLossSTA: 0.1416 iLossGcn: 0.7246 tri1Loss: 8.7772 id1Loss: 6.9798 idALoss: 13.9920 moeAuxL: 0.7196 Accu: 92.19
+Epoch: [31][100/191] Time: 0.393 (0.407) lr:0.1 Loss: 1.2275 iLoss: 0.1183 TLoss: 0.2813 iLossSTA: 0.3735 TLossSTA: 0.0630 iLossGcn: 0.3913 tri1Loss: 8.4241 id1Loss: 6.9796 idALoss: 13.9611 moeAuxL: 0.7191 Accu: 93.44
+训练耗时：76.70216798782349 s
+==> Preparing Data Loader...
+Epoch: [32][0/192] Time: 1.955 (1.955) lr:0.1 Loss: 0.7210 iLoss: 0.0348 TLoss: 0.2895 iLossSTA: 0.1227 TLossSTA: 0.0190 iLossGcn: 0.2550 tri1Loss: 8.6582 id1Loss: 6.9797 idALoss: 13.9227 moeAuxL: 0.7134 Accu: 95.31
+Epoch: [32][100/192] Time: 0.396 (0.409) lr:0.1 Loss: 0.9843 iLoss: 0.0818 TLoss: 0.2607 iLossSTA: 0.2855 TLossSTA: 0.0470 iLossGcn: 0.3094 tri1Loss: 8.4028 id1Loss: 6.9791 idALoss: 13.9574 moeAuxL: 0.7194 Accu: 94.37
+训练耗时：77.09410572052002 s
+==> Preparing Data Loader...
+Epoch: [33][0/192] Time: 2.162 (2.162) lr:0.1 Loss: 2.6493 iLoss: 0.7820 TLoss: 0.2714 iLossSTA: 1.0355 TLossSTA: 0.0000 iLossGcn: 0.5604 tri1Loss: 8.5361 id1Loss: 6.9736 idALoss: 13.9781 moeAuxL: 0.7135 Accu: 87.50
+Epoch: [33][100/192] Time: 0.384 (0.405) lr:0.1 Loss: 1.2922 iLoss: 0.1717 TLoss: 0.2947 iLossSTA: 0.3760 TLossSTA: 0.0679 iLossGcn: 0.3818 tri1Loss: 8.3956 id1Loss: 6.9776 idALoss: 13.9602 moeAuxL: 0.7176 Accu: 92.59
+训练耗时：76.18698859214783 s
+==> Preparing Data Loader...
+Epoch: [34][0/191] Time: 2.363 (2.363) lr:0.1 Loss: 0.9296 iLoss: 0.4270 TLoss: 0.2178 iLossSTA: 0.0392 TLossSTA: 0.0000 iLossGcn: 0.2456 tri1Loss: 7.8231 id1Loss: 6.9787 idALoss: 13.9340 moeAuxL: 0.7185 Accu: 92.19
+Epoch: [34][100/191] Time: 0.398 (0.416) lr:0.1 Loss: 0.9045 iLoss: 0.1117 TLoss: 0.2573 iLossSTA: 0.2052 TLossSTA: 0.0362 iLossGcn: 0.2942 tri1Loss: 8.0950 id1Loss: 6.9797 idALoss: 13.9609 moeAuxL: 0.7156 Accu: 93.70
+训练耗时：77.78767442703247 s
+==> Preparing Data Loader...
+Epoch: [35][0/192] Time: 1.964 (1.964) lr:0.010000000000000002 Loss: 0.7195 iLoss: 0.0440 TLoss: 0.3446 iLossSTA: 0.0816 TLossSTA: 0.0380 iLossGcn: 0.2114 tri1Loss: 8.2886 id1Loss: 6.9770 idALoss: 13.9976 moeAuxL: 0.7173 Accu: 92.19
+Epoch: [35][100/192] Time: 0.408 (0.408) lr:0.010000000000000002 Loss: 0.6657 iLoss: 0.0538 TLoss: 0.2230 iLossSTA: 0.1495 TLossSTA: 0.0241 iLossGcn: 0.2153 tri1Loss: 7.9613 id1Loss: 6.9791 idALoss: 13.9614 moeAuxL: 0.7156 Accu: 94.94
+训练耗时：77.44934439659119 s
+==> Preparing Data Loader...
+Epoch: [36][0/191] Time: 2.615 (2.615) lr:0.010000000000000002 Loss: 29.5884 iLoss: 0.0124 TLoss: 0.1291 iLossSTA: 0.0185 TLossSTA: 0.0000 iLossGcn: 0.0694 tri1Loss: 7.7270 id1Loss: 6.9727 idALoss: 13.9449 moeAuxL: 0.7144 Accu: 100.00
+Epoch: [36][100/191] Time: 0.417 (0.447) lr:0.010000000000000002 Loss: 22.6269 iLoss: 0.0261 TLoss: 0.1819 iLossSTA: 0.0513 TLossSTA: 0.0081 iLossGcn: 0.1571 tri1Loss: 0.5213 id1Loss: 6.8285 idALoss: 13.8584 moeAuxL: 0.9941 Accu: 96.60
+训练耗时：83.28298115730286 s
+==> Preparing Data Loader...
+Epoch: [37][0/192] Time: 2.257 (2.257) lr:0.010000000000000002 Loss: 6.7983 iLoss: 0.0250 TLoss: 0.1279 iLossSTA: 0.0387 TLossSTA: 0.0000 iLossGcn: 0.1438 tri1Loss: 0.1884 id1Loss: 0.9738 idALoss: 4.3008 moeAuxL: 1.0000 Accu: 98.44
+Epoch: [37][100/192] Time: 0.416 (0.432) lr:0.010000000000000002 Loss: 6.4919 iLoss: 0.0347 TLoss: 0.1988 iLossSTA: 0.0487 TLossSTA: 0.0151 iLossGcn: 0.1554 tri1Loss: 0.2352 id1Loss: 1.0168 idALoss: 3.7871 moeAuxL: 1.0000 Accu: 96.10
+训练耗时：81.62397861480713 s
+==> Preparing Data Loader...
+Epoch: [38][0/191] Time: 2.097 (2.097) lr:0.010000000000000002 Loss: 3.5309 iLoss: 0.0384 TLoss: 0.1395 iLossSTA: 0.0930 TLossSTA: 0.0074 iLossGcn: 0.1841 tri1Loss: 0.1696 id1Loss: 0.3863 idALoss: 1.5125 moeAuxL: 1.0000 Accu: 96.88
+Epoch: [38][100/191] Time: 0.419 (0.431) lr:0.010000000000000002 Loss: 2.2142 iLoss: 0.0254 TLoss: 0.1461 iLossSTA: 0.0285 TLossSTA: 0.0072 iLossGcn: 0.1446 tri1Loss: 0.1609 id1Loss: 0.1580 idALoss: 0.5437 moeAuxL: 0.9999 Accu: 97.45
+训练耗时：81.157719373703 s
+==> Preparing Data Loader...
+Epoch: [39][0/192] Time: 2.165 (2.165) lr:0.010000000000000002 Loss: 1.2090 iLoss: 0.0161 TLoss: 0.0155 iLossSTA: 0.0085 TLossSTA: 0.0000 iLossGcn: 0.1022 tri1Loss: 0.0234 id1Loss: 0.0258 idALoss: 0.0190 moeAuxL: 0.9987 Accu: 100.00
+Epoch: [39][100/192] Time: 0.412 (0.432) lr:0.010000000000000002 Loss: 1.7157 iLoss: 0.0230 TLoss: 0.1343 iLossSTA: 0.0242 TLossSTA: 0.0077 iLossGcn: 0.1369 tri1Loss: 0.1371 id1Loss: 0.0682 idALoss: 0.1908 moeAuxL: 0.9937 Accu: 97.37
+训练耗时：81.52325987815857 s
+==> Preparing Data Loader...
+Epoch: [40][0/191] Time: 2.239 (2.239) lr:0.010000000000000002 Loss: 1.2592 iLoss: 0.0102 TLoss: 0.0625 iLossSTA: 0.0082 TLossSTA: 0.0000 iLossGcn: 0.0702 tri1Loss: 0.0474 id1Loss: 0.0265 idALoss: 0.0375 moeAuxL: 0.9968 Accu: 98.44
+Epoch: [40][100/191] Time: 0.439 (0.458) lr:0.010000000000000002 Loss: 1.6321 iLoss: 0.0217 TLoss: 0.1184 iLossSTA: 0.0217 TLossSTA: 0.0060 iLossGcn: 0.1271 tri1Loss: 0.1160 id1Loss: 0.0565 idALoss: 0.1686 moeAuxL: 0.9962 Accu: 97.88
+训练耗时：85.20305013656616 s
+Test Epoch: 40
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:79.10%	Rank-5:91.99%	Rank-10:93.75%	Rank-20:94.92%	mAP: 72.22% .
+RGB->IR :   Rank-1:65.62%	Rank-5:80.86%	Rank-10:85.55%	Rank-20:89.45%	mAP: 59.42% .
+IR ->RGB:   Rank-1:63.03%	Rank-5:82.57%	Rank-10:86.21%	Rank-20:88.51%	mAP: 60.10% .
+IR ->IR :   Rank-1:73.88%	Rank-5:86.75%	Rank-10:90.11%	Rank-20:92.16%	mAP: 69.06% .
+AllModal:   Rank-1:76.24%	Rank-5:87.98%	Rank-10:91.32%	Rank-20:93.32%	mAP: 61.65% .
+测试耗时：51.329657793045044 s
+==> Preparing Data Loader...
+Epoch: [41][0/190] Time: 2.383 (2.383) lr:0.010000000000000002 Loss: 1.8838 iLoss: 0.0380 TLoss: 0.2184 iLossSTA: 0.0328 TLossSTA: 0.0168 iLossGcn: 0.2011 tri1Loss: 0.1988 id1Loss: 0.1156 idALoss: 0.0623 moeAuxL: 1.0000 Accu: 95.31
+Epoch: [41][100/190] Time: 0.412 (0.434) lr:0.010000000000000002 Loss: 1.4773 iLoss: 0.0219 TLoss: 0.1045 iLossSTA: 0.0216 TLossSTA: 0.0070 iLossGcn: 0.1279 tri1Loss: 0.0958 id1Loss: 0.0342 idALoss: 0.0644 moeAuxL: 1.0000 Accu: 97.91
+训练耗时：80.54233479499817 s
+==> Preparing Data Loader...
+Epoch: [42][0/192] Time: 2.156 (2.156) lr:0.010000000000000002 Loss: 1.2973 iLoss: 0.0235 TLoss: 0.0270 iLossSTA: 0.0574 TLossSTA: 0.0000 iLossGcn: 0.1210 tri1Loss: 0.0199 id1Loss: 0.0331 idALoss: 0.0154 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [42][100/192] Time: 0.489 (0.450) lr:0.010000000000000002 Loss: 1.4547 iLoss: 0.0244 TLoss: 0.1004 iLossSTA: 0.0212 TLossSTA: 0.0055 iLossGcn: 0.1313 tri1Loss: 0.0880 id1Loss: 0.0373 idALoss: 0.0465 moeAuxL: 1.0000 Accu: 98.22
+训练耗时：87.32621645927429 s
+==> Preparing Data Loader...
+Epoch: [43][0/191] Time: 2.383 (2.383) lr:0.010000000000000002 Loss: 1.4970 iLoss: 0.0295 TLoss: 0.0873 iLossSTA: 0.0223 TLossSTA: 0.0000 iLossGcn: 0.2331 tri1Loss: 0.0766 id1Loss: 0.0336 idALoss: 0.0146 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [43][100/191] Time: 0.447 (0.472) lr:0.010000000000000002 Loss: 1.4098 iLoss: 0.0218 TLoss: 0.0960 iLossSTA: 0.0206 TLossSTA: 0.0041 iLossGcn: 0.1213 tri1Loss: 0.0790 id1Loss: 0.0304 idALoss: 0.0366 moeAuxL: 1.0000 Accu: 98.41
+训练耗时：89.52757000923157 s
+==> Preparing Data Loader...
+Epoch: [44][0/191] Time: 2.335 (2.335) lr:0.010000000000000002 Loss: 1.4434 iLoss: 0.0419 TLoss: 0.0799 iLossSTA: 0.0667 TLossSTA: 0.0000 iLossGcn: 0.1312 tri1Loss: 0.0649 id1Loss: 0.0399 idALoss: 0.0189 moeAuxL: 1.0000 Accu: 98.44
+Epoch: [44][100/191] Time: 0.475 (0.488) lr:0.010000000000000002 Loss: 1.3768 iLoss: 0.0238 TLoss: 0.0888 iLossSTA: 0.0199 TLossSTA: 0.0038 iLossGcn: 0.1227 tri1Loss: 0.0687 id1Loss: 0.0257 idALoss: 0.0233 moeAuxL: 1.0000 Accu: 98.51
+训练耗时：91.25211119651794 s
+==> Preparing Data Loader...
+Epoch: [45][0/191] Time: 2.660 (2.660) lr:0.010000000000000002 Loss: 1.2412 iLoss: 0.0152 TLoss: 0.0847 iLossSTA: 0.0197 TLossSTA: 0.0000 iLossGcn: 0.0572 tri1Loss: 0.0395 id1Loss: 0.0145 idALoss: 0.0104 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [45][100/191] Time: 0.450 (0.475) lr:0.010000000000000002 Loss: 1.3849 iLoss: 0.0235 TLoss: 0.1040 iLossSTA: 0.0193 TLossSTA: 0.0034 iLossGcn: 0.1188 tri1Loss: 0.0757 id1Loss: 0.0243 idALoss: 0.0159 moeAuxL: 1.0000 Accu: 97.97
+训练耗时：88.28495049476624 s
+==> Preparing Data Loader...
+Epoch: [46][0/190] Time: 2.250 (2.250) lr:0.010000000000000002 Loss: 1.3625 iLoss: 0.0192 TLoss: 0.1460 iLossSTA: 0.0083 TLossSTA: 0.0000 iLossGcn: 0.0579 tri1Loss: 0.0978 id1Loss: 0.0221 idALoss: 0.0113 moeAuxL: 1.0000 Accu: 93.75
+Epoch: [46][100/190] Time: 0.445 (0.453) lr:0.010000000000000002 Loss: 1.3481 iLoss: 0.0250 TLoss: 0.0827 iLossSTA: 0.0195 TLossSTA: 0.0032 iLossGcn: 0.1172 tri1Loss: 0.0531 id1Loss: 0.0276 idALoss: 0.0199 moeAuxL: 1.0000 Accu: 98.62
+训练耗时：83.89779090881348 s
+==> Preparing Data Loader...
+Epoch: [47][0/190] Time: 2.274 (2.274) lr:0.010000000000000002 Loss: 1.5201 iLoss: 0.0392 TLoss: 0.1804 iLossSTA: 0.0195 TLossSTA: 0.0000 iLossGcn: 0.1164 tri1Loss: 0.1134 id1Loss: 0.0294 idALoss: 0.0218 moeAuxL: 0.9999 Accu: 98.44
+Epoch: [47][100/190] Time: 0.465 (0.473) lr:0.010000000000000002 Loss: 1.3539 iLoss: 0.0282 TLoss: 0.0818 iLossSTA: 0.0198 TLossSTA: 0.0031 iLossGcn: 0.1277 tri1Loss: 0.0487 id1Loss: 0.0253 idALoss: 0.0194 moeAuxL: 0.9999 Accu: 98.69
+训练耗时：88.13042616844177 s
+==> Preparing Data Loader...
+Epoch: [48][0/191] Time: 2.088 (2.088) lr:0.010000000000000002 Loss: 1.2026 iLoss: 0.0397 TLoss: 0.0025 iLossSTA: 0.0147 TLossSTA: 0.0000 iLossGcn: 0.1081 tri1Loss: 0.0000 id1Loss: 0.0260 idALoss: 0.0119 moeAuxL: 0.9998 Accu: 100.00
+Epoch: [48][100/191] Time: 0.471 (0.467) lr:0.010000000000000002 Loss: 1.3531 iLoss: 0.0253 TLoss: 0.0790 iLossSTA: 0.0206 TLossSTA: 0.0044 iLossGcn: 0.1298 tri1Loss: 0.0465 id1Loss: 0.0271 idALoss: 0.0229 moeAuxL: 0.9976 Accu: 98.59
+训练耗时：87.11608004570007 s
+==> Preparing Data Loader...
+Epoch: [49][0/192] Time: 2.653 (2.653) lr:0.010000000000000002 Loss: 1.2402 iLoss: 0.0293 TLoss: 0.0477 iLossSTA: 0.0163 TLossSTA: 0.0000 iLossGcn: 0.0936 tri1Loss: 0.0127 id1Loss: 0.0230 idALoss: 0.0177 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [49][100/192] Time: 0.407 (0.459) lr:0.010000000000000002 Loss: 1.3288 iLoss: 0.0263 TLoss: 0.0757 iLossSTA: 0.0192 TLossSTA: 0.0034 iLossGcn: 0.1197 tri1Loss: 0.0417 id1Loss: 0.0241 idALoss: 0.0187 moeAuxL: 1.0000 Accu: 98.82
+训练耗时：83.5618257522583 s
+==> Preparing Data Loader...
+Epoch: [50][0/191] Time: 2.562 (2.562) lr:0.010000000000000002 Loss: 1.1989 iLoss: 0.0239 TLoss: 0.0046 iLossSTA: 0.0152 TLossSTA: 0.0000 iLossGcn: 0.1005 tri1Loss: 0.0000 id1Loss: 0.0320 idALoss: 0.0228 moeAuxL: 0.9999 Accu: 100.00
+Epoch: [50][100/191] Time: 0.415 (0.437) lr:0.010000000000000002 Loss: 1.3287 iLoss: 0.0284 TLoss: 0.0707 iLossSTA: 0.0239 TLossSTA: 0.0022 iLossGcn: 0.1245 tri1Loss: 0.0343 id1Loss: 0.0271 idALoss: 0.0178 moeAuxL: 0.9999 Accu: 98.87
+训练耗时：81.8227789402008 s
+Test Epoch: 50
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:79.69%	Rank-5:91.60%	Rank-10:93.55%	Rank-20:94.92%	mAP: 73.88% .
+RGB->IR :   Rank-1:65.62%	Rank-5:82.62%	Rank-10:86.72%	Rank-20:89.65%	mAP: 60.22% .
+IR ->RGB:   Rank-1:66.09%	Rank-5:83.33%	Rank-10:86.78%	Rank-20:90.23%	mAP: 62.96% .
+IR ->IR :   Rank-1:74.44%	Rank-5:87.31%	Rank-10:90.11%	Rank-20:92.16%	mAP: 70.29% .
+AllModal:   Rank-1:77.10%	Rank-5:88.36%	Rank-10:91.22%	Rank-20:92.94%	mAP: 63.82% .
+测试耗时：42.52999019622803 s
+==> Preparing Data Loader...
+Epoch: [51][0/191] Time: 2.250 (2.250) lr:0.010000000000000002 Loss: 1.2089 iLoss: 0.0326 TLoss: 0.0448 iLossSTA: 0.0103 TLossSTA: 0.0000 iLossGcn: 0.0849 tri1Loss: 0.0102 id1Loss: 0.0173 idALoss: 0.0091 moeAuxL: 0.9998 Accu: 100.00
+Epoch: [51][100/191] Time: 0.408 (0.423) lr:0.010000000000000002 Loss: 1.3267 iLoss: 0.0289 TLoss: 0.0721 iLossSTA: 0.0222 TLossSTA: 0.0028 iLossGcn: 0.1213 tri1Loss: 0.0354 id1Loss: 0.0271 idALoss: 0.0172 moeAuxL: 0.9996 Accu: 98.78
+训练耗时：79.145179271698 s
+==> Preparing Data Loader...
+Epoch: [52][0/192] Time: 2.445 (2.445) lr:0.010000000000000002 Loss: 1.3555 iLoss: 0.0252 TLoss: 0.0539 iLossSTA: 0.0544 TLossSTA: 0.0000 iLossGcn: 0.1809 tri1Loss: 0.0059 id1Loss: 0.0212 idALoss: 0.0143 moeAuxL: 0.9997 Accu: 100.00
+Epoch: [52][100/192] Time: 0.411 (0.422) lr:0.010000000000000002 Loss: 1.3233 iLoss: 0.0297 TLoss: 0.0654 iLossSTA: 0.0230 TLossSTA: 0.0019 iLossGcn: 0.1311 tri1Loss: 0.0276 id1Loss: 0.0286 idALoss: 0.0174 moeAuxL: 0.9986 Accu: 99.04
+训练耗时：79.59592080116272 s
+==> Preparing Data Loader...
+Epoch: [53][0/190] Time: 2.387 (2.387) lr:0.010000000000000002 Loss: 1.3769 iLoss: 0.0248 TLoss: 0.1202 iLossSTA: 0.0243 TLossSTA: 0.0000 iLossGcn: 0.0894 tri1Loss: 0.0679 id1Loss: 0.0315 idALoss: 0.0188 moeAuxL: 1.0000 Accu: 95.31
+Epoch: [53][100/190] Time: 0.413 (0.424) lr:0.010000000000000002 Loss: 1.3233 iLoss: 0.0315 TLoss: 0.0704 iLossSTA: 0.0233 TLossSTA: 0.0028 iLossGcn: 0.1219 tri1Loss: 0.0281 id1Loss: 0.0283 idALoss: 0.0169 moeAuxL: 1.0000 Accu: 98.84
+训练耗时：80.06054472923279 s
+==> Preparing Data Loader...
+Epoch: [54][0/190] Time: 2.498 (2.498) lr:0.010000000000000002 Loss: 1.2479 iLoss: 0.0272 TLoss: 0.0303 iLossSTA: 0.0150 TLossSTA: 0.0000 iLossGcn: 0.1459 tri1Loss: 0.0086 id1Loss: 0.0138 idALoss: 0.0071 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [54][100/190] Time: 0.409 (0.427) lr:0.010000000000000002 Loss: 1.3077 iLoss: 0.0313 TLoss: 0.0637 iLossSTA: 0.0229 TLossSTA: 0.0010 iLossGcn: 0.1242 tri1Loss: 0.0215 id1Loss: 0.0268 idALoss: 0.0162 moeAuxL: 1.0000 Accu: 99.07
+训练耗时：79.33064842224121 s
+==> Preparing Data Loader...
+Epoch: [55][0/191] Time: 2.377 (2.377) lr:0.010000000000000002 Loss: 1.2572 iLoss: 0.0326 TLoss: 0.0114 iLossSTA: 0.0360 TLossSTA: 0.0000 iLossGcn: 0.1300 tri1Loss: 0.0000 id1Loss: 0.0305 idALoss: 0.0167 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [55][100/191] Time: 0.405 (0.424) lr:0.010000000000000002 Loss: 1.3207 iLoss: 0.0305 TLoss: 0.0697 iLossSTA: 0.0217 TLossSTA: 0.0028 iLossGcn: 0.1232 tri1Loss: 0.0300 id1Loss: 0.0266 idALoss: 0.0160 moeAuxL: 1.0000 Accu: 98.93
+训练耗时：79.63695645332336 s
+==> Preparing Data Loader...
+Epoch: [56][0/191] Time: 2.643 (2.643) lr:0.010000000000000002 Loss: 1.4855 iLoss: 0.0567 TLoss: 0.1021 iLossSTA: 0.0233 TLossSTA: 0.0000 iLossGcn: 0.1793 tri1Loss: 0.0690 id1Loss: 0.0376 idALoss: 0.0175 moeAuxL: 1.0000 Accu: 98.44
+Epoch: [56][100/191] Time: 0.415 (0.436) lr:0.010000000000000002 Loss: 1.2707 iLoss: 0.0295 TLoss: 0.0470 iLossSTA: 0.0222 TLossSTA: 0.0024 iLossGcn: 0.1147 tri1Loss: 0.0160 id1Loss: 0.0244 idALoss: 0.0145 moeAuxL: 1.0000 Accu: 99.47
+训练耗时：81.60350322723389 s
+==> Preparing Data Loader...
+Epoch: [57][0/190] Time: 2.327 (2.327) lr:0.010000000000000002 Loss: 1.1774 iLoss: 0.0286 TLoss: 0.0039 iLossSTA: 0.0155 TLossSTA: 0.0000 iLossGcn: 0.0902 tri1Loss: 0.0000 id1Loss: 0.0221 idALoss: 0.0171 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [57][100/190] Time: 0.400 (0.424) lr:0.010000000000000002 Loss: 1.3153 iLoss: 0.0323 TLoss: 0.0657 iLossSTA: 0.0237 TLossSTA: 0.0035 iLossGcn: 0.1222 tri1Loss: 0.0207 id1Loss: 0.0264 idALoss: 0.0209 moeAuxL: 1.0000 Accu: 99.03
+训练耗时：78.87096118927002 s
+==> Preparing Data Loader...
+Epoch: [58][0/190] Time: 2.108 (2.108) lr:0.010000000000000002 Loss: 1.2011 iLoss: 0.0195 TLoss: 0.0253 iLossSTA: 0.0140 TLossSTA: 0.0000 iLossGcn: 0.1113 tri1Loss: 0.0000 id1Loss: 0.0189 idALoss: 0.0120 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [58][100/190] Time: 0.409 (0.418) lr:0.010000000000000002 Loss: 1.2923 iLoss: 0.0324 TLoss: 0.0527 iLossSTA: 0.0249 TLossSTA: 0.0013 iLossGcn: 0.1180 tri1Loss: 0.0175 id1Loss: 0.0263 idALoss: 0.0193 moeAuxL: 1.0000 Accu: 99.21
+训练耗时：78.02687740325928 s
+==> Preparing Data Loader...
+Epoch: [59][0/192] Time: 2.233 (2.233) lr:0.010000000000000002 Loss: 1.3013 iLoss: 0.0523 TLoss: 0.0467 iLossSTA: 0.0305 TLossSTA: 0.0000 iLossGcn: 0.0814 tri1Loss: 0.0151 id1Loss: 0.0410 idALoss: 0.0344 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [59][100/192] Time: 0.416 (0.430) lr:0.010000000000000002 Loss: 1.3160 iLoss: 0.0335 TLoss: 0.0644 iLossSTA: 0.0264 TLossSTA: 0.0027 iLossGcn: 0.1143 tri1Loss: 0.0234 id1Loss: 0.0261 idALoss: 0.0251 moeAuxL: 1.0000 Accu: 98.95
+训练耗时：81.22087621688843 s
+==> Preparing Data Loader...
+Epoch: [60][0/191] Time: 2.341 (2.341) lr:0.010000000000000002 Loss: 1.2042 iLoss: 0.0473 TLoss: 0.0000 iLossSTA: 0.0284 TLossSTA: 0.0000 iLossGcn: 0.0828 tri1Loss: 0.0000 id1Loss: 0.0265 idALoss: 0.0193 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [60][100/191] Time: 0.402 (0.425) lr:0.010000000000000002 Loss: 1.2824 iLoss: 0.0320 TLoss: 0.0531 iLossSTA: 0.0240 TLossSTA: 0.0017 iLossGcn: 0.1133 tri1Loss: 0.0162 id1Loss: 0.0247 idALoss: 0.0174 moeAuxL: 1.0000 Accu: 99.40
+训练耗时：79.65131831169128 s
+Test Epoch: 60
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:80.66%	Rank-5:91.80%	Rank-10:93.95%	Rank-20:95.31%	mAP: 74.55% .
+RGB->IR :   Rank-1:66.60%	Rank-5:83.20%	Rank-10:88.09%	Rank-20:90.04%	mAP: 60.64% .
+IR ->RGB:   Rank-1:66.67%	Rank-5:82.76%	Rank-10:86.21%	Rank-20:89.85%	mAP: 63.05% .
+IR ->IR :   Rank-1:74.44%	Rank-5:87.31%	Rank-10:90.11%	Rank-20:91.79%	mAP: 70.55% .
+AllModal:   Rank-1:77.39%	Rank-5:88.55%	Rank-10:91.32%	Rank-20:93.23%	mAP: 64.28% .
+测试耗时：50.874592304229736 s
+==> Preparing Data Loader...
+Epoch: [61][0/191] Time: 2.433 (2.433) lr:0.010000000000000002 Loss: 1.3541 iLoss: 0.0561 TLoss: 0.0130 iLossSTA: 0.0532 TLossSTA: 0.0000 iLossGcn: 0.1432 tri1Loss: 0.0088 id1Loss: 0.0576 idALoss: 0.0221 moeAuxL: 1.0000 Accu: 100.00
+Epoch: [61][100/191] Time: 0.401 (0.423) lr:0.010000000000000002 Loss: 1.3011 iLoss: 0.0337 TLoss: 0.0550 iLossSTA: 0.0248 TLossSTA: 0.0014 iLossGcn: 0.1231 tri1Loss: 0.0187 id1Loss: 0.0267 idALoss: 0.0178 moeAuxL: 0.9999 Accu: 99.24
+训练耗时：78.96898317337036 s
+==> Preparing Data Loader...
+Epoch: [62][0/190] Time: 2.148 (2.148) lr:0.010000000000000002 Loss: 1.3380 iLoss: 0.0301 TLoss: 0.0201 iLossSTA: 0.0219 TLossSTA: 0.0000 iLossGcn: 0.2060 tri1Loss: 0.0024 id1Loss: 0.0280 idALoss: 0.0295 moeAuxL: 0.9999 Accu: 100.00
+Epoch: [62][100/190] Time: 0.415 (0.422) lr:0.010000000000000002 Loss: 1.2743 iLoss: 0.0321 TLoss: 0.0497 iLossSTA: 0.0243 TLossSTA: 0.0031 iLossGcn: 0.1088 tri1Loss: 0.0150 id1Loss: 0.0248 idALoss: 0.0166 moeAuxL: 0.9999 Accu: 99.27
+训练耗时：79.52311205863953 s
+==> Preparing Data Loader...
+Epoch: [63][0/191] Time: 2.319 (2.319) lr:0.010000000000000002 Loss: 1.1848 iLoss: 0.0159 TLoss: 0.0451 iLossSTA: 0.0117 TLossSTA: 0.0000 iLossGcn: 0.0938 tri1Loss: 0.0000 id1Loss: 0.0107 idALoss: 0.0077 moeAuxL: 0.9999 Accu: 100.00
+Epoch: [63][100/191] Time: 0.422 (0.427) lr:0.010000000000000002 Loss: 1.3122 iLoss: 0.0348 TLoss: 0.0631 iLossSTA: 0.0268 TLossSTA: 0.0018 iLossGcn: 0.1190 tri1Loss: 0.0208 id1Loss: 0.0277 idALoss: 0.0183 moeAuxL: 0.9999 Accu: 99.04
+训练耗时：80.05226159095764 s
+==> Preparing Data Loader...
+Epoch: [64][0/189] Time: 2.139 (2.139) lr:0.010000000000000002 Loss: 1.1629 iLoss: 0.0337 TLoss: 0.0000 iLossSTA: 0.0258 TLossSTA: 0.0000 iLossGcn: 0.0595 tri1Loss: 0.0000 id1Loss: 0.0257 idALoss: 0.0184 moeAuxL: 0.9997 Accu: 100.00
+Epoch: [64][100/189] Time: 0.416 (0.424) lr:0.010000000000000002 Loss: 1.2827 iLoss: 0.0344 TLoss: 0.0511 iLossSTA: 0.0262 TLossSTA: 0.0009 iLossGcn: 0.1125 tri1Loss: 0.0143 id1Loss: 0.0261 idALoss: 0.0176 moeAuxL: 0.9997 Accu: 99.47
+训练耗时：78.76351618766785 s
+==> Preparing Data Loader...
+Epoch: [65][0/191] Time: 2.296 (2.296) lr:0.010000000000000002 Loss: 1.1865 iLoss: 0.0329 TLoss: 0.0526 iLossSTA: 0.0445 TLossSTA: 0.0000 iLossGcn: 0.1193 tri1Loss: 0.0086 id1Loss: 0.0354 idALoss: 0.0256 moeAuxL: 0.8676 Accu: 100.00
+Epoch: [65][100/191] Time: 0.416 (0.431) lr:0.010000000000000002 Loss: 1.1529 iLoss: 0.0342 TLoss: 0.0526 iLossSTA: 0.0259 TLossSTA: 0.0012 iLossGcn: 0.1192 tri1Loss: 0.0144 id1Loss: 0.0294 idALoss: 0.0204 moeAuxL: 0.8557 Accu: 99.35
+训练耗时：80.50001120567322 s
+==> Preparing Data Loader...
+Epoch: [66][0/192] Time: 2.306 (2.306) lr:0.010000000000000002 Loss: 1.0136 iLoss: 0.0235 TLoss: 0.0203 iLossSTA: 0.0165 TLossSTA: 0.0000 iLossGcn: 0.0669 tri1Loss: 0.0000 id1Loss: 0.0216 idALoss: 0.0140 moeAuxL: 0.8507 Accu: 100.00
+Epoch: [66][100/192] Time: 0.402 (0.424) lr:0.010000000000000002 Loss: 1.1547 iLoss: 0.0363 TLoss: 0.0531 iLossSTA: 0.0295 TLossSTA: 0.0014 iLossGcn: 0.1155 tri1Loss: 0.0148 id1Loss: 0.0297 idALoss: 0.0212 moeAuxL: 0.8530 Accu: 99.18
+训练耗时：79.86161088943481 s
+==> Preparing Data Loader...
+Epoch: [67][0/190] Time: 2.341 (2.341) lr:0.010000000000000002 Loss: 1.1618 iLoss: 0.0446 TLoss: 0.0289 iLossSTA: 0.0403 TLossSTA: 0.0000 iLossGcn: 0.1536 tri1Loss: 0.0000 id1Loss: 0.0282 idALoss: 0.0225 moeAuxL: 0.8438 Accu: 100.00
+Epoch: [67][100/190] Time: 0.403 (0.423) lr:0.010000000000000002 Loss: 1.1397 iLoss: 0.0350 TLoss: 0.0491 iLossSTA: 0.0269 TLossSTA: 0.0010 iLossGcn: 0.1148 tri1Loss: 0.0138 id1Loss: 0.0283 idALoss: 0.0198 moeAuxL: 0.8511 Accu: 99.29
+训练耗时：78.86247777938843 s
+==> Preparing Data Loader...
+Epoch: [68][0/192] Time: 2.250 (2.250) lr:0.010000000000000002 Loss: 0.9809 iLoss: 0.0189 TLoss: 0.0000 iLossSTA: 0.0184 TLossSTA: 0.0000 iLossGcn: 0.0847 tri1Loss: 0.0000 id1Loss: 0.0156 idALoss: 0.0147 moeAuxL: 0.8286 Accu: 100.00
+Epoch: [68][100/192] Time: 0.409 (0.426) lr:0.010000000000000002 Loss: 0.9796 iLoss: 0.0348 TLoss: 0.0415 iLossSTA: 0.0273 TLossSTA: 0.0006 iLossGcn: 0.1174 tri1Loss: 0.0140 id1Loss: 0.0313 idALoss: 0.0200 moeAuxL: 0.6925 Accu: 99.54
+训练耗时：79.74247193336487 s
+==> Preparing Data Loader...
+Epoch: [69][0/191] Time: 2.143 (2.143) lr:0.010000000000000002 Loss: 0.9689 iLoss: 0.0391 TLoss: 0.0259 iLossSTA: 0.0333 TLossSTA: 0.0000 iLossGcn: 0.2059 tri1Loss: 0.0000 id1Loss: 0.0263 idALoss: 0.0270 moeAuxL: 0.6114 Accu: 100.00
+Epoch: [69][100/191] Time: 0.401 (0.420) lr:0.010000000000000002 Loss: 0.9098 iLoss: 0.0372 TLoss: 0.0429 iLossSTA: 0.0293 TLossSTA: 0.0014 iLossGcn: 0.1197 tri1Loss: 0.0091 id1Loss: 0.0319 idALoss: 0.0230 moeAuxL: 0.6154 Accu: 99.37
+训练耗时：78.96924686431885 s
+==> Preparing Data Loader...
+Epoch: [70][0/190] Time: 2.659 (2.659) lr:0.010000000000000002 Loss: 0.8796 iLoss: 0.0357 TLoss: 0.0394 iLossSTA: 0.0409 TLossSTA: 0.0010 iLossGcn: 0.1048 tri1Loss: 0.0036 id1Loss: 0.0274 idALoss: 0.0223 moeAuxL: 0.6045 Accu: 100.00
+Epoch: [70][100/190] Time: 0.416 (0.436) lr:0.010000000000000002 Loss: 0.9264 iLoss: 0.0367 TLoss: 0.0544 iLossSTA: 0.0306 TLossSTA: 0.0018 iLossGcn: 0.1177 tri1Loss: 0.0143 id1Loss: 0.0320 idALoss: 0.0249 moeAuxL: 0.6141 Accu: 99.27
+训练耗时：81.22128033638 s
+Test Epoch: 70
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:80.86%	Rank-5:91.41%	Rank-10:93.95%	Rank-20:95.12%	mAP: 74.59% .
+RGB->IR :   Rank-1:68.36%	Rank-5:83.01%	Rank-10:87.11%	Rank-20:89.84%	mAP: 61.93% .
+IR ->RGB:   Rank-1:67.24%	Rank-5:83.72%	Rank-10:87.36%	Rank-20:91.00%	mAP: 64.02% .
+IR ->IR :   Rank-1:76.49%	Rank-5:88.06%	Rank-10:90.49%	Rank-20:92.35%	mAP: 71.55% .
+AllModal:   Rank-1:78.34%	Rank-5:88.74%	Rank-10:91.32%	Rank-20:93.51%	mAP: 64.73% .
+测试耗时：49.54000115394592 s
+==> Preparing Data Loader...
+Epoch: [71][0/189] Time: 2.935 (2.935) lr:0.010000000000000002 Loss: 0.8998 iLoss: 0.0378 TLoss: 0.0297 iLossSTA: 0.0330 TLossSTA: 0.0000 iLossGcn: 0.1337 tri1Loss: 0.0004 id1Loss: 0.0329 idALoss: 0.0243 moeAuxL: 0.6079 Accu: 100.00
+Epoch: [71][100/189] Time: 0.409 (0.431) lr:0.010000000000000002 Loss: 0.8761 iLoss: 0.0353 TLoss: 0.0321 iLossSTA: 0.0286 TLossSTA: 0.0003 iLossGcn: 0.1130 tri1Loss: 0.0057 id1Loss: 0.0281 idALoss: 0.0210 moeAuxL: 0.6119 Accu: 99.77
+训练耗时：79.4490294456482 s
+==> Preparing Data Loader...
+Epoch: [72][0/190] Time: 2.261 (2.261) lr:0.010000000000000002 Loss: 0.8865 iLoss: 0.0553 TLoss: 0.0000 iLossSTA: 0.0281 TLossSTA: 0.0000 iLossGcn: 0.1210 tri1Loss: 0.0000 id1Loss: 0.0325 idALoss: 0.0235 moeAuxL: 0.6261 Accu: 100.00
+Epoch: [72][100/190] Time: 0.422 (0.437) lr:0.010000000000000002 Loss: 0.8925 iLoss: 0.0361 TLoss: 0.0444 iLossSTA: 0.0293 TLossSTA: 0.0010 iLossGcn: 0.1138 tri1Loss: 0.0116 id1Loss: 0.0275 idALoss: 0.0193 moeAuxL: 0.6095 Accu: 99.35
+训练耗时：81.37657976150513 s
+==> Preparing Data Loader...
+Epoch: [73][0/191] Time: 2.195 (2.195) lr:0.010000000000000002 Loss: 0.9288 iLoss: 0.0341 TLoss: 0.0592 iLossSTA: 0.0348 TLossSTA: 0.0153 iLossGcn: 0.0899 tri1Loss: 0.0431 id1Loss: 0.0253 idALoss: 0.0180 moeAuxL: 0.6091 Accu: 98.44
+Epoch: [73][100/191] Time: 0.414 (0.428) lr:0.010000000000000002 Loss: 0.8923 iLoss: 0.0363 TLoss: 0.0429 iLossSTA: 0.0293 TLossSTA: 0.0023 iLossGcn: 0.1121 tri1Loss: 0.0115 id1Loss: 0.0284 idALoss: 0.0215 moeAuxL: 0.6081 Accu: 99.52
+训练耗时：80.25157523155212 s
+==> Preparing Data Loader...
+Epoch: [74][0/191] Time: 2.190 (2.190) lr:0.010000000000000002 Loss: 0.8547 iLoss: 0.0362 TLoss: 0.0000 iLossSTA: 0.0262 TLossSTA: 0.0000 iLossGcn: 0.1397 tri1Loss: 0.0000 id1Loss: 0.0246 idALoss: 0.0180 moeAuxL: 0.6100 Accu: 100.00
+Epoch: [74][100/191] Time: 0.411 (0.421) lr:0.010000000000000002 Loss: 0.9146 iLoss: 0.0395 TLoss: 0.0462 iLossSTA: 0.0324 TLossSTA: 0.0022 iLossGcn: 0.1235 tri1Loss: 0.0100 id1Loss: 0.0317 idALoss: 0.0227 moeAuxL: 0.6065 Accu: 99.35
+训练耗时：78.95852541923523 s
+==> Preparing Data Loader...
+Epoch: [75][0/192] Time: 2.374 (2.374) lr:0.010000000000000002 Loss: 0.8265 iLoss: 0.0488 TLoss: 0.0000 iLossSTA: 0.0344 TLossSTA: 0.0000 iLossGcn: 0.1503 tri1Loss: 0.0000 id1Loss: 0.0390 idALoss: 0.0296 moeAuxL: 0.5245 Accu: 100.00
+Epoch: [75][100/192] Time: 0.401 (0.423) lr:0.010000000000000002 Loss: 0.8294 iLoss: 0.0370 TLoss: 0.0498 iLossSTA: 0.0299 TLossSTA: 0.0042 iLossGcn: 0.1186 tri1Loss: 0.0127 id1Loss: 0.0307 idALoss: 0.0221 moeAuxL: 0.5244 Accu: 99.18
+训练耗时：79.88851976394653 s
+==> Preparing Data Loader...
+Epoch: [76][0/190] Time: 2.185 (2.185) lr:0.010000000000000002 Loss: 0.8533 iLoss: 0.0441 TLoss: 0.0595 iLossSTA: 0.0300 TLossSTA: 0.0000 iLossGcn: 0.1223 tri1Loss: 0.0034 id1Loss: 0.0372 idALoss: 0.0308 moeAuxL: 0.5260 Accu: 100.00
+Epoch: [76][100/190] Time: 0.418 (0.424) lr:0.010000000000000002 Loss: 0.8208 iLoss: 0.0396 TLoss: 0.0397 iLossSTA: 0.0346 TLossSTA: 0.0011 iLossGcn: 0.1216 tri1Loss: 0.0087 id1Loss: 0.0312 idALoss: 0.0232 moeAuxL: 0.5210 Accu: 99.52
+训练耗时：80.03401327133179 s
+==> Preparing Data Loader...
+Epoch: [77][0/191] Time: 2.233 (2.233) lr:0.010000000000000002 Loss: 0.6584 iLoss: 0.0246 TLoss: 0.0000 iLossSTA: 0.0167 TLossSTA: 0.0000 iLossGcn: 0.0717 tri1Loss: 0.0000 id1Loss: 0.0153 idALoss: 0.0136 moeAuxL: 0.5164 Accu: 100.00
+Epoch: [77][100/191] Time: 0.401 (0.425) lr:0.010000000000000002 Loss: 0.8026 iLoss: 0.0396 TLoss: 0.0343 iLossSTA: 0.0323 TLossSTA: 0.0024 iLossGcn: 0.1092 tri1Loss: 0.0081 id1Loss: 0.0308 idALoss: 0.0245 moeAuxL: 0.5213 Accu: 99.63
+训练耗时：79.77809762954712 s
+==> Preparing Data Loader...
+Epoch: [78][0/191] Time: 2.130 (2.130) lr:0.010000000000000002 Loss: 0.7409 iLoss: 0.0329 TLoss: 0.0020 iLossSTA: 0.0269 TLossSTA: 0.0000 iLossGcn: 0.1103 tri1Loss: 0.0000 id1Loss: 0.0251 idALoss: 0.0206 moeAuxL: 0.5230 Accu: 100.00
+Epoch: [78][100/191] Time: 0.399 (0.423) lr:0.010000000000000002 Loss: 0.8120 iLoss: 0.0398 TLoss: 0.0399 iLossSTA: 0.0326 TLossSTA: 0.0023 iLossGcn: 0.1118 tri1Loss: 0.0086 id1Loss: 0.0316 idALoss: 0.0252 moeAuxL: 0.5202 Accu: 99.57
+训练耗时：79.28931879997253 s
+==> Preparing Data Loader...
+Epoch: [79][0/190] Time: 2.270 (2.270) lr:0.010000000000000002 Loss: 0.8355 iLoss: 0.0523 TLoss: 0.0007 iLossSTA: 0.0384 TLossSTA: 0.0000 iLossGcn: 0.1461 tri1Loss: 0.0000 id1Loss: 0.0425 idALoss: 0.0385 moeAuxL: 0.5169 Accu: 100.00
+Epoch: [79][100/190] Time: 0.400 (0.423) lr:0.010000000000000002 Loss: 0.8127 iLoss: 0.0396 TLoss: 0.0375 iLossSTA: 0.0327 TLossSTA: 0.0029 iLossGcn: 0.1192 tri1Loss: 0.0083 id1Loss: 0.0303 idALoss: 0.0228 moeAuxL: 0.5194 Accu: 99.64
+训练耗时：78.89806866645813 s
+==> Preparing Data Loader...
+Epoch: [80][0/189] Time: 2.143 (2.143) lr:0.001 Loss: 0.7174 iLoss: 0.0289 TLoss: 0.0000 iLossSTA: 0.0226 TLossSTA: 0.0000 iLossGcn: 0.1077 tri1Loss: 0.0000 id1Loss: 0.0250 idALoss: 0.0154 moeAuxL: 0.5178 Accu: 100.00
+Epoch: [80][100/189] Time: 0.402 (0.422) lr:0.001 Loss: 0.7789 iLoss: 0.0380 TLoss: 0.0360 iLossSTA: 0.0300 TLossSTA: 0.0024 iLossGcn: 0.1113 tri1Loss: 0.0079 id1Loss: 0.0291 idALoss: 0.0223 moeAuxL: 0.5019 Accu: 99.60
+训练耗时：78.19583988189697 s
+Test Epoch: 80
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:81.45%	Rank-5:91.21%	Rank-10:93.55%	Rank-20:95.51%	mAP: 74.33% .
+RGB->IR :   Rank-1:67.77%	Rank-5:82.81%	Rank-10:88.09%	Rank-20:90.23%	mAP: 61.59% .
+IR ->RGB:   Rank-1:66.09%	Rank-5:83.14%	Rank-10:87.36%	Rank-20:90.42%	mAP: 63.53% .
+IR ->IR :   Rank-1:76.12%	Rank-5:87.50%	Rank-10:90.67%	Rank-20:92.35%	mAP: 71.38% .
+AllModal:   Rank-1:78.53%	Rank-5:88.65%	Rank-10:91.41%	Rank-20:93.32%	mAP: 65.02% .
+测试耗时：38.512336015701294 s
+==> Preparing Data Loader...
+Epoch: [81][0/191] Time: 2.063 (2.063) lr:0.001 Loss: 0.7641 iLoss: 0.0448 TLoss: 0.0146 iLossSTA: 0.0431 TLossSTA: 0.0000 iLossGcn: 0.0938 tri1Loss: 0.0000 id1Loss: 0.0371 idALoss: 0.0277 moeAuxL: 0.5029 Accu: 100.00
+Epoch: [81][100/191] Time: 0.411 (0.422) lr:0.001 Loss: 0.7775 iLoss: 0.0374 TLoss: 0.0374 iLossSTA: 0.0307 TLossSTA: 0.0010 iLossGcn: 0.1110 tri1Loss: 0.0076 id1Loss: 0.0289 idALoss: 0.0216 moeAuxL: 0.5018 Accu: 99.52
+训练耗时：79.10408163070679 s
+==> Preparing Data Loader...
+Epoch: [82][0/190] Time: 2.092 (2.092) lr:0.001 Loss: 0.7201 iLoss: 0.0448 TLoss: 0.0132 iLossSTA: 0.0289 TLossSTA: 0.0000 iLossGcn: 0.0891 tri1Loss: 0.0000 id1Loss: 0.0268 idALoss: 0.0154 moeAuxL: 0.5019 Accu: 100.00
+Epoch: [82][100/190] Time: 0.410 (0.428) lr:0.001 Loss: 0.7664 iLoss: 0.0360 TLoss: 0.0318 iLossSTA: 0.0306 TLossSTA: 0.0014 iLossGcn: 0.1106 tri1Loss: 0.0060 id1Loss: 0.0278 idALoss: 0.0204 moeAuxL: 0.5017 Accu: 99.69
+训练耗时：79.60235714912415 s
+==> Preparing Data Loader...
+Epoch: [83][0/191] Time: 2.144 (2.144) lr:0.001 Loss: 0.6731 iLoss: 0.0334 TLoss: 0.0028 iLossSTA: 0.0213 TLossSTA: 0.0000 iLossGcn: 0.0690 tri1Loss: 0.0000 id1Loss: 0.0242 idALoss: 0.0201 moeAuxL: 0.5025 Accu: 100.00
+Epoch: [83][100/191] Time: 0.422 (0.422) lr:0.001 Loss: 0.7852 iLoss: 0.0379 TLoss: 0.0420 iLossSTA: 0.0319 TLossSTA: 0.0019 iLossGcn: 0.1119 tri1Loss: 0.0071 id1Loss: 0.0290 idALoss: 0.0219 moeAuxL: 0.5015 Accu: 99.54
+训练耗时：79.88467860221863 s
+==> Preparing Data Loader...
+Epoch: [84][0/191] Time: 2.172 (2.172) lr:0.001 Loss: 0.7751 iLoss: 0.0435 TLoss: 0.0006 iLossSTA: 0.0227 TLossSTA: 0.0000 iLossGcn: 0.1558 tri1Loss: 0.0000 id1Loss: 0.0270 idALoss: 0.0223 moeAuxL: 0.5033 Accu: 100.00
+Epoch: [84][100/191] Time: 0.409 (0.426) lr:0.001 Loss: 0.7827 iLoss: 0.0375 TLoss: 0.0381 iLossSTA: 0.0311 TLossSTA: 0.0004 iLossGcn: 0.1182 tri1Loss: 0.0067 id1Loss: 0.0285 idALoss: 0.0209 moeAuxL: 0.5014 Accu: 99.49
+训练耗时：79.39514303207397 s
+==> Preparing Data Loader...
+Epoch: [85][0/191] Time: 2.182 (2.182) lr:0.001 Loss: 0.6792 iLoss: 0.0216 TLoss: 0.0053 iLossSTA: 0.0211 TLossSTA: 0.0000 iLossGcn: 0.0902 tri1Loss: 0.0000 id1Loss: 0.0176 idALoss: 0.0222 moeAuxL: 0.5012 Accu: 100.00
+Epoch: [85][100/191] Time: 0.423 (0.424) lr:0.001 Loss: 0.7782 iLoss: 0.0377 TLoss: 0.0373 iLossSTA: 0.0310 TLossSTA: 0.0001 iLossGcn: 0.1148 tri1Loss: 0.0069 id1Loss: 0.0280 idALoss: 0.0211 moeAuxL: 0.5013 Accu: 99.50
+训练耗时：80.34409809112549 s
+==> Preparing Data Loader...
+Epoch: [86][0/190] Time: 2.335 (2.335) lr:0.001 Loss: 0.7474 iLoss: 0.0385 TLoss: 0.0424 iLossSTA: 0.0349 TLossSTA: 0.0000 iLossGcn: 0.0830 tri1Loss: 0.0000 id1Loss: 0.0282 idALoss: 0.0197 moeAuxL: 0.5008 Accu: 100.00
+Epoch: [86][100/190] Time: 0.418 (0.428) lr:0.001 Loss: 0.7657 iLoss: 0.0358 TLoss: 0.0395 iLossSTA: 0.0286 TLossSTA: 0.0006 iLossGcn: 0.1069 tri1Loss: 0.0055 id1Loss: 0.0270 idALoss: 0.0203 moeAuxL: 0.5015 Accu: 99.54
+训练耗时：79.77993106842041 s
+==> Preparing Data Loader...
+Epoch: [87][0/191] Time: 2.662 (2.662) lr:0.001 Loss: 0.6809 iLoss: 0.0363 TLoss: 0.0031 iLossSTA: 0.0293 TLossSTA: 0.0000 iLossGcn: 0.0684 tri1Loss: 0.0000 id1Loss: 0.0231 idALoss: 0.0158 moeAuxL: 0.5049 Accu: 100.00
+Epoch: [87][100/191] Time: 0.400 (0.426) lr:0.001 Loss: 0.7678 iLoss: 0.0370 TLoss: 0.0341 iLossSTA: 0.0310 TLossSTA: 0.0005 iLossGcn: 0.1078 tri1Loss: 0.0058 id1Loss: 0.0285 idALoss: 0.0217 moeAuxL: 0.5014 Accu: 99.66
+训练耗时：79.40205478668213 s
+==> Preparing Data Loader...
+Epoch: [88][0/191] Time: 2.160 (2.160) lr:0.001 Loss: 0.7005 iLoss: 0.0351 TLoss: 0.0114 iLossSTA: 0.0253 TLossSTA: 0.0000 iLossGcn: 0.0842 tri1Loss: 0.0000 id1Loss: 0.0273 idALoss: 0.0158 moeAuxL: 0.5014 Accu: 100.00
+Epoch: [88][100/191] Time: 0.405 (0.421) lr:0.001 Loss: 0.7584 iLoss: 0.0354 TLoss: 0.0305 iLossSTA: 0.0293 TLossSTA: 0.0009 iLossGcn: 0.1101 tri1Loss: 0.0048 id1Loss: 0.0263 idALoss: 0.0198 moeAuxL: 0.5013 Accu: 99.68
+训练耗时：79.03915238380432 s
+==> Preparing Data Loader...
+Epoch: [89][0/191] Time: 2.547 (2.547) lr:0.001 Loss: 0.8146 iLoss: 0.0441 TLoss: 0.0080 iLossSTA: 0.0284 TLossSTA: 0.0000 iLossGcn: 0.1700 tri1Loss: 0.0000 id1Loss: 0.0304 idALoss: 0.0325 moeAuxL: 0.5011 Accu: 100.00
+Epoch: [89][100/191] Time: 0.415 (0.431) lr:0.001 Loss: 0.7679 iLoss: 0.0371 TLoss: 0.0306 iLossSTA: 0.0300 TLossSTA: 0.0004 iLossGcn: 0.1139 tri1Loss: 0.0052 id1Loss: 0.0279 idALoss: 0.0215 moeAuxL: 0.5014 Accu: 99.69
+训练耗时：80.75563144683838 s
+==> Preparing Data Loader...
+Epoch: [90][0/192] Time: 2.064 (2.064) lr:0.001 Loss: 0.6886 iLoss: 0.0235 TLoss: 0.0262 iLossSTA: 0.0208 TLossSTA: 0.0000 iLossGcn: 0.0862 tri1Loss: 0.0000 id1Loss: 0.0178 idALoss: 0.0129 moeAuxL: 0.5013 Accu: 100.00
+Epoch: [90][100/192] Time: 0.402 (0.421) lr:0.001 Loss: 0.7711 iLoss: 0.0364 TLoss: 0.0373 iLossSTA: 0.0300 TLossSTA: 0.0005 iLossGcn: 0.1115 tri1Loss: 0.0075 id1Loss: 0.0271 idALoss: 0.0197 moeAuxL: 0.5012 Accu: 99.49
+训练耗时：79.63238883018494 s
+Test Epoch: 90
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.03%	Rank-5:91.80%	Rank-10:94.14%	Rank-20:94.92%	mAP: 74.94% .
+RGB->IR :   Rank-1:67.58%	Rank-5:83.20%	Rank-10:87.89%	Rank-20:90.62%	mAP: 61.58% .
+IR ->RGB:   Rank-1:67.82%	Rank-5:83.14%	Rank-10:87.36%	Rank-20:90.23%	mAP: 64.18% .
+IR ->IR :   Rank-1:75.93%	Rank-5:87.50%	Rank-10:90.86%	Rank-20:92.16%	mAP: 71.61% .
+AllModal:   Rank-1:78.44%	Rank-5:89.03%	Rank-10:91.41%	Rank-20:93.42%	mAP: 65.27% .
+测试耗时：42.70187592506409 s
+==> Preparing Data Loader...
+Epoch: [91][0/192] Time: 2.053 (2.053) lr:0.001 Loss: 0.9261 iLoss: 0.0434 TLoss: 0.0400 iLossSTA: 0.0441 TLossSTA: 0.0000 iLossGcn: 0.2055 tri1Loss: 0.0223 id1Loss: 0.0376 idALoss: 0.0324 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [91][100/192] Time: 0.411 (0.423) lr:0.001 Loss: 0.7615 iLoss: 0.0344 TLoss: 0.0381 iLossSTA: 0.0284 TLossSTA: 0.0004 iLossGcn: 0.1066 tri1Loss: 0.0065 id1Loss: 0.0262 idALoss: 0.0198 moeAuxL: 0.5011 Accu: 99.66
+训练耗时：79.75357747077942 s
+==> Preparing Data Loader...
+Epoch: [92][0/191] Time: 2.350 (2.350) lr:0.001 Loss: 0.6910 iLoss: 0.0257 TLoss: 0.0037 iLossSTA: 0.0265 TLossSTA: 0.0000 iLossGcn: 0.0983 tri1Loss: 0.0000 id1Loss: 0.0187 idALoss: 0.0168 moeAuxL: 0.5013 Accu: 100.00
+Epoch: [92][100/191] Time: 0.401 (0.423) lr:0.001 Loss: 0.7837 iLoss: 0.0374 TLoss: 0.0439 iLossSTA: 0.0326 TLossSTA: 0.0012 iLossGcn: 0.1105 tri1Loss: 0.0078 id1Loss: 0.0281 idALoss: 0.0211 moeAuxL: 0.5011 Accu: 99.43
+训练耗时：79.32153058052063 s
+==> Preparing Data Loader...
+Epoch: [93][0/190] Time: 2.028 (2.028) lr:0.001 Loss: 0.8115 iLoss: 0.0384 TLoss: 0.0372 iLossSTA: 0.0363 TLossSTA: 0.0000 iLossGcn: 0.1372 tri1Loss: 0.0074 id1Loss: 0.0299 idALoss: 0.0240 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [93][100/190] Time: 0.413 (0.424) lr:0.001 Loss: 0.7822 iLoss: 0.0374 TLoss: 0.0374 iLossSTA: 0.0313 TLossSTA: 0.0013 iLossGcn: 0.1164 tri1Loss: 0.0084 id1Loss: 0.0282 idALoss: 0.0206 moeAuxL: 0.5012 Accu: 99.54
+训练耗时：79.73946690559387 s
+==> Preparing Data Loader...
+Epoch: [94][0/190] Time: 2.378 (2.378) lr:0.001 Loss: 0.7959 iLoss: 0.0286 TLoss: 0.0799 iLossSTA: 0.0200 TLossSTA: 0.0037 iLossGcn: 0.1037 tri1Loss: 0.0297 id1Loss: 0.0172 idALoss: 0.0124 moeAuxL: 0.5006 Accu: 98.44
+Epoch: [94][100/190] Time: 0.403 (0.424) lr:0.001 Loss: 0.7527 iLoss: 0.0353 TLoss: 0.0279 iLossSTA: 0.0296 TLossSTA: 0.0001 iLossGcn: 0.1074 tri1Loss: 0.0040 id1Loss: 0.0272 idALoss: 0.0201 moeAuxL: 0.5010 Accu: 99.72
+训练耗时：78.92764472961426 s
+==> Preparing Data Loader...
+Epoch: [95][0/191] Time: 2.416 (2.416) lr:0.001 Loss: 0.6271 iLoss: 0.0224 TLoss: 0.0101 iLossSTA: 0.0187 TLossSTA: 0.0000 iLossGcn: 0.0454 tri1Loss: 0.0000 id1Loss: 0.0173 idALoss: 0.0115 moeAuxL: 0.5017 Accu: 100.00
+Epoch: [95][100/191] Time: 0.397 (0.436) lr:0.001 Loss: 0.7719 iLoss: 0.0360 TLoss: 0.0336 iLossSTA: 0.0296 TLossSTA: 0.0013 iLossGcn: 0.1160 tri1Loss: 0.0069 id1Loss: 0.0270 idALoss: 0.0203 moeAuxL: 0.5011 Accu: 99.63
+训练耗时：81.11108326911926 s
+==> Preparing Data Loader...
+Epoch: [96][0/190] Time: 2.338 (2.338) lr:0.001 Loss: 0.7781 iLoss: 0.0299 TLoss: 0.0452 iLossSTA: 0.0293 TLossSTA: 0.0000 iLossGcn: 0.1242 tri1Loss: 0.0021 id1Loss: 0.0269 idALoss: 0.0201 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [96][100/190] Time: 0.399 (0.428) lr:0.001 Loss: 0.7581 iLoss: 0.0360 TLoss: 0.0343 iLossSTA: 0.0296 TLossSTA: 0.0007 iLossGcn: 0.1052 tri1Loss: 0.0046 id1Loss: 0.0268 idALoss: 0.0199 moeAuxL: 0.5011 Accu: 99.64
+训练耗时：80.09802889823914 s
+==> Preparing Data Loader...
+Epoch: [97][0/190] Time: 2.084 (2.084) lr:0.001 Loss: 0.7664 iLoss: 0.0321 TLoss: 0.0102 iLossSTA: 0.0276 TLossSTA: 0.0000 iLossGcn: 0.1532 tri1Loss: 0.0000 id1Loss: 0.0241 idALoss: 0.0177 moeAuxL: 0.5016 Accu: 100.00
+Epoch: [97][100/190] Time: 0.404 (0.423) lr:0.001 Loss: 0.7935 iLoss: 0.0384 TLoss: 0.0412 iLossSTA: 0.0327 TLossSTA: 0.0020 iLossGcn: 0.1184 tri1Loss: 0.0083 id1Loss: 0.0292 idALoss: 0.0224 moeAuxL: 0.5010 Accu: 99.58
+训练耗时：78.9077696800232 s
+==> Preparing Data Loader...
+Epoch: [98][0/192] Time: 2.267 (2.267) lr:0.001 Loss: 0.9907 iLoss: 0.0740 TLoss: 0.0956 iLossSTA: 0.0496 TLossSTA: 0.0000 iLossGcn: 0.1749 tri1Loss: 0.0079 id1Loss: 0.0510 idALoss: 0.0375 moeAuxL: 0.5003 Accu: 98.44
+Epoch: [98][100/192] Time: 0.408 (0.423) lr:0.001 Loss: 0.7692 iLoss: 0.0379 TLoss: 0.0328 iLossSTA: 0.0312 TLossSTA: 0.0002 iLossGcn: 0.1119 tri1Loss: 0.0044 id1Loss: 0.0285 idALoss: 0.0212 moeAuxL: 0.5012 Accu: 99.63
+训练耗时：79.61253476142883 s
+==> Preparing Data Loader...
+Epoch: [99][0/190] Time: 2.136 (2.136) lr:0.001 Loss: 0.6640 iLoss: 0.0245 TLoss: 0.0177 iLossSTA: 0.0179 TLossSTA: 0.0000 iLossGcn: 0.0744 tri1Loss: 0.0000 id1Loss: 0.0157 idALoss: 0.0126 moeAuxL: 0.5011 Accu: 100.00
+Epoch: [99][100/190] Time: 0.420 (0.437) lr:0.001 Loss: 0.7785 iLoss: 0.0366 TLoss: 0.0426 iLossSTA: 0.0309 TLossSTA: 0.0025 iLossGcn: 0.1073 tri1Loss: 0.0087 id1Loss: 0.0281 idALoss: 0.0208 moeAuxL: 0.5010 Accu: 99.40
+训练耗时：81.18899011611938 s
+==> Preparing Data Loader...
+Epoch: [100][0/191] Time: 2.373 (2.373) lr:0.001 Loss: 0.8582 iLoss: 0.0557 TLoss: 0.0034 iLossSTA: 0.0432 TLossSTA: 0.0000 iLossGcn: 0.1910 tri1Loss: 0.0000 id1Loss: 0.0328 idALoss: 0.0318 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [100][100/191] Time: 0.423 (0.435) lr:0.001 Loss: 0.7726 iLoss: 0.0370 TLoss: 0.0380 iLossSTA: 0.0308 TLossSTA: 0.0011 iLossGcn: 0.1092 tri1Loss: 0.0073 id1Loss: 0.0277 idALoss: 0.0206 moeAuxL: 0.5011 Accu: 99.41
+训练耗时：81.60599756240845 s
+Test Epoch: 100
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.23%	Rank-5:91.41%	Rank-10:93.75%	Rank-20:94.92%	mAP: 74.81% .
+RGB->IR :   Rank-1:68.16%	Rank-5:82.42%	Rank-10:87.89%	Rank-20:90.62%	mAP: 61.62% .
+IR ->RGB:   Rank-1:68.39%	Rank-5:83.14%	Rank-10:87.55%	Rank-20:90.42%	mAP: 64.39% .
+IR ->IR :   Rank-1:76.31%	Rank-5:88.43%	Rank-10:90.86%	Rank-20:92.35%	mAP: 71.54% .
+AllModal:   Rank-1:78.72%	Rank-5:88.84%	Rank-10:91.03%	Rank-20:93.42%	mAP: 65.26% .
+测试耗时：39.23366904258728 s
+==> Preparing Data Loader...
+Epoch: [101][0/191] Time: 2.202 (2.202) lr:0.001 Loss: 0.7355 iLoss: 0.0304 TLoss: 0.0157 iLossSTA: 0.0273 TLossSTA: 0.0000 iLossGcn: 0.1128 tri1Loss: 0.0075 id1Loss: 0.0240 idALoss: 0.0174 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [101][100/191] Time: 0.414 (0.427) lr:0.001 Loss: 0.7611 iLoss: 0.0347 TLoss: 0.0378 iLossSTA: 0.0292 TLossSTA: 0.0009 iLossGcn: 0.1057 tri1Loss: 0.0063 id1Loss: 0.0265 idALoss: 0.0191 moeAuxL: 0.5010 Accu: 99.50
+训练耗时：80.18609595298767 s
+==> Preparing Data Loader...
+Epoch: [102][0/191] Time: 2.030 (2.030) lr:0.001 Loss: 0.6886 iLoss: 0.0281 TLoss: 0.0218 iLossSTA: 0.0191 TLossSTA: 0.0000 iLossGcn: 0.0760 tri1Loss: 0.0000 id1Loss: 0.0224 idALoss: 0.0205 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [102][100/191] Time: 0.413 (0.428) lr:0.001 Loss: 0.7681 iLoss: 0.0383 TLoss: 0.0361 iLossSTA: 0.0325 TLossSTA: 0.0015 iLossGcn: 0.1027 tri1Loss: 0.0051 id1Loss: 0.0288 idALoss: 0.0220 moeAuxL: 0.5011 Accu: 99.74
+训练耗时：80.4699935913086 s
+==> Preparing Data Loader...
+Epoch: [103][0/190] Time: 1.979 (1.979) lr:0.001 Loss: 0.7102 iLoss: 0.0489 TLoss: 0.0306 iLossSTA: 0.0264 TLossSTA: 0.0000 iLossGcn: 0.0567 tri1Loss: 0.0000 id1Loss: 0.0265 idALoss: 0.0201 moeAuxL: 0.5011 Accu: 100.00
+Epoch: [103][100/190] Time: 0.426 (0.430) lr:0.001 Loss: 0.7713 iLoss: 0.0366 TLoss: 0.0333 iLossSTA: 0.0311 TLossSTA: 0.0015 iLossGcn: 0.1117 tri1Loss: 0.0071 id1Loss: 0.0277 idALoss: 0.0212 moeAuxL: 0.5011 Accu: 99.57
+训练耗时：80.42124819755554 s
+==> Preparing Data Loader...
+Epoch: [104][0/191] Time: 2.175 (2.175) lr:0.001 Loss: 0.7748 iLoss: 0.0492 TLoss: 0.0000 iLossSTA: 0.0345 TLossSTA: 0.0000 iLossGcn: 0.1196 tri1Loss: 0.0000 id1Loss: 0.0380 idALoss: 0.0319 moeAuxL: 0.5017 Accu: 100.00
+Epoch: [104][100/191] Time: 0.425 (0.434) lr:0.001 Loss: 0.7788 iLoss: 0.0375 TLoss: 0.0385 iLossSTA: 0.0318 TLossSTA: 0.0030 iLossGcn: 0.1085 tri1Loss: 0.0083 id1Loss: 0.0287 idALoss: 0.0215 moeAuxL: 0.5010 Accu: 99.54
+训练耗时：81.42557120323181 s
+==> Preparing Data Loader...
+Epoch: [105][0/192] Time: 2.438 (2.438) lr:0.001 Loss: 0.8640 iLoss: 0.0367 TLoss: 0.0044 iLossSTA: 0.0373 TLossSTA: 0.0000 iLossGcn: 0.2376 tri1Loss: 0.0000 id1Loss: 0.0277 idALoss: 0.0196 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [105][100/192] Time: 0.407 (0.432) lr:0.001 Loss: 0.7727 iLoss: 0.0373 TLoss: 0.0363 iLossSTA: 0.0305 TLossSTA: 0.0012 iLossGcn: 0.1119 tri1Loss: 0.0057 id1Loss: 0.0283 idALoss: 0.0206 moeAuxL: 0.5010 Accu: 99.68
+训练耗时：81.59817790985107 s
+==> Preparing Data Loader...
+Epoch: [106][0/190] Time: 2.234 (2.234) lr:0.001 Loss: 0.7018 iLoss: 0.0265 TLoss: 0.0173 iLossSTA: 0.0218 TLossSTA: 0.0000 iLossGcn: 0.0983 tri1Loss: 0.0000 id1Loss: 0.0192 idALoss: 0.0174 moeAuxL: 0.5012 Accu: 100.00
+Epoch: [106][100/190] Time: 0.406 (0.425) lr:0.001 Loss: 0.7631 iLoss: 0.0376 TLoss: 0.0291 iLossSTA: 0.0316 TLossSTA: 0.0005 iLossGcn: 0.1095 tri1Loss: 0.0039 id1Loss: 0.0282 idALoss: 0.0215 moeAuxL: 0.5011 Accu: 99.75
+训练耗时：79.56206130981445 s
+==> Preparing Data Loader...
+Epoch: [107][0/191] Time: 2.183 (2.183) lr:0.001 Loss: 1.0758 iLoss: 0.0864 TLoss: 0.0428 iLossSTA: 0.0826 TLossSTA: 0.0000 iLossGcn: 0.2317 tri1Loss: 0.0137 id1Loss: 0.0698 idALoss: 0.0484 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [107][100/191] Time: 0.417 (0.427) lr:0.001 Loss: 0.7640 iLoss: 0.0363 TLoss: 0.0314 iLossSTA: 0.0301 TLossSTA: 0.0002 iLossGcn: 0.1126 tri1Loss: 0.0036 id1Loss: 0.0278 idALoss: 0.0211 moeAuxL: 0.5010 Accu: 99.71
+训练耗时：80.27071046829224 s
+==> Preparing Data Loader...
+Epoch: [108][0/191] Time: 2.204 (2.204) lr:0.001 Loss: 0.6514 iLoss: 0.0253 TLoss: 0.0000 iLossSTA: 0.0226 TLossSTA: 0.0000 iLossGcn: 0.0655 tri1Loss: 0.0000 id1Loss: 0.0183 idALoss: 0.0189 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [108][100/191] Time: 0.424 (0.434) lr:0.001 Loss: 0.7630 iLoss: 0.0377 TLoss: 0.0324 iLossSTA: 0.0304 TLossSTA: 0.0010 iLossGcn: 0.1080 tri1Loss: 0.0040 id1Loss: 0.0279 idALoss: 0.0206 moeAuxL: 0.5009 Accu: 99.81
+训练耗时：81.38918042182922 s
+==> Preparing Data Loader...
+Epoch: [109][0/191] Time: 2.390 (2.390) lr:0.001 Loss: 0.7830 iLoss: 0.0439 TLoss: 0.0000 iLossSTA: 0.0341 TLossSTA: 0.0045 iLossGcn: 0.1409 tri1Loss: 0.0000 id1Loss: 0.0330 idALoss: 0.0258 moeAuxL: 0.5008 Accu: 100.00
+Epoch: [109][100/191] Time: 0.423 (0.433) lr:0.001 Loss: 0.7615 iLoss: 0.0355 TLoss: 0.0318 iLossSTA: 0.0297 TLossSTA: 0.0013 iLossGcn: 0.1074 tri1Loss: 0.0072 id1Loss: 0.0271 idALoss: 0.0205 moeAuxL: 0.5009 Accu: 99.63
+训练耗时：81.58431768417358 s
+==> Preparing Data Loader...
+Epoch: [110][0/191] Time: 2.132 (2.132) lr:0.001 Loss: 0.8399 iLoss: 0.0580 TLoss: 0.0356 iLossSTA: 0.0463 TLossSTA: 0.0000 iLossGcn: 0.1351 tri1Loss: 0.0000 id1Loss: 0.0358 idALoss: 0.0287 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [110][100/191] Time: 0.417 (0.432) lr:0.001 Loss: 0.7712 iLoss: 0.0369 TLoss: 0.0360 iLossSTA: 0.0301 TLossSTA: 0.0016 iLossGcn: 0.1076 tri1Loss: 0.0067 id1Loss: 0.0292 idALoss: 0.0222 moeAuxL: 0.5010 Accu: 99.57
+训练耗时：81.19158291816711 s
+Test Epoch: 110
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.23%	Rank-5:91.60%	Rank-10:93.95%	Rank-20:95.12%	mAP: 75.25% .
+RGB->IR :   Rank-1:69.14%	Rank-5:83.20%	Rank-10:88.67%	Rank-20:90.23%	mAP: 62.40% .
+IR ->RGB:   Rank-1:67.62%	Rank-5:83.14%	Rank-10:87.55%	Rank-20:90.80%	mAP: 64.24% .
+IR ->IR :   Rank-1:75.19%	Rank-5:87.69%	Rank-10:91.04%	Rank-20:92.91%	mAP: 71.14% .
+AllModal:   Rank-1:78.34%	Rank-5:88.93%	Rank-10:91.22%	Rank-20:93.42%	mAP: 65.46% .
+测试耗时：42.587332248687744 s
+==> Preparing Data Loader...
+Epoch: [111][0/191] Time: 2.545 (2.545) lr:0.001 Loss: 0.6369 iLoss: 0.0237 TLoss: 0.0000 iLossSTA: 0.0212 TLossSTA: 0.0000 iLossGcn: 0.0658 tri1Loss: 0.0000 id1Loss: 0.0156 idALoss: 0.0102 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [111][100/191] Time: 0.403 (0.429) lr:0.001 Loss: 0.7738 iLoss: 0.0381 TLoss: 0.0341 iLossSTA: 0.0317 TLossSTA: 0.0003 iLossGcn: 0.1130 tri1Loss: 0.0050 id1Loss: 0.0291 idALoss: 0.0216 moeAuxL: 0.5010 Accu: 99.71
+训练耗时：80.2698323726654 s
+==> Preparing Data Loader...
+Epoch: [112][0/190] Time: 2.147 (2.147) lr:0.001 Loss: 0.7452 iLoss: 0.0282 TLoss: 0.0339 iLossSTA: 0.0296 TLossSTA: 0.0000 iLossGcn: 0.1096 tri1Loss: 0.0000 id1Loss: 0.0224 idALoss: 0.0209 moeAuxL: 0.5006 Accu: 100.00
+Epoch: [112][100/190] Time: 0.420 (0.430) lr:0.001 Loss: 0.7738 iLoss: 0.0371 TLoss: 0.0374 iLossSTA: 0.0313 TLossSTA: 0.0004 iLossGcn: 0.1114 tri1Loss: 0.0068 id1Loss: 0.0279 idALoss: 0.0207 moeAuxL: 0.5009 Accu: 99.60
+训练耗时：80.63462567329407 s
+==> Preparing Data Loader...
+Epoch: [113][0/191] Time: 2.238 (2.238) lr:0.001 Loss: 0.6919 iLoss: 0.0311 TLoss: 0.0024 iLossSTA: 0.0323 TLossSTA: 0.0000 iLossGcn: 0.0828 tri1Loss: 0.0000 id1Loss: 0.0237 idALoss: 0.0177 moeAuxL: 0.5019 Accu: 100.00
+Epoch: [113][100/191] Time: 0.424 (0.440) lr:0.001 Loss: 0.7907 iLoss: 0.0366 TLoss: 0.0485 iLossSTA: 0.0300 TLossSTA: 0.0024 iLossGcn: 0.1107 tri1Loss: 0.0120 id1Loss: 0.0283 idALoss: 0.0215 moeAuxL: 0.5008 Accu: 99.49
+训练耗时：82.2690978050232 s
+==> Preparing Data Loader...
+Epoch: [114][0/192] Time: 2.250 (2.250) lr:0.001 Loss: 0.7769 iLoss: 0.0388 TLoss: 0.0375 iLossSTA: 0.0296 TLossSTA: 0.0000 iLossGcn: 0.1115 tri1Loss: 0.0000 id1Loss: 0.0334 idALoss: 0.0248 moeAuxL: 0.5012 Accu: 100.00
+Epoch: [114][100/192] Time: 0.403 (0.424) lr:0.001 Loss: 0.7551 iLoss: 0.0349 TLoss: 0.0336 iLossSTA: 0.0286 TLossSTA: 0.0009 iLossGcn: 0.1046 tri1Loss: 0.0064 id1Loss: 0.0262 idALoss: 0.0192 moeAuxL: 0.5008 Accu: 99.57
+训练耗时：79.6996009349823 s
+==> Preparing Data Loader...
+Epoch: [115][0/192] Time: 2.280 (2.280) lr:0.001 Loss: 0.6652 iLoss: 0.0187 TLoss: 0.0396 iLossSTA: 0.0149 TLossSTA: 0.0000 iLossGcn: 0.0598 tri1Loss: 0.0052 id1Loss: 0.0131 idALoss: 0.0126 moeAuxL: 0.5013 Accu: 100.00
+Epoch: [115][100/192] Time: 0.408 (0.428) lr:0.001 Loss: 0.7561 iLoss: 0.0365 TLoss: 0.0322 iLossSTA: 0.0301 TLossSTA: 0.0009 iLossGcn: 0.1032 tri1Loss: 0.0047 id1Loss: 0.0273 idALoss: 0.0205 moeAuxL: 0.5008 Accu: 99.64
+训练耗时：80.89381337165833 s
+==> Preparing Data Loader...
+Epoch: [116][0/191] Time: 2.388 (2.388) lr:0.001 Loss: 0.6793 iLoss: 0.0325 TLoss: 0.0074 iLossSTA: 0.0257 TLossSTA: 0.0000 iLossGcn: 0.0640 tri1Loss: 0.0000 id1Loss: 0.0258 idALoss: 0.0224 moeAuxL: 0.5015 Accu: 100.00
+Epoch: [116][100/191] Time: 0.406 (0.429) lr:0.001 Loss: 0.7637 iLoss: 0.0353 TLoss: 0.0381 iLossSTA: 0.0293 TLossSTA: 0.0006 iLossGcn: 0.1073 tri1Loss: 0.0058 id1Loss: 0.0264 idALoss: 0.0199 moeAuxL: 0.5010 Accu: 99.69
+训练耗时：80.30791878700256 s
+==> Preparing Data Loader...
+Epoch: [117][0/191] Time: 2.572 (2.572) lr:0.001 Loss: 0.9292 iLoss: 0.0437 TLoss: 0.0935 iLossSTA: 0.0766 TLossSTA: 0.0000 iLossGcn: 0.1642 tri1Loss: 0.0000 id1Loss: 0.0315 idALoss: 0.0184 moeAuxL: 0.5014 Accu: 100.00
+Epoch: [117][100/191] Time: 0.403 (0.435) lr:0.001 Loss: 0.7694 iLoss: 0.0366 TLoss: 0.0392 iLossSTA: 0.0312 TLossSTA: 0.0010 iLossGcn: 0.1068 tri1Loss: 0.0057 id1Loss: 0.0277 idALoss: 0.0205 moeAuxL: 0.5009 Accu: 99.58
+训练耗时：80.62618017196655 s
+==> Preparing Data Loader...
+Epoch: [118][0/191] Time: 2.338 (2.338) lr:0.001 Loss: 0.7415 iLoss: 0.0286 TLoss: 0.0386 iLossSTA: 0.0235 TLossSTA: 0.0000 iLossGcn: 0.1146 tri1Loss: 0.0005 id1Loss: 0.0224 idALoss: 0.0131 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [118][100/191] Time: 0.404 (0.425) lr:0.001 Loss: 0.7574 iLoss: 0.0360 TLoss: 0.0330 iLossSTA: 0.0302 TLossSTA: 0.0006 iLossGcn: 0.1014 tri1Loss: 0.0059 id1Loss: 0.0281 idALoss: 0.0214 moeAuxL: 0.5009 Accu: 99.58
+训练耗时：79.57383155822754 s
+==> Preparing Data Loader...
+Epoch: [119][0/191] Time: 2.274 (2.274) lr:0.001 Loss: 0.7973 iLoss: 0.0408 TLoss: 0.0171 iLossSTA: 0.0371 TLossSTA: 0.0000 iLossGcn: 0.1581 tri1Loss: 0.0000 id1Loss: 0.0268 idALoss: 0.0166 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [119][100/191] Time: 0.411 (0.427) lr:0.001 Loss: 0.7614 iLoss: 0.0373 TLoss: 0.0295 iLossSTA: 0.0318 TLossSTA: 0.0003 iLossGcn: 0.1079 tri1Loss: 0.0033 id1Loss: 0.0287 idALoss: 0.0216 moeAuxL: 0.5009 Accu: 99.78
+训练耗时：80.60031843185425 s
+==> Preparing Data Loader...
+Epoch: [120][0/191] Time: 2.071 (2.071) lr:0.0001 Loss: 0.8889 iLoss: 0.0485 TLoss: 0.0723 iLossSTA: 0.0686 TLossSTA: 0.0040 iLossGcn: 0.1221 tri1Loss: 0.0075 id1Loss: 0.0365 idALoss: 0.0274 moeAuxL: 0.5019 Accu: 100.00
+Epoch: [120][100/191] Time: 0.405 (0.422) lr:0.0001 Loss: 0.7709 iLoss: 0.0369 TLoss: 0.0349 iLossSTA: 0.0326 TLossSTA: 0.0009 iLossGcn: 0.1099 tri1Loss: 0.0048 id1Loss: 0.0288 idALoss: 0.0216 moeAuxL: 0.5006 Accu: 99.66
+训练耗时：78.77692246437073 s
+Test Epoch: 120
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.03%	Rank-5:92.19%	Rank-10:93.95%	Rank-20:95.12%	mAP: 74.76% .
+RGB->IR :   Rank-1:68.75%	Rank-5:82.42%	Rank-10:87.89%	Rank-20:90.23%	mAP: 62.08% .
+IR ->RGB:   Rank-1:67.82%	Rank-5:83.14%	Rank-10:86.78%	Rank-20:90.61%	mAP: 64.53% .
+IR ->IR :   Rank-1:75.56%	Rank-5:87.69%	Rank-10:90.86%	Rank-20:92.35%	mAP: 71.37% .
+AllModal:   Rank-1:78.53%	Rank-5:88.65%	Rank-10:91.51%	Rank-20:93.51%	mAP: 65.29% .
+测试耗时：37.60934901237488 s
+==> Preparing Data Loader...
+Epoch: [121][0/190] Time: 2.687 (2.687) lr:0.0001 Loss: 0.7980 iLoss: 0.0486 TLoss: 0.0028 iLossSTA: 0.0503 TLossSTA: 0.0000 iLossGcn: 0.1400 tri1Loss: 0.0000 id1Loss: 0.0336 idALoss: 0.0218 moeAuxL: 0.5008 Accu: 100.00
+Epoch: [121][100/190] Time: 0.404 (0.429) lr:0.0001 Loss: 0.7596 iLoss: 0.0359 TLoss: 0.0334 iLossSTA: 0.0313 TLossSTA: 0.0014 iLossGcn: 0.1046 tri1Loss: 0.0050 id1Loss: 0.0272 idALoss: 0.0203 moeAuxL: 0.5005 Accu: 99.63
+训练耗时：79.60020852088928 s
+==> Preparing Data Loader...
+Epoch: [122][0/190] Time: 1.983 (1.983) lr:0.0001 Loss: 0.7132 iLoss: 0.0240 TLoss: 0.0614 iLossSTA: 0.0287 TLossSTA: 0.0000 iLossGcn: 0.0651 tri1Loss: 0.0017 id1Loss: 0.0173 idALoss: 0.0140 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [122][100/190] Time: 0.427 (0.427) lr:0.0001 Loss: 0.7692 iLoss: 0.0370 TLoss: 0.0333 iLossSTA: 0.0317 TLossSTA: 0.0028 iLossGcn: 0.1080 tri1Loss: 0.0061 id1Loss: 0.0284 idALoss: 0.0215 moeAuxL: 0.5005 Accu: 99.63
+训练耗时：80.34510970115662 s
+==> Preparing Data Loader...
+Epoch: [123][0/192] Time: 2.437 (2.437) lr:0.0001 Loss: 0.8473 iLoss: 0.0446 TLoss: 0.0094 iLossSTA: 0.0349 TLossSTA: 0.0000 iLossGcn: 0.1918 tri1Loss: 0.0000 id1Loss: 0.0395 idALoss: 0.0268 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [123][100/192] Time: 0.416 (0.435) lr:0.0001 Loss: 0.7524 iLoss: 0.0367 TLoss: 0.0273 iLossSTA: 0.0314 TLossSTA: 0.0011 iLossGcn: 0.1011 tri1Loss: 0.0055 id1Loss: 0.0279 idALoss: 0.0210 moeAuxL: 0.5005 Accu: 99.78
+训练耗时：81.76207780838013 s
+==> Preparing Data Loader...
+Epoch: [124][0/191] Time: 2.097 (2.097) lr:0.0001 Loss: 0.6772 iLoss: 0.0278 TLoss: 0.0015 iLossSTA: 0.0243 TLossSTA: 0.0000 iLossGcn: 0.0875 tri1Loss: 0.0000 id1Loss: 0.0216 idALoss: 0.0144 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [124][100/191] Time: 0.413 (0.431) lr:0.0001 Loss: 0.7623 iLoss: 0.0359 TLoss: 0.0302 iLossSTA: 0.0315 TLossSTA: 0.0004 iLossGcn: 0.1121 tri1Loss: 0.0027 id1Loss: 0.0280 idALoss: 0.0210 moeAuxL: 0.5005 Accu: 99.72
+训练耗时：81.09301161766052 s
+==> Preparing Data Loader...
+Epoch: [125][0/191] Time: 2.242 (2.242) lr:0.0001 Loss: 0.9059 iLoss: 0.0377 TLoss: 0.1237 iLossSTA: 0.0232 TLossSTA: 0.0089 iLossGcn: 0.1042 tri1Loss: 0.0509 id1Loss: 0.0310 idALoss: 0.0263 moeAuxL: 0.5002 Accu: 96.88
+Epoch: [125][100/191] Time: 0.426 (0.438) lr:0.0001 Loss: 0.7517 iLoss: 0.0350 TLoss: 0.0317 iLossSTA: 0.0301 TLossSTA: 0.0003 iLossGcn: 0.1022 tri1Loss: 0.0048 id1Loss: 0.0270 idALoss: 0.0200 moeAuxL: 0.5004 Accu: 99.71
+训练耗时：82.22251415252686 s
+==> Preparing Data Loader...
+Epoch: [126][0/191] Time: 2.630 (2.630) lr:0.0001 Loss: 0.7473 iLoss: 0.0333 TLoss: 0.0009 iLossSTA: 0.0240 TLossSTA: 0.0000 iLossGcn: 0.1441 tri1Loss: 0.0000 id1Loss: 0.0248 idALoss: 0.0200 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [126][100/191] Time: 0.402 (0.431) lr:0.0001 Loss: 0.7734 iLoss: 0.0374 TLoss: 0.0350 iLossSTA: 0.0310 TLossSTA: 0.0010 iLossGcn: 0.1111 tri1Loss: 0.0068 id1Loss: 0.0290 idALoss: 0.0216 moeAuxL: 0.5005 Accu: 99.64
+训练耗时：79.86459994316101 s
+==> Preparing Data Loader...
+Epoch: [127][0/191] Time: 2.264 (2.264) lr:0.0001 Loss: 0.7533 iLoss: 0.0298 TLoss: 0.0610 iLossSTA: 0.0182 TLossSTA: 0.0000 iLossGcn: 0.0996 tri1Loss: 0.0039 id1Loss: 0.0227 idALoss: 0.0179 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [127][100/191] Time: 0.410 (0.430) lr:0.0001 Loss: 0.7646 iLoss: 0.0359 TLoss: 0.0321 iLossSTA: 0.0306 TLossSTA: 0.0022 iLossGcn: 0.1075 tri1Loss: 0.0063 id1Loss: 0.0279 idALoss: 0.0215 moeAuxL: 0.5005 Accu: 99.72
+训练耗时：80.82732844352722 s
+==> Preparing Data Loader...
+Epoch: [128][0/192] Time: 2.379 (2.379) lr:0.0001 Loss: 0.7832 iLoss: 0.0361 TLoss: 0.0166 iLossSTA: 0.0277 TLossSTA: 0.0000 iLossGcn: 0.1452 tri1Loss: 0.0000 id1Loss: 0.0325 idALoss: 0.0243 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [128][100/192] Time: 0.411 (0.431) lr:0.0001 Loss: 0.7503 iLoss: 0.0357 TLoss: 0.0289 iLossSTA: 0.0285 TLossSTA: 0.0007 iLossGcn: 0.1053 tri1Loss: 0.0033 id1Loss: 0.0271 idALoss: 0.0203 moeAuxL: 0.5005 Accu: 99.78
+训练耗时：81.32228517532349 s
+==> Preparing Data Loader...
+Epoch: [129][0/190] Time: 2.034 (2.034) lr:0.0001 Loss: 0.9192 iLoss: 0.0497 TLoss: 0.0910 iLossSTA: 0.0493 TLossSTA: 0.0000 iLossGcn: 0.1211 tri1Loss: 0.0504 id1Loss: 0.0340 idALoss: 0.0235 moeAuxL: 0.5000 Accu: 98.44
+Epoch: [129][100/190] Time: 0.425 (0.439) lr:0.0001 Loss: 0.7630 iLoss: 0.0362 TLoss: 0.0340 iLossSTA: 0.0301 TLossSTA: 0.0003 iLossGcn: 0.1084 tri1Loss: 0.0054 id1Loss: 0.0275 idALoss: 0.0207 moeAuxL: 0.5005 Accu: 99.61
+训练耗时：82.01450157165527 s
+==> Preparing Data Loader...
+Epoch: [130][0/191] Time: 2.162 (2.162) lr:0.0001 Loss: 0.7014 iLoss: 0.0337 TLoss: 0.0000 iLossSTA: 0.0221 TLossSTA: 0.0000 iLossGcn: 0.1026 tri1Loss: 0.0000 id1Loss: 0.0221 idALoss: 0.0205 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [130][100/191] Time: 0.418 (0.432) lr:0.0001 Loss: 0.7720 iLoss: 0.0363 TLoss: 0.0396 iLossSTA: 0.0308 TLossSTA: 0.0019 iLossGcn: 0.1041 tri1Loss: 0.0092 id1Loss: 0.0280 idALoss: 0.0216 moeAuxL: 0.5005 Accu: 99.41
+训练耗时：81.34083485603333 s
+Test Epoch: 130
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:81.84%	Rank-5:91.99%	Rank-10:93.36%	Rank-20:94.92%	mAP: 74.54% .
+RGB->IR :   Rank-1:68.16%	Rank-5:82.62%	Rank-10:87.30%	Rank-20:90.23%	mAP: 61.39% .
+IR ->RGB:   Rank-1:67.24%	Rank-5:83.72%	Rank-10:87.55%	Rank-20:90.42%	mAP: 64.09% .
+IR ->IR :   Rank-1:76.31%	Rank-5:88.06%	Rank-10:90.86%	Rank-20:92.16%	mAP: 71.66% .
+AllModal:   Rank-1:78.72%	Rank-5:88.55%	Rank-10:91.51%	Rank-20:93.23%	mAP: 65.01% .
+测试耗时：36.936172008514404 s
+==> Preparing Data Loader...
+Epoch: [131][0/191] Time: 2.347 (2.347) lr:0.0001 Loss: 0.7813 iLoss: 0.0416 TLoss: 0.0082 iLossSTA: 0.0446 TLossSTA: 0.0000 iLossGcn: 0.1277 tri1Loss: 0.0000 id1Loss: 0.0315 idALoss: 0.0262 moeAuxL: 0.5015 Accu: 100.00
+Epoch: [131][100/191] Time: 0.404 (0.429) lr:0.0001 Loss: 0.7670 iLoss: 0.0366 TLoss: 0.0329 iLossSTA: 0.0304 TLossSTA: 0.0005 iLossGcn: 0.1122 tri1Loss: 0.0042 id1Loss: 0.0285 idALoss: 0.0212 moeAuxL: 0.5005 Accu: 99.66
+训练耗时：80.68471550941467 s
+==> Preparing Data Loader...
+Epoch: [132][0/191] Time: 2.278 (2.278) lr:0.0001 Loss: 0.6937 iLoss: 0.0276 TLoss: 0.0000 iLossSTA: 0.0255 TLossSTA: 0.0000 iLossGcn: 0.0993 tri1Loss: 0.0000 id1Loss: 0.0243 idALoss: 0.0161 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [132][100/191] Time: 0.419 (0.431) lr:0.0001 Loss: 0.7692 iLoss: 0.0374 TLoss: 0.0329 iLossSTA: 0.0308 TLossSTA: 0.0016 iLossGcn: 0.1097 tri1Loss: 0.0055 id1Loss: 0.0290 idALoss: 0.0217 moeAuxL: 0.5005 Accu: 99.60
+训练耗时：80.99552607536316 s
+==> Preparing Data Loader...
+Epoch: [133][0/191] Time: 2.233 (2.233) lr:0.0001 Loss: 0.6517 iLoss: 0.0315 TLoss: 0.0000 iLossSTA: 0.0265 TLossSTA: 0.0000 iLossGcn: 0.0503 tri1Loss: 0.0000 id1Loss: 0.0241 idALoss: 0.0192 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [133][100/191] Time: 0.417 (0.435) lr:0.0001 Loss: 0.7691 iLoss: 0.0387 TLoss: 0.0284 iLossSTA: 0.0322 TLossSTA: 0.0012 iLossGcn: 0.1111 tri1Loss: 0.0042 id1Loss: 0.0297 idALoss: 0.0231 moeAuxL: 0.5005 Accu: 99.80
+训练耗时：81.64324164390564 s
+==> Preparing Data Loader...
+Epoch: [134][0/191] Time: 2.233 (2.233) lr:0.0001 Loss: 0.7828 iLoss: 0.0426 TLoss: 0.0029 iLossSTA: 0.0491 TLossSTA: 0.0000 iLossGcn: 0.1259 tri1Loss: 0.0000 id1Loss: 0.0339 idALoss: 0.0274 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [134][100/191] Time: 0.421 (0.431) lr:0.0001 Loss: 0.7462 iLoss: 0.0358 TLoss: 0.0256 iLossSTA: 0.0301 TLossSTA: 0.0004 iLossGcn: 0.1023 tri1Loss: 0.0021 id1Loss: 0.0278 idALoss: 0.0215 moeAuxL: 0.5005 Accu: 99.89
+训练耗时：80.94168472290039 s
+==> Preparing Data Loader...
+Epoch: [135][0/191] Time: 2.458 (2.458) lr:0.0001 Loss: 0.8363 iLoss: 0.0467 TLoss: 0.0000 iLossSTA: 0.0460 TLossSTA: 0.0000 iLossGcn: 0.1744 tri1Loss: 0.0000 id1Loss: 0.0404 idALoss: 0.0279 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [135][100/191] Time: 0.419 (0.438) lr:0.0001 Loss: 0.7625 iLoss: 0.0371 TLoss: 0.0294 iLossSTA: 0.0304 TLossSTA: 0.0011 iLossGcn: 0.1091 tri1Loss: 0.0051 id1Loss: 0.0282 idALoss: 0.0217 moeAuxL: 0.5005 Accu: 99.71
+训练耗时：81.73679232597351 s
+==> Preparing Data Loader...
+Epoch: [136][0/192] Time: 2.260 (2.260) lr:0.0001 Loss: 0.7255 iLoss: 0.0422 TLoss: 0.0137 iLossSTA: 0.0359 TLossSTA: 0.0000 iLossGcn: 0.0772 tri1Loss: 0.0000 id1Loss: 0.0329 idALoss: 0.0231 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [136][100/192] Time: 0.415 (0.431) lr:0.0001 Loss: 0.7729 iLoss: 0.0367 TLoss: 0.0377 iLossSTA: 0.0334 TLossSTA: 0.0008 iLossGcn: 0.1087 tri1Loss: 0.0049 id1Loss: 0.0288 idALoss: 0.0214 moeAuxL: 0.5005 Accu: 99.60
+训练耗时：81.56938219070435 s
+==> Preparing Data Loader...
+Epoch: [137][0/191] Time: 2.099 (2.099) lr:0.0001 Loss: 0.6633 iLoss: 0.0333 TLoss: 0.0000 iLossSTA: 0.0210 TLossSTA: 0.0000 iLossGcn: 0.0593 tri1Loss: 0.0000 id1Loss: 0.0263 idALoss: 0.0223 moeAuxL: 0.5011 Accu: 100.00
+Epoch: [137][100/191] Time: 0.418 (0.435) lr:0.0001 Loss: 0.7852 iLoss: 0.0398 TLoss: 0.0358 iLossSTA: 0.0349 TLossSTA: 0.0009 iLossGcn: 0.1107 tri1Loss: 0.0069 id1Loss: 0.0308 idALoss: 0.0248 moeAuxL: 0.5005 Accu: 99.46
+训练耗时：81.54315304756165 s
+==> Preparing Data Loader...
+Epoch: [138][0/191] Time: 2.198 (2.198) lr:0.0001 Loss: 0.6752 iLoss: 0.0300 TLoss: 0.0000 iLossSTA: 0.0252 TLossSTA: 0.0000 iLossGcn: 0.0797 tri1Loss: 0.0000 id1Loss: 0.0210 idALoss: 0.0183 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [138][100/191] Time: 0.407 (0.427) lr:0.0001 Loss: 0.7689 iLoss: 0.0367 TLoss: 0.0361 iLossSTA: 0.0307 TLossSTA: 0.0011 iLossGcn: 0.1101 tri1Loss: 0.0045 id1Loss: 0.0280 idALoss: 0.0211 moeAuxL: 0.5005 Accu: 99.64
+训练耗时：79.5933198928833 s
+==> Preparing Data Loader...
+Epoch: [139][0/190] Time: 2.351 (2.351) lr:0.0001 Loss: 0.7853 iLoss: 0.0445 TLoss: 0.0312 iLossSTA: 0.0439 TLossSTA: 0.0000 iLossGcn: 0.1055 tri1Loss: 0.0000 id1Loss: 0.0339 idALoss: 0.0253 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [139][100/190] Time: 0.417 (0.430) lr:0.0001 Loss: 0.7815 iLoss: 0.0366 TLoss: 0.0430 iLossSTA: 0.0303 TLossSTA: 0.0039 iLossGcn: 0.1073 tri1Loss: 0.0102 id1Loss: 0.0284 idALoss: 0.0213 moeAuxL: 0.5005 Accu: 99.46
+训练耗时：80.37540531158447 s
+==> Preparing Data Loader...
+Epoch: [140][0/190] Time: 2.798 (2.798) lr:0.0001 Loss: 0.9068 iLoss: 0.0380 TLoss: 0.0698 iLossSTA: 0.0280 TLossSTA: 0.0000 iLossGcn: 0.2021 tri1Loss: 0.0199 id1Loss: 0.0289 idALoss: 0.0198 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [140][100/190] Time: 0.440 (0.440) lr:0.0001 Loss: 0.7681 iLoss: 0.0368 TLoss: 0.0330 iLossSTA: 0.0314 TLossSTA: 0.0009 iLossGcn: 0.1077 tri1Loss: 0.0068 id1Loss: 0.0289 idALoss: 0.0223 moeAuxL: 0.5004 Accu: 99.63
+训练耗时：81.35699486732483 s
+Test Epoch: 140
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.42%	Rank-5:91.99%	Rank-10:94.34%	Rank-20:94.92%	mAP: 75.07% .
+RGB->IR :   Rank-1:68.36%	Rank-5:82.23%	Rank-10:88.09%	Rank-20:90.82%	mAP: 61.81% .
+IR ->RGB:   Rank-1:68.20%	Rank-5:83.52%	Rank-10:87.74%	Rank-20:90.42%	mAP: 64.75% .
+IR ->IR :   Rank-1:76.31%	Rank-5:87.31%	Rank-10:90.86%	Rank-20:92.35%	mAP: 71.71% .
+AllModal:   Rank-1:78.72%	Rank-5:88.74%	Rank-10:91.41%	Rank-20:93.51%	mAP: 65.57% .
+测试耗时：38.10175681114197 s
+==> Preparing Data Loader...
+Epoch: [141][0/192] Time: 2.312 (2.312) lr:0.0001 Loss: 0.7439 iLoss: 0.0406 TLoss: 0.0000 iLossSTA: 0.0300 TLossSTA: 0.0000 iLossGcn: 0.1240 tri1Loss: 0.0000 id1Loss: 0.0291 idALoss: 0.0198 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [141][100/192] Time: 0.417 (0.436) lr:0.0001 Loss: 0.7658 iLoss: 0.0360 TLoss: 0.0341 iLossSTA: 0.0294 TLossSTA: 0.0008 iLossGcn: 0.1119 tri1Loss: 0.0044 id1Loss: 0.0280 idALoss: 0.0207 moeAuxL: 0.5004 Accu: 99.69
+训练耗时：81.93735980987549 s
+==> Preparing Data Loader...
+Epoch: [142][0/190] Time: 1.962 (1.962) lr:0.0001 Loss: 0.6612 iLoss: 0.0252 TLoss: 0.0074 iLossSTA: 0.0249 TLossSTA: 0.0000 iLossGcn: 0.0656 tri1Loss: 0.0000 id1Loss: 0.0223 idALoss: 0.0157 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [142][100/190] Time: 0.416 (0.431) lr:0.0001 Loss: 0.7720 iLoss: 0.0383 TLoss: 0.0356 iLossSTA: 0.0314 TLossSTA: 0.0013 iLossGcn: 0.1072 tri1Loss: 0.0066 id1Loss: 0.0292 idALoss: 0.0219 moeAuxL: 0.5005 Accu: 99.57
+训练耗时：80.5252034664154 s
+==> Preparing Data Loader...
+Epoch: [143][0/192] Time: 2.033 (2.033) lr:0.0001 Loss: 0.8281 iLoss: 0.0393 TLoss: 0.0090 iLossSTA: 0.0312 TLossSTA: 0.0000 iLossGcn: 0.1976 tri1Loss: 0.0000 id1Loss: 0.0277 idALoss: 0.0228 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [143][100/192] Time: 0.412 (0.428) lr:0.0001 Loss: 0.7646 iLoss: 0.0360 TLoss: 0.0340 iLossSTA: 0.0300 TLossSTA: 0.0007 iLossGcn: 0.1083 tri1Loss: 0.0060 id1Loss: 0.0284 idALoss: 0.0209 moeAuxL: 0.5004 Accu: 99.58
+训练耗时：81.26947593688965 s
+==> Preparing Data Loader...
+Epoch: [144][0/190] Time: 1.947 (1.947) lr:0.0001 Loss: 0.7541 iLoss: 0.0456 TLoss: 0.0001 iLossSTA: 0.0311 TLossSTA: 0.0000 iLossGcn: 0.1184 tri1Loss: 0.0000 id1Loss: 0.0341 idALoss: 0.0245 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [144][100/190] Time: 0.407 (0.422) lr:0.0001 Loss: 0.7580 iLoss: 0.0356 TLoss: 0.0320 iLossSTA: 0.0296 TLossSTA: 0.0005 iLossGcn: 0.1085 tri1Loss: 0.0041 id1Loss: 0.0270 idALoss: 0.0202 moeAuxL: 0.5004 Accu: 99.66
+训练耗时：78.90107893943787 s
+==> Preparing Data Loader...
+Epoch: [145][0/191] Time: 2.084 (2.084) lr:0.0001 Loss: 0.8376 iLoss: 0.0558 TLoss: 0.0000 iLossSTA: 0.0345 TLossSTA: 0.0000 iLossGcn: 0.1754 tri1Loss: 0.0000 id1Loss: 0.0387 idALoss: 0.0327 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [145][100/191] Time: 0.408 (0.426) lr:0.0001 Loss: 0.7674 iLoss: 0.0359 TLoss: 0.0347 iLossSTA: 0.0300 TLossSTA: 0.0013 iLossGcn: 0.1104 tri1Loss: 0.0065 id1Loss: 0.0277 idALoss: 0.0205 moeAuxL: 0.5004 Accu: 99.50
+训练耗时：79.82172346115112 s
+==> Preparing Data Loader...
+Epoch: [146][0/191] Time: 2.047 (2.047) lr:0.0001 Loss: 0.6833 iLoss: 0.0328 TLoss: 0.0225 iLossSTA: 0.0234 TLossSTA: 0.0000 iLossGcn: 0.0632 tri1Loss: 0.0035 id1Loss: 0.0218 idALoss: 0.0156 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [146][100/191] Time: 0.413 (0.433) lr:0.0001 Loss: 0.7635 iLoss: 0.0355 TLoss: 0.0343 iLossSTA: 0.0298 TLossSTA: 0.0006 iLossGcn: 0.1112 tri1Loss: 0.0051 id1Loss: 0.0266 idALoss: 0.0198 moeAuxL: 0.5005 Accu: 99.66
+训练耗时：81.49174046516418 s
+==> Preparing Data Loader...
+Epoch: [147][0/191] Time: 2.331 (2.331) lr:0.0001 Loss: 0.7173 iLoss: 0.0321 TLoss: 0.0000 iLossSTA: 0.0236 TLossSTA: 0.0000 iLossGcn: 0.1231 tri1Loss: 0.0000 id1Loss: 0.0232 idALoss: 0.0146 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [147][100/191] Time: 0.422 (0.432) lr:0.0001 Loss: 0.7737 iLoss: 0.0379 TLoss: 0.0383 iLossSTA: 0.0318 TLossSTA: 0.0010 iLossGcn: 0.1050 tri1Loss: 0.0079 id1Loss: 0.0293 idALoss: 0.0220 moeAuxL: 0.5005 Accu: 99.52
+训练耗时：81.37762761116028 s
+==> Preparing Data Loader...
+Epoch: [148][0/191] Time: 2.498 (2.498) lr:0.0001 Loss: 0.8626 iLoss: 0.0528 TLoss: 0.0434 iLossSTA: 0.0344 TLossSTA: 0.0000 iLossGcn: 0.1737 tri1Loss: 0.0000 id1Loss: 0.0381 idALoss: 0.0201 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [148][100/191] Time: 0.415 (0.437) lr:0.0001 Loss: 0.7690 iLoss: 0.0373 TLoss: 0.0339 iLossSTA: 0.0317 TLossSTA: 0.0007 iLossGcn: 0.1098 tri1Loss: 0.0052 id1Loss: 0.0286 idALoss: 0.0212 moeAuxL: 0.5005 Accu: 99.69
+训练耗时：81.82647395133972 s
+==> Preparing Data Loader...
+Epoch: [149][0/191] Time: 1.877 (1.877) lr:0.0001 Loss: 0.8454 iLoss: 0.0621 TLoss: 0.0000 iLossSTA: 0.0497 TLossSTA: 0.0000 iLossGcn: 0.1646 tri1Loss: 0.0000 id1Loss: 0.0389 idALoss: 0.0296 moeAuxL: 0.5006 Accu: 100.00
+Epoch: [149][100/191] Time: 0.442 (0.434) lr:0.0001 Loss: 0.7516 iLoss: 0.0364 TLoss: 0.0298 iLossSTA: 0.0309 TLossSTA: 0.0012 iLossGcn: 0.1001 tri1Loss: 0.0033 id1Loss: 0.0280 idALoss: 0.0214 moeAuxL: 0.5005 Accu: 99.69
+训练耗时：81.47652912139893 s
+==> Preparing Data Loader...
+Epoch: [150][0/189] Time: 2.488 (2.488) lr:0.0001 Loss: 0.7767 iLoss: 0.0571 TLoss: 0.0048 iLossSTA: 0.0388 TLossSTA: 0.0000 iLossGcn: 0.1006 tri1Loss: 0.0000 id1Loss: 0.0418 idALoss: 0.0326 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [150][100/189] Time: 0.429 (0.441) lr:0.0001 Loss: 0.7687 iLoss: 0.0383 TLoss: 0.0365 iLossSTA: 0.0321 TLossSTA: 0.0012 iLossGcn: 0.1037 tri1Loss: 0.0059 id1Loss: 0.0288 idALoss: 0.0217 moeAuxL: 0.5005 Accu: 99.61
+训练耗时：81.8279378414154 s
+Test Epoch: 150
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:81.84%	Rank-5:91.99%	Rank-10:93.36%	Rank-20:94.92%	mAP: 74.85% .
+RGB->IR :   Rank-1:67.58%	Rank-5:82.62%	Rank-10:87.50%	Rank-20:90.43%	mAP: 61.46% .
+IR ->RGB:   Rank-1:66.67%	Rank-5:82.95%	Rank-10:87.36%	Rank-20:90.42%	mAP: 64.09% .
+IR ->IR :   Rank-1:75.93%	Rank-5:87.31%	Rank-10:90.67%	Rank-20:91.79%	mAP: 71.33% .
+AllModal:   Rank-1:78.44%	Rank-5:88.93%	Rank-10:91.13%	Rank-20:93.23%	mAP: 65.20% .
+测试耗时：37.19984436035156 s
+==> Preparing Data Loader...
+Epoch: [151][0/190] Time: 2.328 (2.328) lr:0.0001 Loss: 0.7062 iLoss: 0.0351 TLoss: 0.0027 iLossSTA: 0.0414 TLossSTA: 0.0000 iLossGcn: 0.0707 tri1Loss: 0.0000 id1Loss: 0.0291 idALoss: 0.0266 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [151][100/190] Time: 0.423 (0.436) lr:0.0001 Loss: 0.7675 iLoss: 0.0374 TLoss: 0.0279 iLossSTA: 0.0309 TLossSTA: 0.0027 iLossGcn: 0.1123 tri1Loss: 0.0062 id1Loss: 0.0284 idALoss: 0.0214 moeAuxL: 0.5004 Accu: 99.75
+训练耗时：81.27781701087952 s
+==> Preparing Data Loader...
+Epoch: [152][0/191] Time: 2.102 (2.102) lr:0.0001 Loss: 0.8516 iLoss: 0.0410 TLoss: 0.0617 iLossSTA: 0.0432 TLossSTA: 0.0000 iLossGcn: 0.1513 tri1Loss: 0.0055 id1Loss: 0.0286 idALoss: 0.0193 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [152][100/191] Time: 0.413 (0.438) lr:0.0001 Loss: 0.7695 iLoss: 0.0365 TLoss: 0.0366 iLossSTA: 0.0314 TLossSTA: 0.0008 iLossGcn: 0.1082 tri1Loss: 0.0051 id1Loss: 0.0287 idALoss: 0.0218 moeAuxL: 0.5005 Accu: 99.43
+训练耗时：82.13514971733093 s
+==> Preparing Data Loader...
+Epoch: [153][0/190] Time: 1.962 (1.962) lr:0.0001 Loss: 0.7054 iLoss: 0.0399 TLoss: 0.0023 iLossSTA: 0.0233 TLossSTA: 0.0000 iLossGcn: 0.0982 tri1Loss: 0.0000 id1Loss: 0.0262 idALoss: 0.0151 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [153][100/190] Time: 0.424 (0.431) lr:0.0001 Loss: 0.7604 iLoss: 0.0361 TLoss: 0.0327 iLossSTA: 0.0306 TLossSTA: 0.0004 iLossGcn: 0.1071 tri1Loss: 0.0044 id1Loss: 0.0278 idALoss: 0.0209 moeAuxL: 0.5005 Accu: 99.63
+训练耗时：80.904714345932 s
+==> Preparing Data Loader...
+Epoch: [154][0/190] Time: 2.261 (2.261) lr:0.0001 Loss: 0.6946 iLoss: 0.0376 TLoss: 0.0000 iLossSTA: 0.0235 TLossSTA: 0.0000 iLossGcn: 0.0875 tri1Loss: 0.0000 id1Loss: 0.0261 idALoss: 0.0195 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [154][100/190] Time: 0.418 (0.435) lr:0.0001 Loss: 0.7695 iLoss: 0.0374 TLoss: 0.0337 iLossSTA: 0.0306 TLossSTA: 0.0008 iLossGcn: 0.1106 tri1Loss: 0.0069 id1Loss: 0.0281 idALoss: 0.0209 moeAuxL: 0.5005 Accu: 99.58
+训练耗时：81.26879930496216 s
+==> Preparing Data Loader...
+Epoch: [155][0/190] Time: 2.181 (2.181) lr:0.0001 Loss: 0.7423 iLoss: 0.0305 TLoss: 0.0262 iLossSTA: 0.0339 TLossSTA: 0.0000 iLossGcn: 0.1013 tri1Loss: 0.0000 id1Loss: 0.0245 idALoss: 0.0259 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [155][100/190] Time: 0.404 (0.427) lr:0.0001 Loss: 0.7685 iLoss: 0.0377 TLoss: 0.0283 iLossSTA: 0.0321 TLossSTA: 0.0012 iLossGcn: 0.1126 tri1Loss: 0.0049 id1Loss: 0.0293 idALoss: 0.0220 moeAuxL: 0.5004 Accu: 99.69
+训练耗时：79.32194232940674 s
+==> Preparing Data Loader...
+Epoch: [156][0/190] Time: 2.266 (2.266) lr:0.0001 Loss: 0.7546 iLoss: 0.0355 TLoss: 0.0246 iLossSTA: 0.0312 TLossSTA: 0.0000 iLossGcn: 0.1098 tri1Loss: 0.0000 id1Loss: 0.0303 idALoss: 0.0224 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [156][100/190] Time: 0.416 (0.430) lr:0.0001 Loss: 0.7583 iLoss: 0.0369 TLoss: 0.0283 iLossSTA: 0.0315 TLossSTA: 0.0005 iLossGcn: 0.1079 tri1Loss: 0.0040 id1Loss: 0.0279 idALoss: 0.0208 moeAuxL: 0.5005 Accu: 99.75
+训练耗时：80.7600884437561 s
+==> Preparing Data Loader...
+Epoch: [157][0/190] Time: 2.560 (2.560) lr:0.0001 Loss: 0.6803 iLoss: 0.0308 TLoss: 0.0000 iLossSTA: 0.0273 TLossSTA: 0.0000 iLossGcn: 0.0748 tri1Loss: 0.0000 id1Loss: 0.0264 idALoss: 0.0196 moeAuxL: 0.5015 Accu: 100.00
+Epoch: [157][100/190] Time: 0.431 (0.436) lr:0.0001 Loss: 0.7608 iLoss: 0.0366 TLoss: 0.0325 iLossSTA: 0.0304 TLossSTA: 0.0005 iLossGcn: 0.1074 tri1Loss: 0.0041 id1Loss: 0.0280 idALoss: 0.0208 moeAuxL: 0.5005 Accu: 99.64
+训练耗时：81.39595055580139 s
+==> Preparing Data Loader...
+Epoch: [158][0/189] Time: 2.150 (2.150) lr:0.0001 Loss: 0.6769 iLoss: 0.0288 TLoss: 0.0000 iLossSTA: 0.0265 TLossSTA: 0.0000 iLossGcn: 0.0829 tri1Loss: 0.0000 id1Loss: 0.0215 idALoss: 0.0171 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [158][100/189] Time: 0.417 (0.435) lr:0.0001 Loss: 0.7638 iLoss: 0.0373 TLoss: 0.0314 iLossSTA: 0.0319 TLossSTA: 0.0008 iLossGcn: 0.1072 tri1Loss: 0.0049 id1Loss: 0.0286 idALoss: 0.0212 moeAuxL: 0.5004 Accu: 99.61
+训练耗时：80.7567207813263 s
+==> Preparing Data Loader...
+Epoch: [159][0/190] Time: 2.434 (2.434) lr:0.0001 Loss: 0.8281 iLoss: 0.0514 TLoss: 0.0439 iLossSTA: 0.0595 TLossSTA: 0.0000 iLossGcn: 0.0984 tri1Loss: 0.0000 id1Loss: 0.0392 idALoss: 0.0349 moeAuxL: 0.5009 Accu: 100.00
+Epoch: [159][100/190] Time: 0.419 (0.434) lr:0.0001 Loss: 0.7925 iLoss: 0.0394 TLoss: 0.0388 iLossSTA: 0.0331 TLossSTA: 0.0011 iLossGcn: 0.1189 tri1Loss: 0.0075 id1Loss: 0.0304 idALoss: 0.0228 moeAuxL: 0.5005 Accu: 99.47
+训练耗时：81.07358241081238 s
+==> Preparing Data Loader...
+Epoch: [160][0/190] Time: 2.169 (2.169) lr:0.0001 Loss: 0.8253 iLoss: 0.0504 TLoss: 0.0624 iLossSTA: 0.0363 TLossSTA: 0.0000 iLossGcn: 0.1048 tri1Loss: 0.0087 id1Loss: 0.0380 idALoss: 0.0243 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [160][100/190] Time: 0.411 (0.432) lr:0.0001 Loss: 0.7636 iLoss: 0.0392 TLoss: 0.0295 iLossSTA: 0.0321 TLossSTA: 0.0002 iLossGcn: 0.1077 tri1Loss: 0.0034 id1Loss: 0.0291 idALoss: 0.0220 moeAuxL: 0.5004 Accu: 99.66
+训练耗时：80.7969617843628 s
+Test Epoch: 160
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.23%	Rank-5:91.99%	Rank-10:93.95%	Rank-20:95.12%	mAP: 75.03% .
+RGB->IR :   Rank-1:67.58%	Rank-5:83.79%	Rank-10:87.89%	Rank-20:90.23%	mAP: 61.97% .
+IR ->RGB:   Rank-1:66.48%	Rank-5:83.52%	Rank-10:88.31%	Rank-20:90.23%	mAP: 64.01% .
+IR ->IR :   Rank-1:75.37%	Rank-5:86.75%	Rank-10:90.67%	Rank-20:92.35%	mAP: 71.46% .
+AllModal:   Rank-1:78.44%	Rank-5:88.74%	Rank-10:91.60%	Rank-20:93.42%	mAP: 65.41% .
+测试耗时：38.35959267616272 s
+==> Preparing Data Loader...
+Epoch: [161][0/190] Time: 2.289 (2.289) lr:0.0001 Loss: 0.6736 iLoss: 0.0358 TLoss: 0.0039 iLossSTA: 0.0262 TLossSTA: 0.0000 iLossGcn: 0.0644 tri1Loss: 0.0000 id1Loss: 0.0234 idALoss: 0.0200 moeAuxL: 0.4999 Accu: 100.00
+Epoch: [161][100/190] Time: 0.418 (0.452) lr:0.0001 Loss: 0.7558 iLoss: 0.0357 TLoss: 0.0316 iLossSTA: 0.0287 TLossSTA: 0.0005 iLossGcn: 0.1061 tri1Loss: 0.0039 id1Loss: 0.0277 idALoss: 0.0212 moeAuxL: 0.5005 Accu: 99.77
+训练耗时：83.03503751754761 s
+==> Preparing Data Loader...
+Epoch: [162][0/191] Time: 2.881 (2.881) lr:0.0001 Loss: 0.7150 iLoss: 0.0336 TLoss: 0.0218 iLossSTA: 0.0311 TLossSTA: 0.0000 iLossGcn: 0.0821 tri1Loss: 0.0000 id1Loss: 0.0274 idALoss: 0.0184 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [162][100/191] Time: 0.440 (0.435) lr:0.0001 Loss: 0.7649 iLoss: 0.0379 TLoss: 0.0317 iLossSTA: 0.0312 TLossSTA: 0.0018 iLossGcn: 0.1062 tri1Loss: 0.0054 id1Loss: 0.0286 idALoss: 0.0217 moeAuxL: 0.5004 Accu: 99.66
+训练耗时：81.1274790763855 s
+==> Preparing Data Loader...
+Epoch: [163][0/192] Time: 2.266 (2.266) lr:0.0001 Loss: 0.7481 iLoss: 0.0379 TLoss: 0.0196 iLossSTA: 0.0394 TLossSTA: 0.0000 iLossGcn: 0.0934 tri1Loss: 0.0000 id1Loss: 0.0342 idALoss: 0.0234 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [163][100/192] Time: 0.419 (0.435) lr:0.0001 Loss: 0.7728 iLoss: 0.0375 TLoss: 0.0386 iLossSTA: 0.0311 TLossSTA: 0.0003 iLossGcn: 0.1101 tri1Loss: 0.0043 id1Loss: 0.0288 idALoss: 0.0216 moeAuxL: 0.5005 Accu: 99.47
+训练耗时：81.68213486671448 s
+==> Preparing Data Loader...
+Epoch: [164][0/190] Time: 2.370 (2.370) lr:0.0001 Loss: 0.7665 iLoss: 0.0308 TLoss: 0.0120 iLossSTA: 0.0224 TLossSTA: 0.0000 iLossGcn: 0.1528 tri1Loss: 0.0000 id1Loss: 0.0245 idALoss: 0.0232 moeAuxL: 0.5008 Accu: 100.00
+Epoch: [164][100/190] Time: 0.414 (0.441) lr:0.0001 Loss: 0.7588 iLoss: 0.0366 TLoss: 0.0299 iLossSTA: 0.0306 TLossSTA: 0.0005 iLossGcn: 0.1078 tri1Loss: 0.0029 id1Loss: 0.0285 idALoss: 0.0216 moeAuxL: 0.5005 Accu: 99.74
+训练耗时：81.49571061134338 s
+==> Preparing Data Loader...
+Epoch: [165][0/191] Time: 2.280 (2.280) lr:0.0001 Loss: 0.7878 iLoss: 0.0595 TLoss: 0.0263 iLossSTA: 0.0464 TLossSTA: 0.0000 iLossGcn: 0.0909 tri1Loss: 0.0000 id1Loss: 0.0380 idALoss: 0.0262 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [165][100/191] Time: 0.409 (0.431) lr:0.0001 Loss: 0.7605 iLoss: 0.0353 TLoss: 0.0342 iLossSTA: 0.0283 TLossSTA: 0.0020 iLossGcn: 0.1049 tri1Loss: 0.0092 id1Loss: 0.0263 idALoss: 0.0198 moeAuxL: 0.5005 Accu: 99.49
+训练耗时：81.1854612827301 s
+==> Preparing Data Loader...
+Epoch: [166][0/189] Time: 2.354 (2.354) lr:0.0001 Loss: 0.7064 iLoss: 0.0354 TLoss: 0.0115 iLossSTA: 0.0248 TLossSTA: 0.0000 iLossGcn: 0.0847 tri1Loss: 0.0000 id1Loss: 0.0287 idALoss: 0.0210 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [166][100/189] Time: 0.415 (0.435) lr:0.0001 Loss: 0.7729 iLoss: 0.0373 TLoss: 0.0399 iLossSTA: 0.0311 TLossSTA: 0.0021 iLossGcn: 0.1068 tri1Loss: 0.0057 id1Loss: 0.0282 idALoss: 0.0214 moeAuxL: 0.5005 Accu: 99.49
+训练耗时：80.51422572135925 s
+==> Preparing Data Loader...
+Epoch: [167][0/190] Time: 2.176 (2.176) lr:0.0001 Loss: 0.7247 iLoss: 0.0324 TLoss: 0.0140 iLossSTA: 0.0294 TLossSTA: 0.0000 iLossGcn: 0.1062 tri1Loss: 0.0000 id1Loss: 0.0255 idALoss: 0.0170 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [167][100/190] Time: 0.414 (0.437) lr:0.0001 Loss: 0.7519 iLoss: 0.0368 TLoss: 0.0218 iLossSTA: 0.0306 TLossSTA: 0.0009 iLossGcn: 0.1091 tri1Loss: 0.0028 id1Loss: 0.0283 idALoss: 0.0211 moeAuxL: 0.5005 Accu: 99.88
+训练耗时：81.70517563819885 s
+==> Preparing Data Loader...
+Epoch: [168][0/190] Time: 2.075 (2.075) lr:0.0001 Loss: 0.6749 iLoss: 0.0324 TLoss: 0.0170 iLossSTA: 0.0147 TLossSTA: 0.0000 iLossGcn: 0.0725 tri1Loss: 0.0000 id1Loss: 0.0218 idALoss: 0.0158 moeAuxL: 0.5006 Accu: 100.00
+Epoch: [168][100/190] Time: 0.415 (0.436) lr:0.0001 Loss: 0.7818 iLoss: 0.0385 TLoss: 0.0355 iLossSTA: 0.0334 TLossSTA: 0.0004 iLossGcn: 0.1158 tri1Loss: 0.0058 id1Loss: 0.0297 idALoss: 0.0222 moeAuxL: 0.5005 Accu: 99.47
+训练耗时：81.388507604599 s
+==> Preparing Data Loader...
+Epoch: [169][0/190] Time: 2.141 (2.141) lr:0.0001 Loss: 0.7142 iLoss: 0.0369 TLoss: 0.0027 iLossSTA: 0.0278 TLossSTA: 0.0000 iLossGcn: 0.0952 tri1Loss: 0.0000 id1Loss: 0.0283 idALoss: 0.0228 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [169][100/190] Time: 0.415 (0.434) lr:0.0001 Loss: 0.7650 iLoss: 0.0373 TLoss: 0.0265 iLossSTA: 0.0318 TLossSTA: 0.0005 iLossGcn: 0.1140 tri1Loss: 0.0035 id1Loss: 0.0290 idALoss: 0.0219 moeAuxL: 0.5004 Accu: 99.77
+训练耗时：81.22515106201172 s
+==> Preparing Data Loader...
+Epoch: [170][0/190] Time: 2.156 (2.156) lr:0.0001 Loss: 0.9258 iLoss: 0.0668 TLoss: 0.0429 iLossSTA: 0.0365 TLossSTA: 0.0000 iLossGcn: 0.1883 tri1Loss: 0.0036 id1Loss: 0.0527 idALoss: 0.0348 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [170][100/190] Time: 0.419 (0.437) lr:0.0001 Loss: 0.7673 iLoss: 0.0397 TLoss: 0.0334 iLossSTA: 0.0317 TLossSTA: 0.0003 iLossGcn: 0.1058 tri1Loss: 0.0043 id1Loss: 0.0297 idALoss: 0.0220 moeAuxL: 0.5005 Accu: 99.63
+训练耗时：81.56054711341858 s
+Test Epoch: 170
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.03%	Rank-5:91.60%	Rank-10:93.55%	Rank-20:95.12%	mAP: 74.84% .
+RGB->IR :   Rank-1:68.75%	Rank-5:83.01%	Rank-10:87.89%	Rank-20:90.43%	mAP: 62.17% .
+IR ->RGB:   Rank-1:68.20%	Rank-5:83.14%	Rank-10:87.36%	Rank-20:90.61%	mAP: 64.51% .
+IR ->IR :   Rank-1:75.93%	Rank-5:87.87%	Rank-10:91.04%	Rank-20:92.35%	mAP: 71.55% .
+AllModal:   Rank-1:78.72%	Rank-5:88.93%	Rank-10:91.41%	Rank-20:93.51%	mAP: 65.47% .
+测试耗时：37.36839509010315 s
+==> Preparing Data Loader...
+Epoch: [171][0/189] Time: 2.338 (2.338) lr:0.0001 Loss: 1.0940 iLoss: 0.0477 TLoss: 0.1448 iLossSTA: 0.0397 TLossSTA: 0.0072 iLossGcn: 0.1936 tri1Loss: 0.1013 id1Loss: 0.0333 idALoss: 0.0262 moeAuxL: 0.5002 Accu: 95.31
+Epoch: [171][100/189] Time: 0.417 (0.430) lr:0.0001 Loss: 0.7907 iLoss: 0.0386 TLoss: 0.0416 iLossSTA: 0.0335 TLossSTA: 0.0004 iLossGcn: 0.1170 tri1Loss: 0.0062 id1Loss: 0.0301 idALoss: 0.0228 moeAuxL: 0.5004 Accu: 99.44
+训练耗时：80.15294194221497 s
+==> Preparing Data Loader...
+Epoch: [172][0/192] Time: 2.226 (2.226) lr:0.0001 Loss: 0.8578 iLoss: 0.0516 TLoss: 0.0008 iLossSTA: 0.0446 TLossSTA: 0.0000 iLossGcn: 0.1979 tri1Loss: 0.0000 id1Loss: 0.0362 idALoss: 0.0258 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [172][100/192] Time: 0.421 (0.432) lr:0.0001 Loss: 0.7728 iLoss: 0.0380 TLoss: 0.0370 iLossSTA: 0.0321 TLossSTA: 0.0008 iLossGcn: 0.1060 tri1Loss: 0.0066 id1Loss: 0.0294 idALoss: 0.0225 moeAuxL: 0.5005 Accu: 99.46
+训练耗时：81.77969574928284 s
+==> Preparing Data Loader...
+Epoch: [173][0/190] Time: 2.192 (2.192) lr:0.0001 Loss: 0.8160 iLoss: 0.0459 TLoss: 0.0104 iLossSTA: 0.0348 TLossSTA: 0.0000 iLossGcn: 0.1619 tri1Loss: 0.0000 id1Loss: 0.0339 idALoss: 0.0288 moeAuxL: 0.5004 Accu: 100.00
+Epoch: [173][100/190] Time: 0.422 (0.439) lr:0.0001 Loss: 0.7680 iLoss: 0.0366 TLoss: 0.0321 iLossSTA: 0.0311 TLossSTA: 0.0012 iLossGcn: 0.1107 tri1Loss: 0.0053 id1Loss: 0.0288 idALoss: 0.0218 moeAuxL: 0.5005 Accu: 99.64
+训练耗时：81.79428482055664 s
+==> Preparing Data Loader...
+Epoch: [174][0/190] Time: 2.468 (2.468) lr:0.0001 Loss: 0.7499 iLoss: 0.0249 TLoss: 0.0148 iLossSTA: 0.0182 TLossSTA: 0.0000 iLossGcn: 0.1502 tri1Loss: 0.0050 id1Loss: 0.0205 idALoss: 0.0161 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [174][100/190] Time: 0.418 (0.438) lr:0.0001 Loss: 0.7626 iLoss: 0.0357 TLoss: 0.0295 iLossSTA: 0.0306 TLossSTA: 0.0003 iLossGcn: 0.1124 tri1Loss: 0.0041 id1Loss: 0.0281 idALoss: 0.0215 moeAuxL: 0.5004 Accu: 99.77
+训练耗时：81.60504531860352 s
+==> Preparing Data Loader...
+Epoch: [175][0/191] Time: 2.304 (2.304) lr:0.0001 Loss: 0.9402 iLoss: 0.0446 TLoss: 0.1039 iLossSTA: 0.0509 TLossSTA: 0.0000 iLossGcn: 0.1798 tri1Loss: 0.0038 id1Loss: 0.0340 idALoss: 0.0229 moeAuxL: 0.5003 Accu: 98.44
+Epoch: [175][100/191] Time: 0.429 (0.432) lr:0.0001 Loss: 0.7830 iLoss: 0.0377 TLoss: 0.0386 iLossSTA: 0.0335 TLossSTA: 0.0023 iLossGcn: 0.1091 tri1Loss: 0.0079 id1Loss: 0.0296 idALoss: 0.0238 moeAuxL: 0.5004 Accu: 99.47
+训练耗时：81.42162561416626 s
+==> Preparing Data Loader...
+Epoch: [176][0/190] Time: 2.434 (2.434) lr:0.0001 Loss: 0.7250 iLoss: 0.0167 TLoss: 0.0291 iLossSTA: 0.0446 TLossSTA: 0.0000 iLossGcn: 0.1040 tri1Loss: 0.0000 id1Loss: 0.0171 idALoss: 0.0134 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [176][100/190] Time: 0.416 (0.435) lr:0.0001 Loss: 0.7615 iLoss: 0.0361 TLoss: 0.0306 iLossSTA: 0.0310 TLossSTA: 0.0002 iLossGcn: 0.1092 tri1Loss: 0.0041 id1Loss: 0.0283 idALoss: 0.0215 moeAuxL: 0.5004 Accu: 99.75
+训练耗时：81.1975245475769 s
+==> Preparing Data Loader...
+Epoch: [177][0/190] Time: 2.286 (2.286) lr:0.0001 Loss: 0.6740 iLoss: 0.0378 TLoss: 0.0000 iLossSTA: 0.0293 TLossSTA: 0.0000 iLossGcn: 0.0648 tri1Loss: 0.0000 id1Loss: 0.0254 idALoss: 0.0162 moeAuxL: 0.5006 Accu: 100.00
+Epoch: [177][100/190] Time: 0.417 (0.438) lr:0.0001 Loss: 0.7630 iLoss: 0.0357 TLoss: 0.0331 iLossSTA: 0.0305 TLossSTA: 0.0008 iLossGcn: 0.1089 tri1Loss: 0.0054 id1Loss: 0.0274 idALoss: 0.0207 moeAuxL: 0.5004 Accu: 99.63
+训练耗时：81.4957447052002 s
+==> Preparing Data Loader...
+Epoch: [178][0/191] Time: 2.754 (2.754) lr:0.0001 Loss: 0.8551 iLoss: 0.0567 TLoss: 0.0000 iLossSTA: 0.0447 TLossSTA: 0.0000 iLossGcn: 0.1798 tri1Loss: 0.0000 id1Loss: 0.0380 idALoss: 0.0360 moeAuxL: 0.4999 Accu: 100.00
+Epoch: [178][100/191] Time: 0.419 (0.437) lr:0.0001 Loss: 0.7616 iLoss: 0.0355 TLoss: 0.0345 iLossSTA: 0.0288 TLossSTA: 0.0019 iLossGcn: 0.1061 tri1Loss: 0.0063 id1Loss: 0.0274 idALoss: 0.0208 moeAuxL: 0.5004 Accu: 99.66
+训练耗时：82.11271667480469 s
+==> Preparing Data Loader...
+Epoch: [179][0/191] Time: 2.334 (2.334) lr:0.0001 Loss: 0.7919 iLoss: 0.0305 TLoss: 0.0455 iLossSTA: 0.0277 TLossSTA: 0.0000 iLossGcn: 0.1331 tri1Loss: 0.0013 id1Loss: 0.0292 idALoss: 0.0239 moeAuxL: 0.5007 Accu: 100.00
+Epoch: [179][100/191] Time: 0.413 (0.433) lr:0.0001 Loss: 0.7766 iLoss: 0.0386 TLoss: 0.0332 iLossSTA: 0.0326 TLossSTA: 0.0011 iLossGcn: 0.1133 tri1Loss: 0.0054 id1Loss: 0.0298 idALoss: 0.0223 moeAuxL: 0.5004 Accu: 99.61
+训练耗时：81.16956329345703 s
+==> Preparing Data Loader...
+Epoch: [180][0/190] Time: 2.361 (2.361) lr:0.0001 Loss: 0.9073 iLoss: 0.0712 TLoss: 0.0441 iLossSTA: 0.0542 TLossSTA: 0.0000 iLossGcn: 0.1248 tri1Loss: 0.0319 id1Loss: 0.0477 idALoss: 0.0331 moeAuxL: 0.5005 Accu: 98.44
+Epoch: [180][100/190] Time: 0.409 (0.434) lr:0.0001 Loss: 0.7699 iLoss: 0.0382 TLoss: 0.0297 iLossSTA: 0.0327 TLossSTA: 0.0009 iLossGcn: 0.1113 tri1Loss: 0.0058 id1Loss: 0.0290 idALoss: 0.0218 moeAuxL: 0.5004 Accu: 99.64
+训练耗时：80.79469633102417 s
+Test Epoch: 180
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:81.45%	Rank-5:92.19%	Rank-10:93.75%	Rank-20:94.92%	mAP: 74.69% .
+RGB->IR :   Rank-1:66.99%	Rank-5:83.40%	Rank-10:87.50%	Rank-20:90.43%	mAP: 61.66% .
+IR ->RGB:   Rank-1:67.62%	Rank-5:83.72%	Rank-10:87.36%	Rank-20:90.61%	mAP: 64.24% .
+IR ->IR :   Rank-1:76.12%	Rank-5:87.87%	Rank-10:90.67%	Rank-20:92.35%	mAP: 71.72% .
+AllModal:   Rank-1:78.34%	Rank-5:89.03%	Rank-10:91.51%	Rank-20:93.51%	mAP: 65.36% .
+测试耗时：38.24616074562073 s
+==> Preparing Data Loader...
+Epoch: [181][0/190] Time: 2.123 (2.123) lr:0.0001 Loss: 0.8351 iLoss: 0.0359 TLoss: 0.0746 iLossSTA: 0.0344 TLossSTA: 0.0000 iLossGcn: 0.1219 tri1Loss: 0.0183 id1Loss: 0.0284 idALoss: 0.0204 moeAuxL: 0.5013 Accu: 98.44
+Epoch: [181][100/190] Time: 0.428 (0.430) lr:0.0001 Loss: 0.7675 iLoss: 0.0367 TLoss: 0.0365 iLossSTA: 0.0306 TLossSTA: 0.0013 iLossGcn: 0.1060 tri1Loss: 0.0068 id1Loss: 0.0282 idALoss: 0.0210 moeAuxL: 0.5005 Accu: 99.50
+训练耗时：80.66150736808777 s
+==> Preparing Data Loader...
+Epoch: [182][0/191] Time: 2.205 (2.205) lr:0.0001 Loss: 0.6594 iLoss: 0.0263 TLoss: 0.0060 iLossSTA: 0.0252 TLossSTA: 0.0000 iLossGcn: 0.0647 tri1Loss: 0.0000 id1Loss: 0.0213 idALoss: 0.0157 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [182][100/191] Time: 0.408 (0.428) lr:0.0001 Loss: 0.7831 iLoss: 0.0374 TLoss: 0.0437 iLossSTA: 0.0316 TLossSTA: 0.0011 iLossGcn: 0.1088 tri1Loss: 0.0086 id1Loss: 0.0294 idALoss: 0.0221 moeAuxL: 0.5004 Accu: 99.38
+训练耗时：79.89148569107056 s
+==> Preparing Data Loader...
+Epoch: [183][0/190] Time: 2.151 (2.151) lr:0.0001 Loss: 0.7872 iLoss: 0.0424 TLoss: 0.0048 iLossSTA: 0.0363 TLossSTA: 0.0000 iLossGcn: 0.1465 tri1Loss: 0.0000 id1Loss: 0.0349 idALoss: 0.0223 moeAuxL: 0.5000 Accu: 100.00
+Epoch: [183][100/190] Time: 0.405 (0.434) lr:0.0001 Loss: 0.7634 iLoss: 0.0381 TLoss: 0.0295 iLossSTA: 0.0320 TLossSTA: 0.0001 iLossGcn: 0.1088 tri1Loss: 0.0034 id1Loss: 0.0293 idALoss: 0.0217 moeAuxL: 0.5004 Accu: 99.80
+训练耗时：80.11412262916565 s
+==> Preparing Data Loader...
+Epoch: [184][0/192] Time: 2.273 (2.273) lr:0.0001 Loss: 0.6698 iLoss: 0.0305 TLoss: 0.0206 iLossSTA: 0.0243 TLossSTA: 0.0000 iLossGcn: 0.0546 tri1Loss: 0.0000 id1Loss: 0.0214 idALoss: 0.0178 moeAuxL: 0.5006 Accu: 100.00
+Epoch: [184][100/192] Time: 0.406 (0.426) lr:0.0001 Loss: 0.7852 iLoss: 0.0387 TLoss: 0.0392 iLossSTA: 0.0324 TLossSTA: 0.0030 iLossGcn: 0.1117 tri1Loss: 0.0076 id1Loss: 0.0297 idALoss: 0.0222 moeAuxL: 0.5005 Accu: 99.50
+训练耗时：79.90893363952637 s
+==> Preparing Data Loader...
+Epoch: [185][0/191] Time: 2.050 (2.050) lr:0.0001 Loss: 0.7131 iLoss: 0.0371 TLoss: 0.0037 iLossSTA: 0.0294 TLossSTA: 0.0000 iLossGcn: 0.0916 tri1Loss: 0.0000 id1Loss: 0.0277 idALoss: 0.0235 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [185][100/191] Time: 0.419 (0.432) lr:0.0001 Loss: 0.7603 iLoss: 0.0369 TLoss: 0.0286 iLossSTA: 0.0319 TLossSTA: 0.0008 iLossGcn: 0.1072 tri1Loss: 0.0050 id1Loss: 0.0280 idALoss: 0.0215 moeAuxL: 0.5004 Accu: 99.74
+训练耗时：81.40171527862549 s
+==> Preparing Data Loader...
+Epoch: [186][0/192] Time: 2.153 (2.153) lr:0.0001 Loss: 0.8401 iLoss: 0.0343 TLoss: 0.0283 iLossSTA: 0.0401 TLossSTA: 0.0000 iLossGcn: 0.1925 tri1Loss: 0.0000 id1Loss: 0.0255 idALoss: 0.0182 moeAuxL: 0.5012 Accu: 100.00
+Epoch: [186][100/192] Time: 0.414 (0.433) lr:0.0001 Loss: 0.7619 iLoss: 0.0370 TLoss: 0.0344 iLossSTA: 0.0314 TLossSTA: 0.0005 iLossGcn: 0.1026 tri1Loss: 0.0065 id1Loss: 0.0280 idALoss: 0.0210 moeAuxL: 0.5005 Accu: 99.60
+训练耗时：81.99198198318481 s
+==> Preparing Data Loader...
+Epoch: [187][0/192] Time: 2.291 (2.291) lr:0.0001 Loss: 0.7363 iLoss: 0.0384 TLoss: 0.0434 iLossSTA: 0.0273 TLossSTA: 0.0000 iLossGcn: 0.0757 tri1Loss: 0.0000 id1Loss: 0.0290 idALoss: 0.0224 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [187][100/192] Time: 0.411 (0.428) lr:0.0001 Loss: 0.7844 iLoss: 0.0359 TLoss: 0.0454 iLossSTA: 0.0303 TLossSTA: 0.0036 iLossGcn: 0.1060 tri1Loss: 0.0133 id1Loss: 0.0284 idALoss: 0.0211 moeAuxL: 0.5004 Accu: 99.29
+训练耗时：80.90805292129517 s
+==> Preparing Data Loader...
+Epoch: [188][0/192] Time: 2.574 (2.574) lr:0.0001 Loss: 0.7389 iLoss: 0.0378 TLoss: 0.0103 iLossSTA: 0.0343 TLossSTA: 0.0000 iLossGcn: 0.0943 tri1Loss: 0.0000 id1Loss: 0.0338 idALoss: 0.0282 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [188][100/192] Time: 0.406 (0.434) lr:0.0001 Loss: 0.7678 iLoss: 0.0370 TLoss: 0.0349 iLossSTA: 0.0312 TLossSTA: 0.0010 iLossGcn: 0.1083 tri1Loss: 0.0061 id1Loss: 0.0281 idALoss: 0.0208 moeAuxL: 0.5005 Accu: 99.61
+训练耗时：81.0479040145874 s
+==> Preparing Data Loader...
+Epoch: [189][0/191] Time: 2.296 (2.296) lr:0.0001 Loss: 0.8849 iLoss: 0.0518 TLoss: 0.0473 iLossSTA: 0.0337 TLossSTA: 0.0000 iLossGcn: 0.1901 tri1Loss: 0.0000 id1Loss: 0.0360 idALoss: 0.0258 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [189][100/191] Time: 0.417 (0.437) lr:0.0001 Loss: 0.7631 iLoss: 0.0375 TLoss: 0.0297 iLossSTA: 0.0313 TLossSTA: 0.0001 iLossGcn: 0.1096 tri1Loss: 0.0042 id1Loss: 0.0285 idALoss: 0.0219 moeAuxL: 0.5004 Accu: 99.64
+训练耗时：81.8706066608429 s
+==> Preparing Data Loader...
+Epoch: [190][0/191] Time: 2.322 (2.322) lr:0.0001 Loss: 0.8098 iLoss: 0.0531 TLoss: 0.0227 iLossSTA: 0.0434 TLossSTA: 0.0000 iLossGcn: 0.1113 tri1Loss: 0.0000 id1Loss: 0.0406 idALoss: 0.0385 moeAuxL: 0.5002 Accu: 100.00
+Epoch: [190][100/191] Time: 0.414 (0.433) lr:0.0001 Loss: 0.7783 iLoss: 0.0385 TLoss: 0.0365 iLossSTA: 0.0318 TLossSTA: 0.0007 iLossGcn: 0.1139 tri1Loss: 0.0054 id1Loss: 0.0291 idALoss: 0.0220 moeAuxL: 0.5005 Accu: 99.52
+训练耗时：80.95978951454163 s
+Test Epoch: 190
+========== Testing ==========
+Extracting Query Feature...
+Extracting Gallery Feature...
+RGB->RGB:   Rank-1:82.23%	Rank-5:92.19%	Rank-10:93.75%	Rank-20:95.31%	mAP: 75.09% .
+RGB->IR :   Rank-1:68.55%	Rank-5:82.62%	Rank-10:88.28%	Rank-20:90.23%	mAP: 62.05% .
+IR ->RGB:   Rank-1:67.05%	Rank-5:82.76%	Rank-10:87.74%	Rank-20:90.61%	mAP: 64.15% .
+IR ->IR :   Rank-1:75.75%	Rank-5:87.50%	Rank-10:90.86%	Rank-20:92.54%	mAP: 71.40% .
+AllModal:   Rank-1:78.53%	Rank-5:88.74%	Rank-10:91.22%	Rank-20:93.51%	mAP: 65.35% .
+测试耗时：36.73398208618164 s
+==> Preparing Data Loader...
+Epoch: [191][0/191] Time: 2.241 (2.241) lr:0.0001 Loss: 0.6943 iLoss: 0.0285 TLoss: 0.0023 iLossSTA: 0.0218 TLossSTA: 0.0000 iLossGcn: 0.1011 tri1Loss: 0.0000 id1Loss: 0.0232 idALoss: 0.0168 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [191][100/191] Time: 0.414 (0.435) lr:0.0001 Loss: 0.7730 iLoss: 0.0367 TLoss: 0.0332 iLossSTA: 0.0323 TLossSTA: 0.0016 iLossGcn: 0.1103 tri1Loss: 0.0056 id1Loss: 0.0297 idALoss: 0.0229 moeAuxL: 0.5005 Accu: 99.61
+训练耗时：80.92156982421875 s
+==> Preparing Data Loader...
+Epoch: [192][0/191] Time: 2.608 (2.608) lr:0.0001 Loss: 0.6733 iLoss: 0.0252 TLoss: 0.0000 iLossSTA: 0.0269 TLossSTA: 0.0000 iLossGcn: 0.0861 tri1Loss: 0.0000 id1Loss: 0.0205 idALoss: 0.0144 moeAuxL: 0.5001 Accu: 100.00
+Epoch: [192][100/191] Time: 0.416 (0.438) lr:0.0001 Loss: 0.7783 iLoss: 0.0373 TLoss: 0.0399 iLossSTA: 0.0312 TLossSTA: 0.0014 iLossGcn: 0.1093 tri1Loss: 0.0072 id1Loss: 0.0292 idALoss: 0.0224 moeAuxL: 0.5004 Accu: 99.52
+训练耗时：81.5895643234253 s
+==> Preparing Data Loader...
+Epoch: [193][0/191] Time: 2.752 (2.752) lr:0.0001 Loss: 0.6854 iLoss: 0.0359 TLoss: 0.0035 iLossSTA: 0.0319 TLossSTA: 0.0000 iLossGcn: 0.0710 tri1Loss: 0.0000 id1Loss: 0.0257 idALoss: 0.0165 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [193][100/191] Time: 0.420 (0.435) lr:0.0001 Loss: 0.7546 iLoss: 0.0358 TLoss: 0.0297 iLossSTA: 0.0307 TLossSTA: 0.0005 iLossGcn: 0.1040 tri1Loss: 0.0052 id1Loss: 0.0276 idALoss: 0.0207 moeAuxL: 0.5004 Accu: 99.75
+训练耗时：81.18763589859009 s
+==> Preparing Data Loader...
+Epoch: [194][0/190] Time: 2.451 (2.451) lr:0.0001 Loss: 0.7786 iLoss: 0.0231 TLoss: 0.0815 iLossSTA: 0.0232 TLossSTA: 0.0000 iLossGcn: 0.1074 tri1Loss: 0.0008 id1Loss: 0.0222 idALoss: 0.0196 moeAuxL: 0.5007 Accu: 98.44
+Epoch: [194][100/190] Time: 0.416 (0.437) lr:0.0001 Loss: 0.7844 iLoss: 0.0388 TLoss: 0.0349 iLossSTA: 0.0338 TLossSTA: 0.0023 iLossGcn: 0.1106 tri1Loss: 0.0090 id1Loss: 0.0308 idALoss: 0.0238 moeAuxL: 0.5005 Accu: 99.55
+训练耗时：81.28671288490295 s
+==> Preparing Data Loader...
+Epoch: [195][0/191] Time: 2.282 (2.282) lr:0.0001 Loss: 0.6997 iLoss: 0.0245 TLoss: 0.0000 iLossSTA: 0.0235 TLossSTA: 0.0000 iLossGcn: 0.1156 tri1Loss: 0.0000 id1Loss: 0.0200 idALoss: 0.0157 moeAuxL: 0.5005 Accu: 100.00
+Epoch: [195][100/191] Time: 0.411 (0.433) lr:0.0001 Loss: 0.7625 iLoss: 0.0380 TLoss: 0.0310 iLossSTA: 0.0314 TLossSTA: 0.0003 iLossGcn: 0.1072 tri1Loss: 0.0033 id1Loss: 0.0293 idALoss: 0.0216 moeAuxL: 0.5005 Accu: 99.75
+训练耗时：81.39801478385925 s
+==> Preparing Data Loader...
+Epoch: [196][0/190] Time: 2.258 (2.258) lr:0.0001 Loss: 0.6629 iLoss: 0.0352 TLoss: 0.0012 iLossSTA: 0.0288 TLossSTA: 0.0000 iLossGcn: 0.0566 tri1Loss: 0.0000 id1Loss: 0.0227 idALoss: 0.0181 moeAuxL: 0.5003 Accu: 100.00
+Epoch: [196][100/190] Time: 0.412 (0.433) lr:0.0001 Loss: 0.7723 iLoss: 0.0388 TLoss: 0.0318 iLossSTA: 0.0326 TLossSTA: 0.0011 iLossGcn: 0.1119 tri1Loss: 0.0033 id1Loss: 0.0297 idALoss: 0.0226 moeAuxL: 0.5004 Accu: 99.63
+训练耗时：81.20422577857971 s
+==> Preparing Data Loader...
+Epoch: [197][0/190] Time: 2.386 (2.386) lr:0.0001 Loss: 1.1103 iLoss: 0.0741 TLoss: 0.1471 iLossSTA: 0.0701 TLossSTA: 0.0166 iLossGcn: 0.1650 tri1Loss: 0.0417 id1Loss: 0.0544 idALoss: 0.0408 moeAuxL: 0.5005 Accu: 98.44
+Epoch: [197][100/190] Time: 0.421 (0.438) lr:0.0001 Loss: 0.7584 iLoss: 0.0362 TLoss: 0.0296 iLossSTA: 0.0300 TLossSTA: 0.0010 iLossGcn: 0.1072 tri1Loss: 0.0047 id1Loss: 0.0279 idALoss: 0.0215 moeAuxL: 0.5004 Accu: 99.64
+训练耗时：81.17975401878357 s
+==> Preparing Data Loader...
+Epoch: [198][0/191] Time: 2.302 (2.302) lr:0.0001 Loss: 0.7293 iLoss: 0.0315 TLoss: 0.0059 iLossSTA: 0.0332 TLossSTA: 0.0000 iLossGcn: 0.1226 tri1Loss: 0.0000 id1Loss: 0.0215 idALoss: 0.0138 moeAuxL: 0.5010 Accu: 100.00
+Epoch: [198][100/191] Time: 0.411 (0.431) lr:0.0001 Loss: 0.7763 iLoss: 0.0376 TLoss: 0.0350 iLossSTA: 0.0315 TLossSTA: 0.0022 iLossGcn: 0.1124 tri1Loss: 0.0068 id1Loss: 0.0289 idALoss: 0.0214 moeAuxL: 0.5005 Accu: 99.55
+训练耗时：80.89571905136108 s
+==> Preparing Data Loader...
