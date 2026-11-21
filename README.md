@@ -1,4 +1,4 @@
-# Dynamic Modality-Temporal Adaptation for Video-based Visible–Infrared Person Re-Identification
+# Dynamic Modality-Temporal Adaptation for Video-based Visible-Infrared Person Re-Identification
 
 This is the official repository for **DMTA**, a novel framework designed for **Video-Based Visible-Infrared Person Re-Identification**.
 
