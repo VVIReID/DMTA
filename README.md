@@ -54,13 +54,16 @@ python test.py --resume v2t_map_best.pth
 
 ### 💾 Pretrained Models & Training Logs
 
-We provide pretrained weights and training logs for both datasets:
+We provide pretrained DMTA checkpoints and training logs for the HITSZ-VCM and BUPTCampus datasets.
 
-### 🔹 VCM Dataset
+| Dataset | Pretrained Weights | Training Log |
+| :--- | :--- | :--- |
+| HITSZ-VCM | [Download checkpoint](https://pan.baidu.com/s/1xfUaZyEkpNX2U0QgXWWFSw?pwd=c2x8) | [View training log](HITSZ-VCM/VCM_v1_os.txt) |
+| BUPTCampus | [Download checkpoint](https://pan.baidu.com/s/1thafrDX8OrLdAqp-O0HyEA?pwd=m6m3) | [View training log](BUPTCampus/BUPTCampus_drop_0.2_4_16_lr_0.1_seed_1234_os.txt) |
 
-- 📑 [Training Log (VCM)]([Anonymized Repository - Anonymous GitHub](https://anonymous.4open.science/r/VVIReID-DMTA/HITSZ-VCM/VCM_v1_os.txt))
+## 📬 Contact
 
-### 🔹 BUPT Dataset
+If you have any questions about DMTA or this repository, please feel free to contact us. For code requests related to Re-ID, please contact the email(s) below:
 
-- 📑 [Training Log (BUPT)]([Anonymized Repository - Anonymous GitHub](https://anonymous.4open.science/r/VVIReID-DMTA/BUPTCampus/BUPTCampus_drop_0.2_4_16_lr_0.1_seed_1234_os.txt))
-
+- **Yong Wu** — [wuyong_tj@163.com](mailto:wuyong_tj@163.com)
+- **Zijie Ding** — [zijie@ahnu.edu.cn](mailto:zijie@ahnu.edu.cn)
