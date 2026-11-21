@@ -52,11 +52,11 @@ python test.py --resume v2t_map_best.pth
 ```
 
 
-### 💾 Pretrained Models & Training Logs
+### 💾 Checkpoints & Training Logs
 
-We provide pretrained DMTA checkpoints and training logs for the HITSZ-VCM and BUPTCampus datasets.
+We provide DMTA checkpoints and training logs for the HITSZ-VCM and BUPTCampus datasets.
 
-| Dataset | Pretrained Weights | Training Log |
+| Dataset | Checkpoints | Training Log |
 | :--- | :--- | :--- |
 | HITSZ-VCM | [Download checkpoint](https://pan.baidu.com/s/1xfUaZyEkpNX2U0QgXWWFSw?pwd=c2x8) | [View training log](HITSZ-VCM/VCM_v1_os.txt) |
 | BUPTCampus | [Download checkpoint](https://pan.baidu.com/s/1thafrDX8OrLdAqp-O0HyEA?pwd=m6m3) | [View training log](BUPTCampus/BUPTCampus_drop_0.2_4_16_lr_0.1_seed_1234_os.txt) |
